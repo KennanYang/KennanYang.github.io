@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>KennanYang</title>
+  <icon>http://example.com/icon.png</icon>
+  <subtitle>Welcome</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-05-30T02:59:55.806Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Kennan Yang</name>
+    <email>yzw1048125026@163.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>006-HTTP协议详解（https\http 1.X\http 2.0, cookie\session）</title>
+    <link href="http://example.com/2022/05/30/006-HTTP-HTTPS/"/>
+    <id>http://example.com/2022/05/30/006-HTTP-HTTPS/</id>
+    <published>2022-05-30T02:46:33.000Z</published>
+    <updated>2022-05-30T02:59:55.806Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;超文本传输协议（Hyper Text Transfer Protocol，HTTP）&lt;/strong&gt; 是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。&lt;/p&gt;
+&lt;p&gt;HTTP协议是网络编程的基础知识，后端开发应当熟练掌握，但是相关内容较多，这里做一个总结方便回顾。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计算机网络" scheme="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>005. UDP/TCP协议详解</title>
+    <link href="http://example.com/2022/03/16/005-TCP-IP/"/>
+    <id>http://example.com/2022/03/16/005-TCP-IP/</id>
+    <published>2022-03-16T04:27:49.000Z</published>
+    <updated>2022-05-09T12:17:20.025Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;面试中频繁问到UDP&amp;#x2F;TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计算机网络" scheme="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>004. 数据结构总结 —— 树</title>
+    <link href="http://example.com/2022/03/02/004-tree-datatype/"/>
+    <id>http://example.com/2022/03/02/004-tree-datatype/</id>
+    <published>2022-03-02T00:59:29.000Z</published>
+    <updated>2022-05-09T12:17:20.024Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://c.biancheng.net/view/3390.html&quot;&gt;《c语言学习网》数据结构总结——树&lt;/a&gt;&lt;br&gt;本文旨在根据教程巩固树的数据结构知识和c语言指针的应用，记录一下自己学习过程中的代码，知识讲解参考教程。&lt;/p&gt;
+&lt;h2 id=&quot;一、树的基本概念和术语&quot;&gt;&lt;a href=&quot;#一、树的基本概念和术语&quot; class=&quot;headerlink&quot; title=&quot;一、树的基本概念和术语&quot;&gt;&lt;/a&gt;一、树的基本概念和术语&lt;/h2&gt;&lt;p&gt;树结构是一种非线性存储结构，存储的是具有“一对多”关系的数据元素的集合。如图 是使用树结构存储的集合 {A,B,C,D,E,F,G,H,I,J,K,L,M} 的示意图。对于数据 A 来说，和数据 B、C、D 有关系；对于数据 B 来说，和 E、F 有关系。这就是“一对多”的关系。&lt;br&gt;&lt;img src=&quot;https://imgconvert.csdnimg.cn/aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTA0MjcvMDk0NDMwMTQ5My0wLnBuZw?x-oss-process=image/format,png&quot; alt=&quot;图 1（A）树的示例&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数据结构" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="c" scheme="http://example.com/tags/c/"/>
+    
+    <category term="数据结构" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>003. go入门，学习用goroutine开启并发</title>
+    <link href="http://example.com/2022/03/02/003-goroutine/"/>
+    <id>http://example.com/2022/03/02/003-goroutine/</id>
+    <published>2022-03-02T00:03:04.000Z</published>
+    <updated>2022-05-09T12:17:20.024Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;为了学习go语言，和了解并行的基本写法，这里通过一个demo练习&lt;/strong&gt;&lt;br&gt;由于已经有了c++和python的基础，所以了解基本语法很快，主要是学习go面向消息的传递机制，以及使用goroutine进行并发操作。&lt;br&gt;参考资料：&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="go" scheme="http://example.com/categories/go/"/>
+    
+    
+    <category term="go" scheme="http://example.com/tags/go/"/>
+    
+    <category term="并发" scheme="http://example.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
+    <link href="http://example.com/2022/02/24/002-config-pytorch/"/>
+    <id>http://example.com/2022/02/24/002-config-pytorch/</id>
+    <published>2022-02-24T10:54:57.000Z</published>
+    <updated>2022-05-09T12:17:20.024Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。&lt;br&gt;前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="http://example.com/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://example.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>001. 如何连接实验室的服务器进行网络训练？</title>
+    <link href="http://example.com/2022/02/24/001-link-to-server/"/>
+    <id>http://example.com/2022/02/24/001-link-to-server/</id>
+    <published>2022-02-24T10:48:44.000Z</published>
+    <updated>2022-05-09T12:17:20.023Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。&lt;/p&gt;
+&lt;p&gt;实验室的师兄甩过来服务器的ip和用户名密码，说直接连就行。&lt;/p&gt;
+&lt;p&gt;直接连？linux都不太会用的小白，咋连？&lt;/p&gt;
+&lt;p&gt;首先确保连接到实验室的网络，我这边是用校园网或者挂校园网的VPN，然后有下面几种配置方法（方法应该很多，只是列出了我尝试过的这三种）：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭建环境" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="服务器" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>000. Hello World - 用Github pages和Hexo搭建自己的个人主页</title>
+    <link href="http://example.com/2022/02/24/000-hello-world/"/>
+    <id>http://example.com/2022/02/24/000-hello-world/</id>
+    <published>2022-02-24T02:54:57.000Z</published>
+    <updated>2022-05-09T12:17:20.023Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Hello world&lt;/strong&gt;&lt;br&gt;欢迎来到我的博客，我是Kennan，一名计算机专业的研究生。以前在不同的地方写一些文章博客，但会受到平台的各种限制和广告。&lt;br&gt;这里在前辈的指导下，通过 &lt;a href=&quot;https://docs.github.com/en/pages&quot;&gt;github pages平台&lt;/a&gt; 和 &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo博客框架&lt;/a&gt; 搭建了一个自己的个人主页，在上面分享一些自己的经历和学习心得。&lt;br&gt;下面记录一下我的搭建过程，请多多指教，一些相关文件可参考我的 &lt;a href=&quot;https://github.com/KennanYang/KennanYang.github.io&quot;&gt;KennanYang.github.io&lt;/a&gt; 项目&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭建环境" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+    <category term="搭建环境" scheme="http://example.com/tags/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+</feed>
