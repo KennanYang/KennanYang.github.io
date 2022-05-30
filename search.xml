@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>001. 如何连接实验室的服务器进行网络训练？</title>
+    <url>/2022/02/24/001-link-to-server/</url>
+    <content><![CDATA[<p>我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。</p>
+<p>实验室的师兄甩过来服务器的ip和用户名密码，说直接连就行。</p>
+<p>直接连？linux都不太会用的小白，咋连？</p>
+<p>首先确保连接到实验室的网络，我这边是用校园网或者挂校园网的VPN，然后有下面几种配置方法（方法应该很多，只是列出了我尝试过的这三种）：</p>
+<span id="more"></span>
+<h1 id="方法一：wsl（Windows-Subsystem-for-Linux）"><a href="#方法一：wsl（Windows-Subsystem-for-Linux）" class="headerlink" title="方法一：wsl（Windows Subsystem for Linux）"></a>方法一：wsl（Windows Subsystem for Linux）</h1><p>1.下载wsl2<br>参考<br><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">https://docs.microsoft.com/zh-cn/windows/wsl/install-win10</a></p>
+<p>2.下载windows终端windows terminal（非必须，也可直接用power shell）<br><a href="https://docs.microsoft.com/zh-cn/windows/terminal/get-started">https://docs.microsoft.com/zh-cn/windows/terminal/get-started</a></p>
+<p>3.使用ssh命令进行外部链接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-&gt; ssh 用户@ip</span><br><span class="line">-&gt; 密码</span><br></pre></td></tr></table></figure>
+
+<h1 id="方法二：vscode"><a href="#方法二：vscode" class="headerlink" title="方法二：vscode"></a>方法二：vscode</h1><p>1.vscode下载remote-ssh和remote wsl<br><img src="https://img-blog.csdnimg.cn/20210519110928571.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
+<p>2.连接服务器</p>
+<p>选择左下角的标志<br><img src="https://img-blog.csdnimg.cn/20210519111221622.png"><br>会弹出一个菜单栏，选择Connect to Host…，输入用户名和密码即可<br><img src="https://img-blog.csdnimg.cn/20210519111159132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
+<h1 id="方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版"><a href="#方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版" class="headerlink" title="方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版"></a>方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版</h1><p><a href="https://www.netsarang.com/zh/free-for-home-school/">https://www.netsarang.com/zh/free-for-home-school/</a><br><img src="https://img-blog.csdnimg.cn/2021051911143257.png"></p>
+<p>XShell用来输入指令</p>
+<p>XFtp方便文件管理和传输</p>
+<p>当连接完成之后，就可以把使用GPU的网络训练代码放在服务器上跑了。。</p>
+]]></content>
+      <categories>
+        <category>搭建环境</category>
+      </categories>
+      <tags>
+        <tag>服务器</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>000. Hello World - 用Github pages和Hexo搭建自己的个人主页</title>
     <url>/2022/02/24/000-hello-world/</url>
     <content><![CDATA[<p><strong>Hello world</strong><br>欢迎来到我的博客，我是Kennan，一名计算机专业的研究生。以前在不同的地方写一些文章博客，但会受到平台的各种限制和广告。<br>这里在前辈的指导下，通过 <a href="https://docs.github.com/en/pages">github pages平台</a> 和 <a href="https://hexo.io/">Hexo博客框架</a> 搭建了一个自己的个人主页，在上面分享一些自己的经历和学习心得。<br>下面记录一下我的搭建过程，请多多指教，一些相关文件可参考我的 <a href="https://github.com/KennanYang/KennanYang.github.io">KennanYang.github.io</a> 项目</p>
@@ -68,127 +97,50 @@
       </tags>
   </entry>
   <entry>
-    <title>006-HTTP协议详解（https\http 1.X\http 2.0, cookie\session）</title>
-    <url>/2022/05/30/006-HTTP-HTTPS/</url>
-    <content><![CDATA[<p><strong>超文本传输协议（Hyper Text Transfer Protocol，HTTP）</strong> 是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。</p>
-<p>HTTP协议是网络编程的基础知识，后端开发应当熟练掌握，但是相关内容较多，这里做一个总结方便回顾。</p>
-<span id="more"></span>
+    <title>003. go入门，学习用goroutine开启并发</title>
+    <url>/2022/03/02/003-goroutine/</url>
+    <content><![CDATA[<p><strong>为了学习go语言，和了解并行的基本写法，这里通过一个demo练习</strong><br>由于已经有了c++和python的基础，所以了解基本语法很快，主要是学习go面向消息的传递机制，以及使用goroutine进行并发操作。<br>参考资料：<br><a href="https://www.runoob.com/go/go-concurrent.html">Go 语言教程-Go并发</a></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>hello.go</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*一个go的并行计算demo,学习go的基本语法，并计算两个数组元素值为1的数目*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//包声明：必须在源文件中非注释的第一行指明这个文件属于哪个包</span></span><br><span class="line"><span class="comment">//每个Go程序都包含一个名为main的包</span></span><br><span class="line"><span class="keyword">package</span> main </span><br><span class="line"></span><br><span class="line"><span class="comment">//import告诉Go编译器使用&quot;fmt&quot;包里的元素</span></span><br><span class="line"><span class="comment">//fmt包实现了格式化IO函数</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">函数声明方式</span></span><br><span class="line"><span class="comment">func function_name([parameter list])[return_types]&#123;</span></span><br><span class="line"><span class="comment">    函数体</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sum</span><span class="params">(arr []<span class="type">int</span>, c <span class="keyword">chan</span> <span class="type">int</span>)</span></span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    变量声明的两种方式：</span></span><br><span class="line"><span class="comment">    1.var v_name v_type = value</span></span><br><span class="line"><span class="comment">    2.v_name := value 根据值自行判定变量类型</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    注：标识符首字母大写，如Group 1，则可被外部包调用，称为导出。以小写字母开头则只能内部可见。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    sum := <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    循环定义方式 </span></span><br><span class="line"><span class="comment">    1.for init; condition； post&#123;&#125;</span></span><br><span class="line"><span class="comment">    2.for condition&#123;&#125;</span></span><br><span class="line"><span class="comment">    3.for key, value := range iter&#123;&#125;  用range对slice、map、数组等迭代循环</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _, value := <span class="keyword">range</span> arr &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        条件语句</span></span><br><span class="line"><span class="comment">        if 布尔表达式&#123;</span></span><br><span class="line"><span class="comment">            //语句</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">if</span> value == <span class="number">1</span>&#123;</span><br><span class="line">            <span class="comment">//运算符同c++，包括++，--</span></span><br><span class="line">            sum++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//值保存到通道（channel）方便并行</span></span><br><span class="line">    c &lt;- sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//main函数是程序开始执行的函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">( )</span></span>&#123;</span><br><span class="line">    <span class="comment">//字符串输出到控制台，并结尾增加换行符&#x27;\n&#x27;</span></span><br><span class="line">    fmt.Println(<span class="string">&quot;hello world!&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建数组方式一: var variable_name = [SIZE] variable_type&#123;,,,...&#125;</span></span><br><span class="line">    <span class="keyword">var</span> arr_a =[]<span class="type">int</span>  &#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">5</span>&#125;</span><br><span class="line">    <span class="comment">// 创建数组方式二: variable_name := [SIZE] variable_type&#123;,,,...&#125;</span></span><br><span class="line">    arr_b := []<span class="type">int</span> &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="type">int</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    函数调用方式: func([parameter_list])</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    goroutine: 轻量级线程，支持并发</span></span><br><span class="line"><span class="comment">    如果用goroutine调度，则前加go关键字，如go f(x,y,z)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">go</span> sum(arr_a, ch)</span><br><span class="line">    <span class="keyword">go</span> sum(arr_b, ch)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    通道（channel）可用于两个goroutine之间通过传递一个指定的值来同步运行和通讯。</span></span><br><span class="line"><span class="comment">    操作符&lt;-用于指定通道的方向，发送或接收。如：</span></span><br><span class="line"><span class="comment">    ch &lt;- v //把v发送到通道ch</span></span><br><span class="line"><span class="comment">    v := &lt;- ch //从ch接收数据，并把值赋给v</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    result_a, result_b := &lt;- ch, &lt;- ch</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//输出计算结果</span></span><br><span class="line">    fmt.Println(<span class="string">&quot;results&quot;</span>, result_a, result_b, result_a + result_b)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://baike.baidu.com/item/HTTP/243074?fr=aladdin">1.百度百科-HTTP</a></p>
-<p><a href="https://leetcode.cn/leetbook/read/tech-interview-cookbook/o9ga26/">2.校招基础知识详解-HTTP</a></p>
+<h3 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h3><p><img src="/images/helloworld.png" alt="输出结果"></p>
 ]]></content>
       <categories>
-        <category>计算机网络</category>
+        <category>go</category>
       </categories>
       <tags>
-        <tag>计算机网络</tag>
+        <tag>go</tag>
+        <tag>并发</tag>
       </tags>
   </entry>
   <entry>
-    <title>005. UDP/TCP协议详解</title>
-    <url>/2022/03/16/005-TCP-IP/</url>
-    <content><![CDATA[<p>面试中频繁问到UDP&#x2F;TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。</p>
+    <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
+    <url>/2022/02/24/002-config-pytorch/</url>
+    <content><![CDATA[<p>最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。<br>前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。</p>
 <span id="more"></span>
+<h1 id="1-安装python3-9"><a href="#1-安装python3-9" class="headerlink" title="1.安装python3.9"></a>1.安装python3.9</h1><p>首先是python的安装，选用当前时间最新版的python3.9.1<br>官网下载安装包即可<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br><img src="https://img-blog.csdnimg.cn/20201219134620158.png"></p>
+<p>一路“下一步”，建议安装到默认路径。</p>
+<p>然后，配置环境变量：<br>找到安装的位置，把图中所示的两个路径加入环境变量。<br>我的路径是：<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39\Scripts<br><img src="https://img-blog.csdnimg.cn/20201219134237283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>补充一点：<br>conda里python中的pytorch比较老，遇到没法调用的问题（这里没有深究），所以没有用anaconda，而是直接官网找最新的python。</p>
+<h1 id="2-安装cuda（需要vs环境，我的是vs2015）"><a href="#2-安装cuda（需要vs环境，我的是vs2015）" class="headerlink" title="2.安装cuda（需要vs环境，我的是vs2015）"></a>2.安装cuda（需要vs环境，我的是vs2015）</h1><p>CUDA（Compute Unified Device Architecture），是显卡厂商NVIDIA推出的运算平台。</p>
+<p>我当前的环境是vs2015，电脑配置是</p>
+<p><img src="https://img-blog.csdnimg.cn/20201219142426303.png"><br><img src="https://img-blog.csdnimg.cn/20201219142440290.png"><br>注意CUDA的版本不能超过GPU的版本。</p>
+<p>官网的CUDA安装路径如下：<br><a href="https://developer.nvidia.com/zh-cn/cuda-downloads">https://developer.nvidia.com/zh-cn/cuda-downloads</a><br><img src="https://img-blog.csdnimg.cn/20201219142239715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>圈出来的部分，前者是一个比较大的安装包，下载到本地安装，后者是很小的安装包，但是需要联网，我选的前者。<br><img src="https://img-blog.csdnimg.cn/20201219142349445.png"></p>
+<p>仍然选择当前最新的版本11.1，安装到默认路径下：<br>C:\Program Files\NVIDIA GPU Computing Toolkit</p>
+<h1 id="3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"><a href="#3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）" class="headerlink" title="3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"></a>3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）</h1><p>NVIDIA cuDNN是用于深度神经网络的GPU加速库。<br>老规矩，走官网。<br><a href="https://developer.nvidia.com/rdp/cudnn-archive">https://developer.nvidia.com/rdp/cudnn-archive</a><br><img src="https://img-blog.csdnimg.cn/20201219140906756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
+<p>这里的下载需要注册，有个技巧是复制链接，在迅雷打开可以直接下载。<br><img src="https://img-blog.csdnimg.cn/20201219135916291.png"></p>
+<p>下载好的压缩包解压之后，会发现三个文件夹。<br>分别把文件放到cuda路径对应的文件夹下。<br><img src="https://img-blog.csdnimg.cn/20201219135443329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
+<h1 id="4-安装pytorch"><a href="#4-安装pytorch" class="headerlink" title="4.安装pytorch"></a>4.安装pytorch</h1><p>它是一个基于Python的可续计算包，提供两个高级功能：1、具有强大的GPU加速的张量计算（如NumPy）。2、包含自动求导系统的深度神经网络。<br>官网：<br><a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br><img src="https://img-blog.csdnimg.cn/20201219140414305.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>可以通过pip安装，最下面的命令行在cmd中打开即可。<br>由于速度慢，所以直接从别人那里拷贝过来了。</p>
+<p>可以在python中通过下面的代码来检验，True表示pytorch的cuda配置成功<br><img src="https://img-blog.csdnimg.cn/20201219142901202.png"></p>
+<h1 id="5-安装opencv"><a href="#5-安装opencv" class="headerlink" title="5.安装opencv"></a>5.安装opencv</h1><p>方法一：<br>打开cmd，输入<code>pip install opencv-python</code>即可，但超级慢还可能断开连接。<br>此处建议清华镜像下载</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
 
-<h2 id="UDP和TCP的特点"><a href="#UDP和TCP的特点" class="headerlink" title="UDP和TCP的特点"></a>UDP和TCP的特点</h2><p><strong>1.	TCP与UDP的区别？应用场景都有哪些？</strong><br>1)	TCP面向连接（如打电话要先拨号建立连接）;UDP是无连接的，即发送数据之前不需要建立连接<br>2)	TCP提供可靠的服务。也就是说，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达;UDP尽最大努力交付，即不保证可靠交付Tcp通过校验和，重传控制，序号标识，滑动窗口、确认应答实现可靠传输。如丢包时的重发控制，还可以对次序乱掉的分包进行顺序控制。<br>3)	UDP具有较好的实时性，工作效率比TCP高，适用于对高速传输和实时性有较高的通信或广播通信。<br>4)	每一条TCP连接只能是点到点的;UDP支持一对一，一对多，多对一和多对多的交互通信<br>5)	TCP对系统资源要求较多，UDP对系统资源要求较少。<br>6)	若通信数据完整性需让位与通信实时性，则应该选用 TCP 协议（如文件传输、重要状态的更新等）；反之，则使用 UDP 协议（如视频传输、实时通信等）。<br>7)	UDP:DNS   SNMP<br>8)	TCP面向字节流，UTP面向数据包；</p>
-<p><strong>2.	为什么UDP有时比TCP更有优势?</strong><br>1)	网速的提升给UDP的稳定性提供可靠网络保障，丢包率很低，如果使用应用层重传，能够确保传输的可靠性。<br>2)	TCP为了实现网络通信的可靠性，使用了复杂的拥塞控制算法，建立了繁琐的握手过程，由于TCP内置的系统协议栈中，极难对其进行改进。<br>3)	采用TCP，一旦发生丢包，TCP会将后续的包缓存起来，等前面的包重传并接收到后再继续发送，延时会越来越大，基于UDP对实时性要求较为严格的情况下，采用自定义重传机制，能够把丢包产生的延迟降到最低，尽量减少网络问题对游戏性造成影响。 </p>
-<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><p><img src="/images/UDPhead.png" alt="UDP首部格式"><br>首部字段只有 8 个字节，包括源端口、目的端口、长度、检验和。12 字节的伪首部是为了计算检验和临时添加的。</p>
-<h2 id="TCP首部格式"><a href="#TCP首部格式" class="headerlink" title="TCP首部格式"></a>TCP首部格式</h2><p><img src="/images/TCPhead.png" alt="TCP首部格式"><br><strong>序号</strong> ：用于对字节流进行编号，例如序号为 301，表示第一个字节的编号为 301，如果携带的数据长度为 100 字节，那么下一个报文段的序号应为 401。</p>
-<p><strong>确认号</strong> ：期望收到的下一个报文段的序号。例如 B 正确收到 A 发送来的一个报文段，序号为 501，携带的数据长度为 200 字节，因此 B 期望下一个报文段的序号为 701，B 发送给 A 的确认报文段中确认号就为 701。</p>
-<p><strong>数据偏移</strong> ：指的是数据部分距离报文段起始处的偏移量，实际上指的是首部的长度。</p>
-<p><strong>确认 ACK</strong> ：当 ACK&#x3D;1 时确认号字段有效，否则无效。TCP 规定，在连接建立后所有传送的报文段都必须把 ACK 置 1。</p>
-<p><strong>同步 SYN</strong> ：在连接建立时用来同步序号。当 SYN&#x3D;1，ACK&#x3D;0 时表示这是一个连接请求报文段。若对方同意建立连接，则响应报文中 SYN&#x3D;1，ACK&#x3D;1。</p>
-<p><strong>终止 FIN</strong> ：用来释放一个连接，当 FIN&#x3D;1 时，表示此报文段的发送方的数据已发送完毕，并要求释放连接。</p>
-<p><strong>窗口</strong> ：窗口值作为接收方让发送方设置其发送窗口的依据。之所以要有这个限制，是因为接收方的数据缓存空间是有限的。</p>
-<h2 id="TCP的三次握手和四次挥手"><a href="#TCP的三次握手和四次挥手" class="headerlink" title="TCP的三次握手和四次挥手"></a>TCP的三次握手和四次挥手</h2><p><strong>1.三次握手</strong><br>1)	第一次握手：建立连接。客户端发送连接请求报文段，将SYN位置为1，Sequence Number为x；然后，客户端进入SYN_SEND状态，等待服务器的确认；<br>2)	第二次握手：服务器收到SYN报文段。服务器收到客户端的SYN报文段，需要对这个SYN报文段进行确认，设置Acknowledgment Number为x+1(Sequence Number+1)；同时，自己自己还要发送SYN请求信息，将SYN位置为1，Sequence Number为y；服务器端将上述所有信息放到一个报文段（即SYN+ACK报文段）中，一并发送给客户端，此时服务器进入SYN_RECV状态；<br>3)	第三次握手：客户端收到服务器的SYN+ACK报文段。然后将Acknowledgment Number设置为y+1，向服务器发送ACK报文段，这个报文段发送完毕以后，客户端和服务器端都进入ESTABLISHED状态，完成TCP三次握手。</p>
-<p><img src="https://pic.imgdb.cn/item/6239213727f86abb2aef1b3b.jpg" alt="TCP的三次握手和四次挥手"></p>
-<p><strong>2.四次挥手</strong><br>当客户端和服务器通过三次握手建立了TCP连接以后，当数据传送完毕，肯定是要断开TCP连接的啊。那对于TCP的断开连接，这里就有了神秘的“四次分手”。<br>1)	第一次分手：主机1（可以使客户端，也可以是服务器端），设置Sequence Number和Acknowledgment Number，向主机2发送一个FIN报文段；此时，主机1进入FIN_WAIT_1状态；这表示主机1没有数据要发送给主机2了；<br>2)	第二次分手：主机2收到了主机1发送的FIN报文段，向主机1回一个ACK报文段，Acknowledgment Number为Sequence Number加1；主机1进入FIN_WAIT_2状态；主机2告诉主机1，我“同意”你的关闭请求；<br>3)	第三次分手：主机2向主机1发送FIN报文段，请求关闭连接，同时主机2进入LAST_ACK状态；<br>4)	第四次分手：主机1收到主机2发送的FIN报文段，向主机2发送ACK报文段，然后主机1进入TIME_WAIT状态；主机2收到主机1的ACK报文段以后，就关闭连接；此时，主机1等待2MSL后依然没有收到回复，则证明Server端已正常关闭，那好，主机1也可以关闭连接了。<br>5)	六大标志位<br>SYN，同步标志位；ACK确认标志位；PSH传送标志位；FIN结束标志位；RST重置标志位；URG紧急标志位；seq序号；ack确认号</p>
-<h2 id="TCP协议计时器"><a href="#TCP协议计时器" class="headerlink" title="TCP协议计时器"></a>TCP协议计时器</h2><ol>
-<li><pre><code>重传计时器
-</code></pre>
-在一个TCP连接中，TCP每发送一个报文段，就对此报文段设置一个超时重传计时器。若在收到了对此特定报文段的确认之前计时器截止期到，则重传此报文段，并将计时器复位。<ol start="2">
-<li><pre><code>持续计时器
-</code></pre>
-为了对付零窗口大小通知，TCP需要另一个计时器。假定接收TCP宣布了窗口大小为零。发送TCP就停止传送报文段，直到接收TCP发送确认并宣布一个非零的窗口大小。但这个确认可能会丢失。我们知道在TCP中，对确认是不需要发送确认的。若确认丢失了，接收TCP并不知道，而是会认为它已经完成任务了，并等待着发送TCP接着会发送更多的报文段。但发送TCP由于没有收到确认，就等待对方发送确认来通知窗口的大小。双方的TCP都在永远地等待着对方。要打开这种死锁，TCP为每一个连接使用一个坚持计时器。当发送TCP收到一个窗口大小为零的确认时，就启动坚持计时器。当坚持计时器期限到时，发送TCP就发送一个特殊的报文段， 叫做 探测报文段 。这个报文段只有一个字节的数据。它有一个序号，但它的序号永远不需要确认；甚至在计算对其他部分的数据的确认时该序号也被忽略。探测报文段提醒对端：确认已丢失，必须重传。 <ol start="3">
-<li><pre><code>保活计时器
-</code></pre>
-保活计时器使用在某些实现中，用来防止在两个TCP之间的连接出现长时期的空闲。假定客户打开了到服务器的连接，传送了一些数据，然后就保持静默了。也许这个客户出故障了。在这种情况下，这个连接将永远地处理打开状态。 <ol start="4">
-<li><pre><code>时间等待计时器
-</code></pre>
-时间等待计时器是在连接终止期间使用的。当TCP关闭一个连接时，它并不认为这个连接马上就真正地关闭了。在时间等待期间中，连接还处于一种中间过渡状态。这就可以使重复的FIN报文段（如果有的话）可以到达目的站因而可将其丢弃。这个计时器的值通常设置为一个报文段的寿命期待值的两倍。</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="TCP可靠传输"><a href="#TCP可靠传输" class="headerlink" title="TCP可靠传输"></a>TCP可靠传输</h2><p><strong>如何保证TCP的可靠传输?</strong><br><strong>1.	序号</strong><br>TCP首部的序号字段用来保证数据能有序提交给应用层，TCP把数据看成无结构的有序的字节流。数据流中的每一个字节都编上一个序号字段的值是指本报文段所发送的数据的第一个字节序号。<br><strong>2.	确认</strong><br>TCP首部的确认号是期望收到对方的下一个报文段的数据的第一个字节的序号；<br><strong>3.	重传</strong><br>超时重传<br>冗余ACK重传<br><strong>4.	流量控制</strong><br>TCP采用大小可变的滑动窗口进行流量控制，窗口大小的单位是字节。<br>发送窗口在连接建立时由双方商定。但在通信的过程中，接收端可根据自己的资源情况，随时动态地调整对方的发送窗口上限值(可增大或减小)。<br><strong>窗口</strong><br>    接受窗口rwnd，接收端缓冲区大小。接收端将此窗口值放在 TCP 报文的首部中的窗口字段，传送给发送端。<br>    拥塞窗口cwnd，发送缓冲区大小。<br>    发送窗口swnd, 发送窗口的上限值 &#x3D; Min [rwnd, cwnd]</p>
-<p><strong>5.	拥塞控制</strong><br><strong>6.	流量控制与拥塞控制的区别</strong><br>所谓拥塞控制就是防止过多的数据注入到网络中，这样可以使网络中的路由器或链路不致过载。拥塞控制所要做的都有一个前提，就是网络能承受现有的网络负荷。流量控制往往指的是点对点通信量的控制，是个端到端的问题。流量控制所要做的就是控制发送端发送数据的速率，以便使接收端来得及接受。</p>
-<h2 id="TCP滑动窗口"><a href="#TCP滑动窗口" class="headerlink" title="TCP滑动窗口"></a>TCP滑动窗口</h2><p><img src="/images/TCPslice_window.png" alt="TCP滑动窗口"><br>窗口是缓存的一部分，用来暂时存放字节流。发送方和接收方各有一个窗口，接收方通过 TCP 报文段中的窗口字段告诉发送方自己的窗口大小，发送方根据这个值和其它信息设置自己的窗口大小。</p>
-<p>发送窗口内的字节都允许被发送，接收窗口内的字节都允许被接收。如果发送窗口左部的字节已经发送并且收到了确认，那么就将发送窗口向右滑动一定距离，直到左部第一个字节不是已发送并且已确认的状态；接收窗口的滑动类似，接收窗口左部字节已经发送确认并交付主机，就向右滑动接收窗口。</p>
-<p>接收窗口只会对窗口内最后一个按序到达的字节进行确认，例如接收窗口已经收到的字节为 {31, 34, 35}，其中 {31} 按序到达，而 {34, 35} 就不是，因此只对字节 31 进行确认。发送方得到一个字节的确认之后，就知道这个字节之前的所有字节都已经被接收。</p>
-<h2 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h2><ol>
-<li><pre><code>如果发送方把数据发送得过快，接收方可能会来不及接收，这就会造成数据的丢失。TCP的流量控制是利用滑动窗口机制实现的，接收方在返回的ACK中会包含自己的接收窗口的大小，以控制发送方的数据发送。
-</code></pre>
-<ol start="2">
-<li><pre><code>当某个ACK报文丢失了，就会出现A等待B确认，并且B等待A发送数据的死锁状态。为了解决这种问题，TCP引入了持续计时器（Persistence timer），当A收到rwnd=0时，就启用该计时器，时间到了则发送一个1字节的探测报文，询问B是很忙还是上个ACK丢失了，然后B回应自身的接收窗口大小，返回仍为0（A重设持续计时器继续等待）或者会重发rwnd=x。
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p>如果网络出现拥塞，分组将会丢失，此时发送方会继续重传，从而导致网络拥塞程度更高。因此当出现拥塞时，应当控制发送方的速率。这一点和流量控制很像，但是出发点不同。流量控制是为了让接收方能来得及接收，而拥塞控制是为了降低整个网络的拥塞程度。<br><img src="/images/TCPcontrol1.png" alt="TCP拥塞控制"><br>TCP 主要通过四个算法来进行拥塞控制：慢开始、拥塞避免、快重传、快恢复。</p>
-<p>发送方需要维护一个叫做拥塞窗口（cwnd）的状态变量，注意拥塞窗口与发送方窗口的区别：拥塞窗口只是一个状态变量，实际决定发送方能发送多少数据的是发送方窗口。</p>
-<p>为了便于讨论，做如下假设：</p>
-<p>接收方有足够大的接收缓存，因此不会发生流量控制；<br>虽然 TCP 的窗口基于字节，但是这里设窗口的大小单位为报文段。<br><strong>1.	慢开始</strong><br>发送方维持一个叫做拥塞窗口cwnd（congestion window）的状态变量。拥塞窗口的大小取决于网络的拥塞程度，并且动态地在变化。发送方让自己的发送窗口等于拥塞窗口，另外考虑到接受方的接收能力，发送窗口可能小于拥塞窗口。慢开始算法的思路就是，不要一开始就发送大量的数据，先探测一下网络的拥塞程度，也就是说由小到大逐渐增加拥塞窗口的大小。<br>当然收到单个确认但此确认多个数据报的时候就加相应的数值。所以一次传输轮次之后拥塞窗口就加倍。这就是乘法增长，和后面的拥塞避免算法的加法增长比较。<br>为了防止cwnd增长过大引起网络拥塞，还需设置一个慢开始门限ssthresh状态变量。ssthresh的用法如下：<br>当cwnd&lt;ssthresh时，使用慢开始算法。<br>当cwnd&gt;ssthresh时，改用拥塞避免算法。<br>当cwnd&#x3D;ssthresh时，慢开始与拥塞避免算法任意。<br>拥塞避免算法让拥塞窗口缓慢增长，即每经过一个往返时间RTT就把发送方的拥塞窗口cwnd加1，而不是加倍。这样拥塞窗口按线性规律缓慢增长。<br>无论是在慢开始阶段还是在拥塞避免阶段，只要发送方判断网络出现拥塞（其根据就是没有收到确认，虽然没有收到确认可能是其他原因的分组丢失，但是因为无法判定，所以都当做拥塞来处理），就把慢开始门限设置为出现拥塞时的发送窗口大小的一半。然后把拥塞窗口设置为1，执行慢开始算法。如下图：<br><img src="/images/TCPcontrol2.png" alt="TCP慢开始"><br><strong>2.	快重传和快恢复</strong><br>快重传要求接收方在收到一个失序的报文段后就立即发出重复确认（为的是使发送方及早知道有报文段没有到达对方）而不要等到自己发送数据时捎带确认。快重传算法规定，发送方只要一连收到三个重复确认就应当立即重传对方尚未收到的报文段，而不必继续等待设置的重传计时器时间到期。<br>快重传配合使用的还有快恢复算法，有以下两个要点:<br>①当发送方连续收到三个重复确认时，就执行“乘法减小”算法，把ssthresh门限减半。但是接下去并不执行慢开始算法。<br>②考虑到如果网络出现拥塞的话就不会收到好几个重复的确认，所以发送方现在认为网络可能没有出现拥塞。所以此时不执行慢开始算法，而是将cwnd设置为ssthresh的大小，然后执行拥塞避免算法。如下图：</p>
-<p><img src="/images/TCPcontrol3.png" alt="TCP快重传"></p>
-<h2 id="time-wait与close-wait"><a href="#time-wait与close-wait" class="headerlink" title="time_wait与close_wait"></a>time_wait与close_wait</h2><h3 id="time-wait"><a href="#time-wait" class="headerlink" title="time_wait"></a>time_wait</h3><p><strong>1.time_wait与close_wait，time_wait状态持续多长时间？为什么会有time_wait状态？</strong><br>1)	time_wait另一边已经初始化一个释放，close_wait连接一端被动关闭；<br>2)	首先调用close()发起主动关闭的一方，在发送最后一个ACK之后会进入time_wait的状态，也就说该发送方会保持2MSL时间之后才会回到初始状态。MSL指的是数据包在网络中的最大生存时间。产生这种结果使得这个TCP连接在2MSL连接等待期间，定义这个连接的四元组（客户端IP地址和端口，服务端IP地址和端口号）不能被使用。<br>3)	为什么存在time_wait</p>
-<pre><code>(1) 为实现TCP全双工连接的可靠释放
-TCP协议在关闭连接的四次握手过程中，最终的ACK是由主动关闭连接的一端（后面统称A端）发出的，如果这个ACK丢失，对方（后面统称B端）将重发出最终的FIN，因此A端必须维护状态信息（TIME_WAIT）允许它重发最终的ACK。如果A端不维持TIME_WAIT状态，而是处于CLOSED 状态，那么A端将响应RST分节，B端收到后将此分节解释成一个错误。因而，要实现TCP全双工连接的正常终止，必须处理终止过程中四个分节任何一个分节的丢失情况，主动关闭连接的A端必须维持TIME_WAIT状态。
-由TCP状态变迁图可知，假设发起主动关闭的一方（client）最后发送的ACK在网络中丢失，由于TCP协议的重传机制，执行被动关闭的一方（server）将会重发其FIN，在该FIN到达client之前，client必须维护这条连接状态，也就说这条TCP连接所对应的资源（client方的local_ip,local_port）不能被立即释放或重新分配，直到另一方重发的FIN达到之后，client重发ACK后，经过2MSL时间周期没有再收到另一方的FIN之后，该TCP连接才能恢复初始的CLOSED状态。如果主动关闭一方不维护这样一个TIME_WAIT状态，那么当被动关闭一方重发的FIN到达时，主动关闭一方的TCP传输层会用RST包响应对方，这会被对方认为是有错误发生，然而这事实上只是正常的关闭连接过程，并非异常。
-
-(2) 为使旧的数据包在网络因过期而消失
-TCP segment 可能由于路由器异常而“迷途”，在迷途期间，TCP发送端可能因确认超时而重发这个segment，迷途的segment在路由器修复后也会被送到最终目的地，这个迟到的迷途segment到达时可能会引起问题。在关闭“前一个连接”之后，马上又重新建立起一个相同的IP和端口之间的“新连接”，“前一个连接”的迷途重复分组在“前一个连接”终止后到达，而被“新连接”收到了。为了避免这个情况，TCP协议不允许处于TIME_WAIT状态的连接启动一个新的可用连接，因为TIME_WAIT状态持续2MSL，就可以保证当成功建立一个新TCP连接的时候，来自旧连接重复分组已经在网络中消逝。
-为说明这个问题，我们先假设TCP协议中不存在TIME_WAIT状态的限制，再假设当前有一条TCP连接：(local_ip, local_port, remote_ip,remote_port)，因某些原因，我们先关闭，接着很快以相同的四元组建立一条新连接。本文前面介绍过，TCP连接由四元组唯一标识，因此，在我们假设的情况中，TCP协议栈是无法区分前后两条TCP连接的不同的，在它看来，这根本就是同一条连接，中间先释放再建立的过程对其来说是“感知”不到的。这样就可能发生这样的情况：前一条TCP连接由local peer发送的数据到达remote peer后，会被该remot peer的TCP传输层当做当前TCP连接的正常数据接收并向上传递至应用层（而事实上，在我们假设的场景下，这些旧数据到达remote peer前，旧连接已断开且一条由相同四元组构成的新TCP连接已建立，因此，这些旧数据是不应该被向上传递至应用层的），从而引起数据错乱进而导致各种无法预知的诡异现象。作为一种可靠的传输协议，TCP必须在协议层面考虑并避免这种情况的发生，这正是TIME_WAIT状态存在的第2个原因。
-</code></pre>
-<ol start="4">
-<li><pre><code>如果time_wait维持的时间过长，主动关闭连接端迟迟无法关闭连接，占用程序资源。
-</code></pre>
-<ol start="5">
-<li><pre><code>如果服务器程序TCP连接一直保持在CLOSE_WAIT状态，那么只有一种情况，就是在对方关闭连接之后服务器程序自己没有进一步发出ack信号。换句话说，就是在对方连接关闭之后，程序里没有检测到，或者程序压根就忘记了这个时候需要关闭连接，于是这个资源就一直被程序占着。
-</code></pre>
-<ol start="6">
-<li><pre><code>time_wait状态如何避免
-</code></pre>
-首先服务器可以设置SO_REUSEADDR套接字选项来通知内核，如果端口忙，但TCP连接位于TIME_WAIT状态时可以重用端口。在一个非常有用的场景就是，如果你的服务器程序停止后想立即重启，而新的套接字依旧希望使用同一端口，此时SO_REUSEADDR选项就可以避免TIME_WAIT状态。</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>Time_wait为什么是2MSL的时间长度<br>TIME_WAIT的状态是为了等待连接上所有的分组的消失。单纯的想法，发送端只需要等待一个MSL就足够了。这是不够的，假设现在一个MSL的时候，接收端需要发送一个应答，这时候，我们也必须等待这个应答的消失，这个应答的消失也是需要一个MSL，所以我们需要等待2MSL。</li>
-</ol>
-<h3 id="close-wait"><a href="#close-wait" class="headerlink" title="close_wait"></a>close_wait</h3><ol>
-<li><pre><code>产生原因
-</code></pre>
-在被动关闭连接情况下，在已经接收到FIN，但是还没有发送自己的FIN的时刻，连接处于CLOSE_WAIT状态。通常来讲，CLOSE_WAIT状态的持续时间应该很短，正如SYN_RCVD状态。但是在一些特殊情况下，就会出现连接长时间处于CLOSE_WAIT状态的情况。出现大量close_wait的现象，主要原因是某种情况下对方关闭了socket链接，但是我方忙与读或者写，没有关闭连接。代码需要判断socket，一旦读到0，断开连接，read返回负，检查一下errno，如果不是AGAIN，就断开连接。对方关闭连接之后服务器程序自己没有进一步发出ack信号。换句话说，就是在对方连接关闭之后，程序里没有检测到，或者程序压根就忘记了这个时候需要关闭连接，于是这个资源就一直被程序占着。<ol start="2">
-<li><pre><code>解决方法
-</code></pre>
-要检测出对方已经关闭的socket，然后关闭它。</li>
-</ol>
-</li>
-</ol>
-<h2 id="socket编程"><a href="#socket编程" class="headerlink" title="socket编程"></a>socket编程</h2><p><strong>TCP过程：</strong><br>客户端：<br>　　1、创建socket<br>　　2、绑定ip、端口号到socket字<br>　　3、连接服务器，connect()<br>　　4、收发数据，send()、recv()<br>　　5、关闭连接<br>服务器端：<br>　　1、创建socket字<br>　　2、设置socket属性<br>　　3、绑定ip与端口号<br>　　4、开启监听，listen()<br>　　5、接受发送端的连接accept()<br>　　6、收发数据send()、recv()<br>　　7、关闭网络连接<br>　　8、关闭监听</p>
-<p>对应关系：<br>客户端的connect()指向服务器端的accept()<br>客户端、服务器端的send()&#x2F;recv()是双向箭头的关系。</p>
-<p><strong>UDP过程：</strong></p>
-<p>客户端：<br>　　1、创建一个socket，用函数socket()；<br>　　2、设置socket属性，用函数setsockopt();* 可选<br>　　3、绑定IP地址、端口等信息到socket上，用函数bind();* 可选<br>　　4、设置对方的IP地址和端口等属性;<br>　　5、发送数据，用函数sendto();<br>　　6、关闭网络连接；<br>服务器端：<br>　　1、创建一个socket，用函数socket()；<br>　　2、设置socket属性，用函数setsockopt();* 可选<br>　　3、绑定IP地址、端口等信息到socket上，用函数bind();<br>　　4、循环接收数据，用函数recvfrom();<br>　　5、关闭网络连接； </p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.cnblogs.com/Anker/p/6210840.html">1.TCP与UDP在socket编程中的区别</a><br><a href="https://leetcode-cn.com/leetbook/read/tech-interview-cookbook/oeo4q5/">2.校招基础知识详解-计算机网络传输层协议</a></p>
-]]></content>
+<p>方法二：<br>下载相应Python版本的OpenCV的whl文件<br><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv">https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv</a><br>然后打开cmd，在whl文件对应文件夹路径下，使用pip安装，如<br><img src="https://img-blog.csdnimg.cn/20201219141255475.png"></p>
+<h2 id="至此我需要的环境已经配置完成。"><a href="#至此我需要的环境已经配置完成。" class="headerlink" title="至此我需要的环境已经配置完成。"></a>至此我需要的环境已经配置完成。</h2>]]></content>
       <categories>
-        <category>计算机网络</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>计算机网络</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -321,79 +273,127 @@ TCP segment 可能由于路由器异常而“迷途”，在迷途期间，TCP�
       </tags>
   </entry>
   <entry>
-    <title>003. go入门，学习用goroutine开启并发</title>
-    <url>/2022/03/02/003-goroutine/</url>
-    <content><![CDATA[<p><strong>为了学习go语言，和了解并行的基本写法，这里通过一个demo练习</strong><br>由于已经有了c++和python的基础，所以了解基本语法很快，主要是学习go面向消息的传递机制，以及使用goroutine进行并发操作。<br>参考资料：<br><a href="https://www.runoob.com/go/go-concurrent.html">Go 语言教程-Go并发</a></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>hello.go</p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*一个go的并行计算demo,学习go的基本语法，并计算两个数组元素值为1的数目*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//包声明：必须在源文件中非注释的第一行指明这个文件属于哪个包</span></span><br><span class="line"><span class="comment">//每个Go程序都包含一个名为main的包</span></span><br><span class="line"><span class="keyword">package</span> main </span><br><span class="line"></span><br><span class="line"><span class="comment">//import告诉Go编译器使用&quot;fmt&quot;包里的元素</span></span><br><span class="line"><span class="comment">//fmt包实现了格式化IO函数</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">函数声明方式</span></span><br><span class="line"><span class="comment">func function_name([parameter list])[return_types]&#123;</span></span><br><span class="line"><span class="comment">    函数体</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sum</span><span class="params">(arr []<span class="type">int</span>, c <span class="keyword">chan</span> <span class="type">int</span>)</span></span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    变量声明的两种方式：</span></span><br><span class="line"><span class="comment">    1.var v_name v_type = value</span></span><br><span class="line"><span class="comment">    2.v_name := value 根据值自行判定变量类型</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    注：标识符首字母大写，如Group 1，则可被外部包调用，称为导出。以小写字母开头则只能内部可见。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    sum := <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    循环定义方式 </span></span><br><span class="line"><span class="comment">    1.for init; condition； post&#123;&#125;</span></span><br><span class="line"><span class="comment">    2.for condition&#123;&#125;</span></span><br><span class="line"><span class="comment">    3.for key, value := range iter&#123;&#125;  用range对slice、map、数组等迭代循环</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _, value := <span class="keyword">range</span> arr &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        条件语句</span></span><br><span class="line"><span class="comment">        if 布尔表达式&#123;</span></span><br><span class="line"><span class="comment">            //语句</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">if</span> value == <span class="number">1</span>&#123;</span><br><span class="line">            <span class="comment">//运算符同c++，包括++，--</span></span><br><span class="line">            sum++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//值保存到通道（channel）方便并行</span></span><br><span class="line">    c &lt;- sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//main函数是程序开始执行的函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">( )</span></span>&#123;</span><br><span class="line">    <span class="comment">//字符串输出到控制台，并结尾增加换行符&#x27;\n&#x27;</span></span><br><span class="line">    fmt.Println(<span class="string">&quot;hello world!&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建数组方式一: var variable_name = [SIZE] variable_type&#123;,,,...&#125;</span></span><br><span class="line">    <span class="keyword">var</span> arr_a =[]<span class="type">int</span>  &#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">5</span>&#125;</span><br><span class="line">    <span class="comment">// 创建数组方式二: variable_name := [SIZE] variable_type&#123;,,,...&#125;</span></span><br><span class="line">    arr_b := []<span class="type">int</span> &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="type">int</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    函数调用方式: func([parameter_list])</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    goroutine: 轻量级线程，支持并发</span></span><br><span class="line"><span class="comment">    如果用goroutine调度，则前加go关键字，如go f(x,y,z)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">go</span> sum(arr_a, ch)</span><br><span class="line">    <span class="keyword">go</span> sum(arr_b, ch)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    通道（channel）可用于两个goroutine之间通过传递一个指定的值来同步运行和通讯。</span></span><br><span class="line"><span class="comment">    操作符&lt;-用于指定通道的方向，发送或接收。如：</span></span><br><span class="line"><span class="comment">    ch &lt;- v //把v发送到通道ch</span></span><br><span class="line"><span class="comment">    v := &lt;- ch //从ch接收数据，并把值赋给v</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    result_a, result_b := &lt;- ch, &lt;- ch</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//输出计算结果</span></span><br><span class="line">    fmt.Println(<span class="string">&quot;results&quot;</span>, result_a, result_b, result_a + result_b)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>005. UDP/TCP协议详解</title>
+    <url>/2022/03/16/005-TCP-IP/</url>
+    <content><![CDATA[<p>面试中频繁问到UDP&#x2F;TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。</p>
+<span id="more"></span>
 
-<h3 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h3><p><img src="/images/helloworld.png" alt="输出结果"></p>
+<h2 id="UDP和TCP的特点"><a href="#UDP和TCP的特点" class="headerlink" title="UDP和TCP的特点"></a>UDP和TCP的特点</h2><p><strong>1.	TCP与UDP的区别？应用场景都有哪些？</strong><br>1)	TCP面向连接（如打电话要先拨号建立连接）;UDP是无连接的，即发送数据之前不需要建立连接<br>2)	TCP提供可靠的服务。也就是说，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达;UDP尽最大努力交付，即不保证可靠交付Tcp通过校验和，重传控制，序号标识，滑动窗口、确认应答实现可靠传输。如丢包时的重发控制，还可以对次序乱掉的分包进行顺序控制。<br>3)	UDP具有较好的实时性，工作效率比TCP高，适用于对高速传输和实时性有较高的通信或广播通信。<br>4)	每一条TCP连接只能是点到点的;UDP支持一对一，一对多，多对一和多对多的交互通信<br>5)	TCP对系统资源要求较多，UDP对系统资源要求较少。<br>6)	若通信数据完整性需让位与通信实时性，则应该选用 TCP 协议（如文件传输、重要状态的更新等）；反之，则使用 UDP 协议（如视频传输、实时通信等）。<br>7)	UDP:DNS   SNMP<br>8)	TCP面向字节流，UTP面向数据包；</p>
+<p><strong>2.	为什么UDP有时比TCP更有优势?</strong><br>1)	网速的提升给UDP的稳定性提供可靠网络保障，丢包率很低，如果使用应用层重传，能够确保传输的可靠性。<br>2)	TCP为了实现网络通信的可靠性，使用了复杂的拥塞控制算法，建立了繁琐的握手过程，由于TCP内置的系统协议栈中，极难对其进行改进。<br>3)	采用TCP，一旦发生丢包，TCP会将后续的包缓存起来，等前面的包重传并接收到后再继续发送，延时会越来越大，基于UDP对实时性要求较为严格的情况下，采用自定义重传机制，能够把丢包产生的延迟降到最低，尽量减少网络问题对游戏性造成影响。 </p>
+<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><p><img src="/images/UDPhead.png" alt="UDP首部格式"><br>首部字段只有 8 个字节，包括源端口、目的端口、长度、检验和。12 字节的伪首部是为了计算检验和临时添加的。</p>
+<h2 id="TCP首部格式"><a href="#TCP首部格式" class="headerlink" title="TCP首部格式"></a>TCP首部格式</h2><p><img src="/images/TCPhead.png" alt="TCP首部格式"><br><strong>序号</strong> ：用于对字节流进行编号，例如序号为 301，表示第一个字节的编号为 301，如果携带的数据长度为 100 字节，那么下一个报文段的序号应为 401。</p>
+<p><strong>确认号</strong> ：期望收到的下一个报文段的序号。例如 B 正确收到 A 发送来的一个报文段，序号为 501，携带的数据长度为 200 字节，因此 B 期望下一个报文段的序号为 701，B 发送给 A 的确认报文段中确认号就为 701。</p>
+<p><strong>数据偏移</strong> ：指的是数据部分距离报文段起始处的偏移量，实际上指的是首部的长度。</p>
+<p><strong>确认 ACK</strong> ：当 ACK&#x3D;1 时确认号字段有效，否则无效。TCP 规定，在连接建立后所有传送的报文段都必须把 ACK 置 1。</p>
+<p><strong>同步 SYN</strong> ：在连接建立时用来同步序号。当 SYN&#x3D;1，ACK&#x3D;0 时表示这是一个连接请求报文段。若对方同意建立连接，则响应报文中 SYN&#x3D;1，ACK&#x3D;1。</p>
+<p><strong>终止 FIN</strong> ：用来释放一个连接，当 FIN&#x3D;1 时，表示此报文段的发送方的数据已发送完毕，并要求释放连接。</p>
+<p><strong>窗口</strong> ：窗口值作为接收方让发送方设置其发送窗口的依据。之所以要有这个限制，是因为接收方的数据缓存空间是有限的。</p>
+<h2 id="TCP的三次握手和四次挥手"><a href="#TCP的三次握手和四次挥手" class="headerlink" title="TCP的三次握手和四次挥手"></a>TCP的三次握手和四次挥手</h2><p><strong>1.三次握手</strong><br>1)	第一次握手：建立连接。客户端发送连接请求报文段，将SYN位置为1，Sequence Number为x；然后，客户端进入SYN_SEND状态，等待服务器的确认；<br>2)	第二次握手：服务器收到SYN报文段。服务器收到客户端的SYN报文段，需要对这个SYN报文段进行确认，设置Acknowledgment Number为x+1(Sequence Number+1)；同时，自己自己还要发送SYN请求信息，将SYN位置为1，Sequence Number为y；服务器端将上述所有信息放到一个报文段（即SYN+ACK报文段）中，一并发送给客户端，此时服务器进入SYN_RECV状态；<br>3)	第三次握手：客户端收到服务器的SYN+ACK报文段。然后将Acknowledgment Number设置为y+1，向服务器发送ACK报文段，这个报文段发送完毕以后，客户端和服务器端都进入ESTABLISHED状态，完成TCP三次握手。</p>
+<p><img src="https://pic.imgdb.cn/item/6239213727f86abb2aef1b3b.jpg" alt="TCP的三次握手和四次挥手"></p>
+<p><strong>2.四次挥手</strong><br>当客户端和服务器通过三次握手建立了TCP连接以后，当数据传送完毕，肯定是要断开TCP连接的啊。那对于TCP的断开连接，这里就有了神秘的“四次分手”。<br>1)	第一次分手：主机1（可以使客户端，也可以是服务器端），设置Sequence Number和Acknowledgment Number，向主机2发送一个FIN报文段；此时，主机1进入FIN_WAIT_1状态；这表示主机1没有数据要发送给主机2了；<br>2)	第二次分手：主机2收到了主机1发送的FIN报文段，向主机1回一个ACK报文段，Acknowledgment Number为Sequence Number加1；主机1进入FIN_WAIT_2状态；主机2告诉主机1，我“同意”你的关闭请求；<br>3)	第三次分手：主机2向主机1发送FIN报文段，请求关闭连接，同时主机2进入LAST_ACK状态；<br>4)	第四次分手：主机1收到主机2发送的FIN报文段，向主机2发送ACK报文段，然后主机1进入TIME_WAIT状态；主机2收到主机1的ACK报文段以后，就关闭连接；此时，主机1等待2MSL后依然没有收到回复，则证明Server端已正常关闭，那好，主机1也可以关闭连接了。<br>5)	六大标志位<br>SYN，同步标志位；ACK确认标志位；PSH传送标志位；FIN结束标志位；RST重置标志位；URG紧急标志位；seq序号；ack确认号</p>
+<h2 id="TCP协议计时器"><a href="#TCP协议计时器" class="headerlink" title="TCP协议计时器"></a>TCP协议计时器</h2><ol>
+<li><pre><code>重传计时器
+</code></pre>
+在一个TCP连接中，TCP每发送一个报文段，就对此报文段设置一个超时重传计时器。若在收到了对此特定报文段的确认之前计时器截止期到，则重传此报文段，并将计时器复位。<ol start="2">
+<li><pre><code>持续计时器
+</code></pre>
+为了对付零窗口大小通知，TCP需要另一个计时器。假定接收TCP宣布了窗口大小为零。发送TCP就停止传送报文段，直到接收TCP发送确认并宣布一个非零的窗口大小。但这个确认可能会丢失。我们知道在TCP中，对确认是不需要发送确认的。若确认丢失了，接收TCP并不知道，而是会认为它已经完成任务了，并等待着发送TCP接着会发送更多的报文段。但发送TCP由于没有收到确认，就等待对方发送确认来通知窗口的大小。双方的TCP都在永远地等待着对方。要打开这种死锁，TCP为每一个连接使用一个坚持计时器。当发送TCP收到一个窗口大小为零的确认时，就启动坚持计时器。当坚持计时器期限到时，发送TCP就发送一个特殊的报文段， 叫做 探测报文段 。这个报文段只有一个字节的数据。它有一个序号，但它的序号永远不需要确认；甚至在计算对其他部分的数据的确认时该序号也被忽略。探测报文段提醒对端：确认已丢失，必须重传。 <ol start="3">
+<li><pre><code>保活计时器
+</code></pre>
+保活计时器使用在某些实现中，用来防止在两个TCP之间的连接出现长时期的空闲。假定客户打开了到服务器的连接，传送了一些数据，然后就保持静默了。也许这个客户出故障了。在这种情况下，这个连接将永远地处理打开状态。 <ol start="4">
+<li><pre><code>时间等待计时器
+</code></pre>
+时间等待计时器是在连接终止期间使用的。当TCP关闭一个连接时，它并不认为这个连接马上就真正地关闭了。在时间等待期间中，连接还处于一种中间过渡状态。这就可以使重复的FIN报文段（如果有的话）可以到达目的站因而可将其丢弃。这个计时器的值通常设置为一个报文段的寿命期待值的两倍。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="TCP可靠传输"><a href="#TCP可靠传输" class="headerlink" title="TCP可靠传输"></a>TCP可靠传输</h2><p><strong>如何保证TCP的可靠传输?</strong><br><strong>1.	序号</strong><br>TCP首部的序号字段用来保证数据能有序提交给应用层，TCP把数据看成无结构的有序的字节流。数据流中的每一个字节都编上一个序号字段的值是指本报文段所发送的数据的第一个字节序号。<br><strong>2.	确认</strong><br>TCP首部的确认号是期望收到对方的下一个报文段的数据的第一个字节的序号；<br><strong>3.	重传</strong><br>超时重传<br>冗余ACK重传<br><strong>4.	流量控制</strong><br>TCP采用大小可变的滑动窗口进行流量控制，窗口大小的单位是字节。<br>发送窗口在连接建立时由双方商定。但在通信的过程中，接收端可根据自己的资源情况，随时动态地调整对方的发送窗口上限值(可增大或减小)。<br><strong>窗口</strong><br>    接受窗口rwnd，接收端缓冲区大小。接收端将此窗口值放在 TCP 报文的首部中的窗口字段，传送给发送端。<br>    拥塞窗口cwnd，发送缓冲区大小。<br>    发送窗口swnd, 发送窗口的上限值 &#x3D; Min [rwnd, cwnd]</p>
+<p><strong>5.	拥塞控制</strong><br><strong>6.	流量控制与拥塞控制的区别</strong><br>所谓拥塞控制就是防止过多的数据注入到网络中，这样可以使网络中的路由器或链路不致过载。拥塞控制所要做的都有一个前提，就是网络能承受现有的网络负荷。流量控制往往指的是点对点通信量的控制，是个端到端的问题。流量控制所要做的就是控制发送端发送数据的速率，以便使接收端来得及接受。</p>
+<h2 id="TCP滑动窗口"><a href="#TCP滑动窗口" class="headerlink" title="TCP滑动窗口"></a>TCP滑动窗口</h2><p><img src="/images/TCPslice_window.png" alt="TCP滑动窗口"><br>窗口是缓存的一部分，用来暂时存放字节流。发送方和接收方各有一个窗口，接收方通过 TCP 报文段中的窗口字段告诉发送方自己的窗口大小，发送方根据这个值和其它信息设置自己的窗口大小。</p>
+<p>发送窗口内的字节都允许被发送，接收窗口内的字节都允许被接收。如果发送窗口左部的字节已经发送并且收到了确认，那么就将发送窗口向右滑动一定距离，直到左部第一个字节不是已发送并且已确认的状态；接收窗口的滑动类似，接收窗口左部字节已经发送确认并交付主机，就向右滑动接收窗口。</p>
+<p>接收窗口只会对窗口内最后一个按序到达的字节进行确认，例如接收窗口已经收到的字节为 {31, 34, 35}，其中 {31} 按序到达，而 {34, 35} 就不是，因此只对字节 31 进行确认。发送方得到一个字节的确认之后，就知道这个字节之前的所有字节都已经被接收。</p>
+<h2 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h2><ol>
+<li><pre><code>如果发送方把数据发送得过快，接收方可能会来不及接收，这就会造成数据的丢失。TCP的流量控制是利用滑动窗口机制实现的，接收方在返回的ACK中会包含自己的接收窗口的大小，以控制发送方的数据发送。
+</code></pre>
+<ol start="2">
+<li><pre><code>当某个ACK报文丢失了，就会出现A等待B确认，并且B等待A发送数据的死锁状态。为了解决这种问题，TCP引入了持续计时器（Persistence timer），当A收到rwnd=0时，就启用该计时器，时间到了则发送一个1字节的探测报文，询问B是很忙还是上个ACK丢失了，然后B回应自身的接收窗口大小，返回仍为0（A重设持续计时器继续等待）或者会重发rwnd=x。
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p>如果网络出现拥塞，分组将会丢失，此时发送方会继续重传，从而导致网络拥塞程度更高。因此当出现拥塞时，应当控制发送方的速率。这一点和流量控制很像，但是出发点不同。流量控制是为了让接收方能来得及接收，而拥塞控制是为了降低整个网络的拥塞程度。<br><img src="/images/TCPcontrol1.png" alt="TCP拥塞控制"><br>TCP 主要通过四个算法来进行拥塞控制：慢开始、拥塞避免、快重传、快恢复。</p>
+<p>发送方需要维护一个叫做拥塞窗口（cwnd）的状态变量，注意拥塞窗口与发送方窗口的区别：拥塞窗口只是一个状态变量，实际决定发送方能发送多少数据的是发送方窗口。</p>
+<p>为了便于讨论，做如下假设：</p>
+<p>接收方有足够大的接收缓存，因此不会发生流量控制；<br>虽然 TCP 的窗口基于字节，但是这里设窗口的大小单位为报文段。<br><strong>1.	慢开始</strong><br>发送方维持一个叫做拥塞窗口cwnd（congestion window）的状态变量。拥塞窗口的大小取决于网络的拥塞程度，并且动态地在变化。发送方让自己的发送窗口等于拥塞窗口，另外考虑到接受方的接收能力，发送窗口可能小于拥塞窗口。慢开始算法的思路就是，不要一开始就发送大量的数据，先探测一下网络的拥塞程度，也就是说由小到大逐渐增加拥塞窗口的大小。<br>当然收到单个确认但此确认多个数据报的时候就加相应的数值。所以一次传输轮次之后拥塞窗口就加倍。这就是乘法增长，和后面的拥塞避免算法的加法增长比较。<br>为了防止cwnd增长过大引起网络拥塞，还需设置一个慢开始门限ssthresh状态变量。ssthresh的用法如下：<br>当cwnd&lt;ssthresh时，使用慢开始算法。<br>当cwnd&gt;ssthresh时，改用拥塞避免算法。<br>当cwnd&#x3D;ssthresh时，慢开始与拥塞避免算法任意。<br>拥塞避免算法让拥塞窗口缓慢增长，即每经过一个往返时间RTT就把发送方的拥塞窗口cwnd加1，而不是加倍。这样拥塞窗口按线性规律缓慢增长。<br>无论是在慢开始阶段还是在拥塞避免阶段，只要发送方判断网络出现拥塞（其根据就是没有收到确认，虽然没有收到确认可能是其他原因的分组丢失，但是因为无法判定，所以都当做拥塞来处理），就把慢开始门限设置为出现拥塞时的发送窗口大小的一半。然后把拥塞窗口设置为1，执行慢开始算法。如下图：<br><img src="/images/TCPcontrol2.png" alt="TCP慢开始"><br><strong>2.	快重传和快恢复</strong><br>快重传要求接收方在收到一个失序的报文段后就立即发出重复确认（为的是使发送方及早知道有报文段没有到达对方）而不要等到自己发送数据时捎带确认。快重传算法规定，发送方只要一连收到三个重复确认就应当立即重传对方尚未收到的报文段，而不必继续等待设置的重传计时器时间到期。<br>快重传配合使用的还有快恢复算法，有以下两个要点:<br>①当发送方连续收到三个重复确认时，就执行“乘法减小”算法，把ssthresh门限减半。但是接下去并不执行慢开始算法。<br>②考虑到如果网络出现拥塞的话就不会收到好几个重复的确认，所以发送方现在认为网络可能没有出现拥塞。所以此时不执行慢开始算法，而是将cwnd设置为ssthresh的大小，然后执行拥塞避免算法。如下图：</p>
+<p><img src="/images/TCPcontrol3.png" alt="TCP快重传"></p>
+<h2 id="time-wait与close-wait"><a href="#time-wait与close-wait" class="headerlink" title="time_wait与close_wait"></a>time_wait与close_wait</h2><h3 id="time-wait"><a href="#time-wait" class="headerlink" title="time_wait"></a>time_wait</h3><p><strong>1.time_wait与close_wait，time_wait状态持续多长时间？为什么会有time_wait状态？</strong><br>1)	time_wait另一边已经初始化一个释放，close_wait连接一端被动关闭；<br>2)	首先调用close()发起主动关闭的一方，在发送最后一个ACK之后会进入time_wait的状态，也就说该发送方会保持2MSL时间之后才会回到初始状态。MSL指的是数据包在网络中的最大生存时间。产生这种结果使得这个TCP连接在2MSL连接等待期间，定义这个连接的四元组（客户端IP地址和端口，服务端IP地址和端口号）不能被使用。<br>3)	为什么存在time_wait</p>
+<pre><code>(1) 为实现TCP全双工连接的可靠释放
+TCP协议在关闭连接的四次握手过程中，最终的ACK是由主动关闭连接的一端（后面统称A端）发出的，如果这个ACK丢失，对方（后面统称B端）将重发出最终的FIN，因此A端必须维护状态信息（TIME_WAIT）允许它重发最终的ACK。如果A端不维持TIME_WAIT状态，而是处于CLOSED 状态，那么A端将响应RST分节，B端收到后将此分节解释成一个错误。因而，要实现TCP全双工连接的正常终止，必须处理终止过程中四个分节任何一个分节的丢失情况，主动关闭连接的A端必须维持TIME_WAIT状态。
+由TCP状态变迁图可知，假设发起主动关闭的一方（client）最后发送的ACK在网络中丢失，由于TCP协议的重传机制，执行被动关闭的一方（server）将会重发其FIN，在该FIN到达client之前，client必须维护这条连接状态，也就说这条TCP连接所对应的资源（client方的local_ip,local_port）不能被立即释放或重新分配，直到另一方重发的FIN达到之后，client重发ACK后，经过2MSL时间周期没有再收到另一方的FIN之后，该TCP连接才能恢复初始的CLOSED状态。如果主动关闭一方不维护这样一个TIME_WAIT状态，那么当被动关闭一方重发的FIN到达时，主动关闭一方的TCP传输层会用RST包响应对方，这会被对方认为是有错误发生，然而这事实上只是正常的关闭连接过程，并非异常。
+
+(2) 为使旧的数据包在网络因过期而消失
+TCP segment 可能由于路由器异常而“迷途”，在迷途期间，TCP发送端可能因确认超时而重发这个segment，迷途的segment在路由器修复后也会被送到最终目的地，这个迟到的迷途segment到达时可能会引起问题。在关闭“前一个连接”之后，马上又重新建立起一个相同的IP和端口之间的“新连接”，“前一个连接”的迷途重复分组在“前一个连接”终止后到达，而被“新连接”收到了。为了避免这个情况，TCP协议不允许处于TIME_WAIT状态的连接启动一个新的可用连接，因为TIME_WAIT状态持续2MSL，就可以保证当成功建立一个新TCP连接的时候，来自旧连接重复分组已经在网络中消逝。
+为说明这个问题，我们先假设TCP协议中不存在TIME_WAIT状态的限制，再假设当前有一条TCP连接：(local_ip, local_port, remote_ip,remote_port)，因某些原因，我们先关闭，接着很快以相同的四元组建立一条新连接。本文前面介绍过，TCP连接由四元组唯一标识，因此，在我们假设的情况中，TCP协议栈是无法区分前后两条TCP连接的不同的，在它看来，这根本就是同一条连接，中间先释放再建立的过程对其来说是“感知”不到的。这样就可能发生这样的情况：前一条TCP连接由local peer发送的数据到达remote peer后，会被该remot peer的TCP传输层当做当前TCP连接的正常数据接收并向上传递至应用层（而事实上，在我们假设的场景下，这些旧数据到达remote peer前，旧连接已断开且一条由相同四元组构成的新TCP连接已建立，因此，这些旧数据是不应该被向上传递至应用层的），从而引起数据错乱进而导致各种无法预知的诡异现象。作为一种可靠的传输协议，TCP必须在协议层面考虑并避免这种情况的发生，这正是TIME_WAIT状态存在的第2个原因。
+</code></pre>
+<ol start="4">
+<li><pre><code>如果time_wait维持的时间过长，主动关闭连接端迟迟无法关闭连接，占用程序资源。
+</code></pre>
+<ol start="5">
+<li><pre><code>如果服务器程序TCP连接一直保持在CLOSE_WAIT状态，那么只有一种情况，就是在对方关闭连接之后服务器程序自己没有进一步发出ack信号。换句话说，就是在对方连接关闭之后，程序里没有检测到，或者程序压根就忘记了这个时候需要关闭连接，于是这个资源就一直被程序占着。
+</code></pre>
+<ol start="6">
+<li><pre><code>time_wait状态如何避免
+</code></pre>
+首先服务器可以设置SO_REUSEADDR套接字选项来通知内核，如果端口忙，但TCP连接位于TIME_WAIT状态时可以重用端口。在一个非常有用的场景就是，如果你的服务器程序停止后想立即重启，而新的套接字依旧希望使用同一端口，此时SO_REUSEADDR选项就可以避免TIME_WAIT状态。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Time_wait为什么是2MSL的时间长度<br>TIME_WAIT的状态是为了等待连接上所有的分组的消失。单纯的想法，发送端只需要等待一个MSL就足够了。这是不够的，假设现在一个MSL的时候，接收端需要发送一个应答，这时候，我们也必须等待这个应答的消失，这个应答的消失也是需要一个MSL，所以我们需要等待2MSL。</li>
+</ol>
+<h3 id="close-wait"><a href="#close-wait" class="headerlink" title="close_wait"></a>close_wait</h3><ol>
+<li><pre><code>产生原因
+</code></pre>
+在被动关闭连接情况下，在已经接收到FIN，但是还没有发送自己的FIN的时刻，连接处于CLOSE_WAIT状态。通常来讲，CLOSE_WAIT状态的持续时间应该很短，正如SYN_RCVD状态。但是在一些特殊情况下，就会出现连接长时间处于CLOSE_WAIT状态的情况。出现大量close_wait的现象，主要原因是某种情况下对方关闭了socket链接，但是我方忙与读或者写，没有关闭连接。代码需要判断socket，一旦读到0，断开连接，read返回负，检查一下errno，如果不是AGAIN，就断开连接。对方关闭连接之后服务器程序自己没有进一步发出ack信号。换句话说，就是在对方连接关闭之后，程序里没有检测到，或者程序压根就忘记了这个时候需要关闭连接，于是这个资源就一直被程序占着。<ol start="2">
+<li><pre><code>解决方法
+</code></pre>
+要检测出对方已经关闭的socket，然后关闭它。</li>
+</ol>
+</li>
+</ol>
+<h2 id="socket编程"><a href="#socket编程" class="headerlink" title="socket编程"></a>socket编程</h2><p><strong>TCP过程：</strong><br>客户端：<br>　　1、创建socket<br>　　2、绑定ip、端口号到socket字<br>　　3、连接服务器，connect()<br>　　4、收发数据，send()、recv()<br>　　5、关闭连接<br>服务器端：<br>　　1、创建socket字<br>　　2、设置socket属性<br>　　3、绑定ip与端口号<br>　　4、开启监听，listen()<br>　　5、接受发送端的连接accept()<br>　　6、收发数据send()、recv()<br>　　7、关闭网络连接<br>　　8、关闭监听</p>
+<p>对应关系：<br>客户端的connect()指向服务器端的accept()<br>客户端、服务器端的send()&#x2F;recv()是双向箭头的关系。</p>
+<p><strong>UDP过程：</strong></p>
+<p>客户端：<br>　　1、创建一个socket，用函数socket()；<br>　　2、设置socket属性，用函数setsockopt();* 可选<br>　　3、绑定IP地址、端口等信息到socket上，用函数bind();* 可选<br>　　4、设置对方的IP地址和端口等属性;<br>　　5、发送数据，用函数sendto();<br>　　6、关闭网络连接；<br>服务器端：<br>　　1、创建一个socket，用函数socket()；<br>　　2、设置socket属性，用函数setsockopt();* 可选<br>　　3、绑定IP地址、端口等信息到socket上，用函数bind();<br>　　4、循环接收数据，用函数recvfrom();<br>　　5、关闭网络连接； </p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.cnblogs.com/Anker/p/6210840.html">1.TCP与UDP在socket编程中的区别</a><br><a href="https://leetcode-cn.com/leetbook/read/tech-interview-cookbook/oeo4q5/">2.校招基础知识详解-计算机网络传输层协议</a></p>
 ]]></content>
       <categories>
-        <category>go</category>
+        <category>计算机网络</category>
       </categories>
       <tags>
-        <tag>go</tag>
-        <tag>并发</tag>
+        <tag>计算机网络</tag>
       </tags>
   </entry>
   <entry>
-    <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
-    <url>/2022/02/24/002-config-pytorch/</url>
-    <content><![CDATA[<p>最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。<br>前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。</p>
+    <title>006-HTTP协议详解</title>
+    <url>/2022/05/30/006-HTTP-HTTPS/</url>
+    <content><![CDATA[<p><strong>超文本传输协议（Hyper Text Transfer Protocol，HTTP）</strong> 是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。</p>
+<p>HTTP协议是网络编程的基础知识，后端开发应当熟练掌握，但是相关内容较多，这里做一个总结方便回顾。</p>
 <span id="more"></span>
-<h1 id="1-安装python3-9"><a href="#1-安装python3-9" class="headerlink" title="1.安装python3.9"></a>1.安装python3.9</h1><p>首先是python的安装，选用当前时间最新版的python3.9.1<br>官网下载安装包即可<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br><img src="https://img-blog.csdnimg.cn/20201219134620158.png"></p>
-<p>一路“下一步”，建议安装到默认路径。</p>
-<p>然后，配置环境变量：<br>找到安装的位置，把图中所示的两个路径加入环境变量。<br>我的路径是：<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39\Scripts<br><img src="https://img-blog.csdnimg.cn/20201219134237283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>补充一点：<br>conda里python中的pytorch比较老，遇到没法调用的问题（这里没有深究），所以没有用anaconda，而是直接官网找最新的python。</p>
-<h1 id="2-安装cuda（需要vs环境，我的是vs2015）"><a href="#2-安装cuda（需要vs环境，我的是vs2015）" class="headerlink" title="2.安装cuda（需要vs环境，我的是vs2015）"></a>2.安装cuda（需要vs环境，我的是vs2015）</h1><p>CUDA（Compute Unified Device Architecture），是显卡厂商NVIDIA推出的运算平台。</p>
-<p>我当前的环境是vs2015，电脑配置是</p>
-<p><img src="https://img-blog.csdnimg.cn/20201219142426303.png"><br><img src="https://img-blog.csdnimg.cn/20201219142440290.png"><br>注意CUDA的版本不能超过GPU的版本。</p>
-<p>官网的CUDA安装路径如下：<br><a href="https://developer.nvidia.com/zh-cn/cuda-downloads">https://developer.nvidia.com/zh-cn/cuda-downloads</a><br><img src="https://img-blog.csdnimg.cn/20201219142239715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>圈出来的部分，前者是一个比较大的安装包，下载到本地安装，后者是很小的安装包，但是需要联网，我选的前者。<br><img src="https://img-blog.csdnimg.cn/20201219142349445.png"></p>
-<p>仍然选择当前最新的版本11.1，安装到默认路径下：<br>C:\Program Files\NVIDIA GPU Computing Toolkit</p>
-<h1 id="3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"><a href="#3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）" class="headerlink" title="3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"></a>3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）</h1><p>NVIDIA cuDNN是用于深度神经网络的GPU加速库。<br>老规矩，走官网。<br><a href="https://developer.nvidia.com/rdp/cudnn-archive">https://developer.nvidia.com/rdp/cudnn-archive</a><br><img src="https://img-blog.csdnimg.cn/20201219140906756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
-<p>这里的下载需要注册，有个技巧是复制链接，在迅雷打开可以直接下载。<br><img src="https://img-blog.csdnimg.cn/20201219135916291.png"></p>
-<p>下载好的压缩包解压之后，会发现三个文件夹。<br>分别把文件放到cuda路径对应的文件夹下。<br><img src="https://img-blog.csdnimg.cn/20201219135443329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
-<h1 id="4-安装pytorch"><a href="#4-安装pytorch" class="headerlink" title="4.安装pytorch"></a>4.安装pytorch</h1><p>它是一个基于Python的可续计算包，提供两个高级功能：1、具有强大的GPU加速的张量计算（如NumPy）。2、包含自动求导系统的深度神经网络。<br>官网：<br><a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br><img src="https://img-blog.csdnimg.cn/20201219140414305.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>可以通过pip安装，最下面的命令行在cmd中打开即可。<br>由于速度慢，所以直接从别人那里拷贝过来了。</p>
-<p>可以在python中通过下面的代码来检验，True表示pytorch的cuda配置成功<br><img src="https://img-blog.csdnimg.cn/20201219142901202.png"></p>
-<h1 id="5-安装opencv"><a href="#5-安装opencv" class="headerlink" title="5.安装opencv"></a>5.安装opencv</h1><p>方法一：<br>打开cmd，输入<code>pip install opencv-python</code>即可，但超级慢还可能断开连接。<br>此处建议清华镜像下载</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
 
-<p>方法二：<br>下载相应Python版本的OpenCV的whl文件<br><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv">https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv</a><br>然后打开cmd，在whl文件对应文件夹路径下，使用pip安装，如<br><img src="https://img-blog.csdnimg.cn/20201219141255475.png"></p>
-<h2 id="至此我需要的环境已经配置完成。"><a href="#至此我需要的环境已经配置完成。" class="headerlink" title="至此我需要的环境已经配置完成。"></a>至此我需要的环境已经配置完成。</h2>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>001. 如何连接实验室的服务器进行网络训练？</title>
-    <url>/2022/02/24/001-link-to-server/</url>
-    <content><![CDATA[<p>我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。</p>
-<p>实验室的师兄甩过来服务器的ip和用户名密码，说直接连就行。</p>
-<p>直接连？linux都不太会用的小白，咋连？</p>
-<p>首先确保连接到实验室的网络，我这边是用校园网或者挂校园网的VPN，然后有下面几种配置方法（方法应该很多，只是列出了我尝试过的这三种）：</p>
-<span id="more"></span>
-<h1 id="方法一：wsl（Windows-Subsystem-for-Linux）"><a href="#方法一：wsl（Windows-Subsystem-for-Linux）" class="headerlink" title="方法一：wsl（Windows Subsystem for Linux）"></a>方法一：wsl（Windows Subsystem for Linux）</h1><p>1.下载wsl2<br>参考<br><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">https://docs.microsoft.com/zh-cn/windows/wsl/install-win10</a></p>
-<p>2.下载windows终端windows terminal（非必须，也可直接用power shell）<br><a href="https://docs.microsoft.com/zh-cn/windows/terminal/get-started">https://docs.microsoft.com/zh-cn/windows/terminal/get-started</a></p>
-<p>3.使用ssh命令进行外部链接</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-&gt; ssh 用户@ip</span><br><span class="line">-&gt; 密码</span><br></pre></td></tr></table></figure>
-
-<h1 id="方法二：vscode"><a href="#方法二：vscode" class="headerlink" title="方法二：vscode"></a>方法二：vscode</h1><p>1.vscode下载remote-ssh和remote wsl<br><img src="https://img-blog.csdnimg.cn/20210519110928571.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
-<p>2.连接服务器</p>
-<p>选择左下角的标志<br><img src="https://img-blog.csdnimg.cn/20210519111221622.png"><br>会弹出一个菜单栏，选择Connect to Host…，输入用户名和密码即可<br><img src="https://img-blog.csdnimg.cn/20210519111159132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
-<h1 id="方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版"><a href="#方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版" class="headerlink" title="方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版"></a>方法三（推荐）：使用终端模拟器XShell和XFtp，学校和家庭有免费版</h1><p><a href="https://www.netsarang.com/zh/free-for-home-school/">https://www.netsarang.com/zh/free-for-home-school/</a><br><img src="https://img-blog.csdnimg.cn/2021051911143257.png"></p>
-<p>XShell用来输入指令</p>
-<p>XFtp方便文件管理和传输</p>
-<p>当连接完成之后，就可以把使用GPU的网络训练代码放在服务器上跑了。。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://baike.baidu.com/item/HTTP/243074?fr=aladdin">1.百度百科-HTTP</a></p>
+<p><a href="https://leetcode.cn/leetbook/read/tech-interview-cookbook/o9ga26/">2.校招基础知识详解-HTTP</a></p>
 ]]></content>
       <categories>
-        <category>搭建环境</category>
+        <category>计算机网络</category>
       </categories>
       <tags>
-        <tag>服务器</tag>
-        <tag>linux</tag>
+        <tag>计算机网络</tag>
       </tags>
   </entry>
 </search>

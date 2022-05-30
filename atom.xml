@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-05-30T02:59:55.806Z</updated>
+  <updated>2022-05-30T03:28:04.804Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>006-HTTP协议详解（https\http 1.X\http 2.0, cookie\session）</title>
+    <title>006-HTTP协议详解</title>
     <link href="http://example.com/2022/05/30/006-HTTP-HTTPS/"/>
     <id>http://example.com/2022/05/30/006-HTTP-HTTPS/</id>
     <published>2022-05-30T02:46:33.000Z</published>
-    <updated>2022-05-30T02:59:55.806Z</updated>
+    <updated>2022-05-30T03:28:04.804Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;超文本传输协议（Hyper Text Transfer Protocol，HTTP）&lt;/strong&gt; 是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。&lt;/p&gt;
