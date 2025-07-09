@@ -55,6 +55,52 @@
       </tags>
   </entry>
   <entry>
+    <title>模板+AI助手：网站开发的新范式</title>
+    <url>/2025/07/09/011-template-ai-website/</url>
+    <content><![CDATA[<h1 id="模板-AI助手：网站开发的新范式"><a href="#模板-AI助手：网站开发的新范式" class="headerlink" title="模板+AI助手：网站开发的新范式"></a>模板+AI助手：网站开发的新范式</h1><blockquote>
+<p>“写代码不如写段子，做网站不如用AI！”</p>
+</blockquote>
+<p>大家好，我是恺南，一个和bug斗智斗勇三年的AI实战派程序员。</p>
+<h2 id="🚀-1-传统建站的”血泪史”"><a href="#🚀-1-传统建站的”血泪史”" class="headerlink" title="🚀 1. 传统建站的”血泪史”"></a>🚀 1. 传统建站的”血泪史”</h2><p>还记得我第一次搭个人主页，手撸HTML+CSS，像在搬砖。每次改个样式都要F5一百遍，调色调到怀疑人生，最后做出来的效果还不如隔壁小明的PPT。</p>
+<h2 id="🤖-2-模板-AI：效率革命"><a href="#🤖-2-模板-AI：效率革命" class="headerlink" title="🤖 2. 模板+AI：效率革命"></a>🤖 2. 模板+AI：效率革命</h2><p>直到有一天，我发现了”模板+AI助手”这对黄金搭档！</p>
+<ul>
+<li><strong>模板</strong>：Hexo+ayer主题，开箱即用，颜值在线。</li>
+<li><strong>AI助手</strong>：Cursor，写代码、改样式、加功能，统统一句话的事。</li>
+</ul>
+<h2 id="🛠️-3-新功能加持，网站焕然一新"><a href="#🛠️-3-新功能加持，网站焕然一新" class="headerlink" title="🛠️ 3. 新功能加持，网站焕然一新"></a>🛠️ 3. 新功能加持，网站焕然一新</h2><p>有了Cursor的加持，我的个人网站像打了鸡血：</p>
+<ul>
+<li><strong>一键生成作品集</strong>：只需告诉AI”我要一个作品集”，页面立马安排上，结构清晰还带卡片动画。</li>
+<li><strong>自我介绍区块</strong>：AI帮我写得又酷又有梗，访客一看就记住”AI实战派程序员”。</li>
+<li><strong>社交icon全家桶</strong>：再也不用手抠SVG，AI帮我引入Remix Icon，icon一行排开，气场两米八。</li>
+<li><strong>样式优化</strong>：字号、留白、配色，AI都能给建议，改完首页大气得像大厂官网。</li>
+</ul>
+<h2 id="😂-4-幽默彩蛋"><a href="#😂-4-幽默彩蛋" class="headerlink" title="😂 4. 幽默彩蛋"></a>😂 4. 幽默彩蛋</h2><p>有时候我会和Cursor聊两句：</p>
+<blockquote>
+<p>我：”帮我把首页做得像huasheng.ai那样高端！”</p>
+<p>Cursor：”没问题，极简风、留白多、icon齐全，安排！”</p>
+</blockquote>
+<p>AI助手不仅能写代码，还能陪你唠嗑，程序员的快乐就是这么简单！</p>
+<h2 id="🌈-5-总结：新时代的建站姿势"><a href="#🌈-5-总结：新时代的建站姿势" class="headerlink" title="🌈 5. 总结：新时代的建站姿势"></a>🌈 5. 总结：新时代的建站姿势</h2><ul>
+<li>不用再熬夜手撸样式，模板+AI让你轻松拥有高颜值个人主页。</li>
+<li>想加新功能？和AI说一声，立马安排。</li>
+<li>样式不满意？AI帮你调到满意为止。</li>
+</ul>
+<p><strong>新时代的网站开发，拼的不是谁会写div，而是谁会用AI！</strong></p>
+<hr>
+<blockquote>
+<p>关注我，带你体验更多AI驱动的开发新范式！ </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术杂谈</category>
+      </categories>
+      <tags>
+        <tag>AI开发</tag>
+        <tag>个人网站</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>010. hexo配置过程中遇到的问题汇总</title>
     <url>/2022/06/15/010-hexo-problems/</url>
     <content><![CDATA[<p>在hexo配置个人主页的过程中，遇到一些环境配置问题，在这里整理一下大神们的解决办法：</p>
