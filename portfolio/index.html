@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>007. 机器学习：支持向量机（SVM）课堂实践 |  KennanYang</title>
+      <title>作品集 |  KennanYang</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/kennan2.png" />
@@ -60,8 +60,8 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-007-SVM"
-  class="article article-type-post"
+  id="page-"
+  class="article article-type-page"
   itemscope
   itemprop="blogPost"
   data-scroll-reveal
@@ -71,63 +71,72 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  007. 机器学习：支持向量机（SVM）课堂实践
+  作品集
 </h1>
  
 
       
     </header>
-     
-    <div class="article-meta">
-      <a href="/2022/06/04/007-SVM/" class="article-date">
-  <time datetime="2022-06-04T01:43:37.000Z" itemprop="datePublished">2022-06-04</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
-  </div>
-  
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">623</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
-        </span>
-    </span>
-</div>
- 
-    </div>
-      
-    <div class="tocbot"></div>
-
-
-
-
-  
+       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>这是在学习《机器学习基础》课程的支持向量机这一章时，做的课堂实践内容，详见《机器学习（周立华）》第六章，记录一下以便回顾。<br>数据集使用 <a target="_blank" rel="noopener" href="http://yann.lecun.com/exdb/mnist/">Mnist-image数据集</a><br>完整代码见github：<a target="_blank" rel="noopener" href="https://github.com/KennanYang/mechine-learning/blob/master/week7_SVM.ipynb">SVM课程实践</a></p>
-<span id="more"></span>
-<h2 id="机器学习算法基础"><a href="#机器学习算法基础" class="headerlink" title="机器学习算法基础"></a>机器学习算法基础</h2><h3 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h3><p>在这个实验中，<strong>支持向量机（Support Vector Macchine,简称SVM）</strong> 被用来解决分类问题。目的是找出区间最大的划分超平面。SVM的基本类型是<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f94bc.png" alt=""><br>对于高维特征空间，可以通过训练样本的 <strong>核函数（Kernel）</strong> 展开模型的最优解，获得支持向量展开<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f9466.png" alt=""></p>
-<h3 id="核函数"><a href="#核函数" class="headerlink" title="核函数"></a>核函数</h3><h4 id="1-线性核"><a href="#1-线性核" class="headerlink" title="1.线性核"></a>1.线性核</h4><p>线性核（Linear Kernel）的实现使用sklearn库中SVC函数的默认参数 <strong><em>(‘ linear ‘)</em></strong> 。<br>线性核函数是：<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f9471.png" alt=""></p>
-<h4 id="2-径向基核"><a href="#2-径向基核" class="headerlink" title="2.径向基核"></a>2.径向基核</h4><p>径向基核函数(Radial Basis Function,简称RBF，也叫高斯核)的实现也使用了sklearn库中SVC函数的默认参数 <strong><em>(‘ rbf ‘)</em></strong> 。<br>RBF核函数为：<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f9486.png" alt=""></p>
-<h4 id="3-自定义核函数"><a href="#3-自定义核函数" class="headerlink" title="3.自定义核函数"></a>3.自定义核函数</h4><p>利用 <strong>核函数的性质</strong> 构造了一个新的核函数: 两个核函数的直积也是一个核函数。<br>К1 是线性核，К2 是拉普拉斯核：<br><img src="https://pic.imgdb.cn/item/62a945890947543129873256.png" alt=""></p>
-<p>自定义一个核函数： К1 ⊗ К2.<br>К1和К2的内核函数是通过自己编写的python函数实现的，在径向基和线性核的编程过程中展示了更多的细节。<br><img src="https://pic.imgdb.cn/item/62a94252094754312983607a.png" alt=""></p>
-<h3 id="python工具包"><a href="#python工具包" class="headerlink" title="python工具包"></a>python工具包</h3><p>Python的scikit-learn库有SVC工具包，可以自定义以下参数。<br><strong><em>C: float, default=1.0</em></strong><br>-正则化参数<br><strong><em>Kernel {‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’}, default=’rbf’</em></strong><br><strong><em>Degree: int, default=3</em></strong><br>-Degree是多项式核函数 <strong><em>(‘ poly ‘)</em></strong> 的阶数，其他核基本忽略该参数。<br>有很多参数，但在本次实验中，只修改了核函数，其他参数使用默认值。</p>
-<h2 id="实验结果展示"><a href="#实验结果展示" class="headerlink" title="实验结果展示"></a>实验结果展示</h2><p>JupyterLab的python程序运行结果：<br><img src="https://pic.imgdb.cn/item/62a93fc309475431297f9495.png" alt=""></p>
-<p>从结果来看:<br>首先，展示测试图像。每个标签显示三张图片，按照000-999的矩阵输出，对应的数字如图所示。<br>然后分别用 <strong>线性核函数、径向基核函数、自定义核函数</strong> 三种核函数构造SVM，用训练集进行模型训练，用测试集衡量识别精度，输出识别准确率评价指标按顺序显示。<br>ps.从结果看，自定义核并不适合这个任务。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>1.Mnist-image数据集下载: <a target="_blank" rel="noopener" href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a></p>
-<p>2.scikit-learn库的安装和SVC的API:<br><a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/index.html">https://scikit-learn.org/stable/index.html</a></p>
-<p>3.《机器学习（周立华）》（西瓜书）</p>
+  <h1 id="🎨-作品集"><a href="#🎨-作品集" class="headerlink" title="🎨 作品集"></a>🎨 作品集</h1><blockquote>
+<p>这里展示我在AI转型路上的实战项目，每个作品都是技术迁移的见证</p>
+</blockquote>
+<hr>
+<h2 id="🧠-MBTI-性格测试网站"><a href="#🧠-MBTI-性格测试网站" class="headerlink" title="🧠 MBTI 性格测试网站"></a>🧠 MBTI 性格测试网站</h2><h3 id="📋-项目简介"><a href="#📋-项目简介" class="headerlink" title="📋 项目简介"></a>📋 项目简介</h3><p>一个基于MBTI理论的在线性格测试平台，帮助用户了解自己的性格类型。</p>
+<h3 id="🛠️-技术栈"><a href="#🛠️-技术栈" class="headerlink" title="🛠️ 技术栈"></a>🛠️ 技术栈</h3><ul>
+<li><strong>前端</strong>：HTML5, CSS3, JavaScript</li>
+<li><strong>AI工具</strong>：Cursor AI 辅助开发</li>
+<li><strong>部署</strong>：GitHub Pages</li>
+</ul>
+<h3 id="✨-核心功能"><a href="#✨-核心功能" class="headerlink" title="✨ 核心功能"></a>✨ 核心功能</h3><ul>
+<li>16种MBTI性格类型测试</li>
+<li>实时结果分析</li>
+<li>响应式设计，支持移动端</li>
+<li>简洁优雅的用户界面</li>
+</ul>
+<h3 id="🔗-项目链接"><a href="#🔗-项目链接" class="headerlink" title="🔗 项目链接"></a>🔗 项目链接</h3><ul>
+<li><strong>在线体验</strong>：<a target="_blank" rel="noopener" href="https://kennanyang.github.io/mbti-test/">MBTI测试网站</a></li>
+<li><strong>源码地址</strong>：<a target="_blank" rel="noopener" href="https://github.com/KennanYang/mbti-test">GitHub仓库</a></li>
+</ul>
+<h3 id="💡-开发心得"><a href="#💡-开发心得" class="headerlink" title="💡 开发心得"></a>💡 开发心得</h3><p>这是我在AI转型路上的第一个实战项目，使用Cursor AI在5分钟内完成了基础框架搭建，真正体验到了AI工具对开发效率的提升。</p>
+<hr>
+<h2 id="🛠️-恺南AI工具箱导航站"><a href="#🛠️-恺南AI工具箱导航站" class="headerlink" title="🛠️ 恺南AI工具箱导航站"></a>🛠️ 恺南AI工具箱导航站</h2><h3 id="📋-项目简介-1"><a href="#📋-项目简介-1" class="headerlink" title="📋 项目简介"></a>📋 项目简介</h3><p>一个专注于AI工具的导航网站，收集整理了各类实用的AI工具和资源，为程序员和AI爱好者提供一站式工具导航。</p>
+<h3 id="🛠️-技术栈-1"><a href="#🛠️-技术栈-1" class="headerlink" title="🛠️ 技术栈"></a>🛠️ 技术栈</h3><ul>
+<li><strong>前端</strong>：HTML5, CSS3, JavaScript</li>
+<li><strong>AI工具</strong>：Cursor AI 快速开发</li>
+<li><strong>部署</strong>：GitHub Pages</li>
+</ul>
+<h3 id="✨-核心功能-1"><a href="#✨-核心功能-1" class="headerlink" title="✨ 核心功能"></a>✨ 核心功能</h3><ul>
+<li>AI工具分类导航</li>
+<li>工具使用指南</li>
+<li>实时更新最新AI工具</li>
+<li>用户友好的搜索功能</li>
+</ul>
+<h3 id="🔗-项目链接-1"><a href="#🔗-项目链接-1" class="headerlink" title="🔗 项目链接"></a>🔗 项目链接</h3><ul>
+<li><strong>在线访问</strong>：<a target="_blank" rel="noopener" href="https://kennanyang.github.io/ai-toolbox/">恺南AI工具箱</a></li>
+<li><strong>源码地址</strong>：<a target="_blank" rel="noopener" href="https://github.com/KennanYang/ai-toolbox">GitHub仓库</a></li>
+</ul>
+<h3 id="💡-开发心得-1"><a href="#💡-开发心得-1" class="headerlink" title="💡 开发心得"></a>💡 开发心得</h3><p>这个项目展示了AI工具在网站开发中的强大能力，使用Cursor AI在一小时内完成了整个导航站的开发，包括界面设计、功能实现和部署上线。</p>
+<hr>
+<h2 id="🚀-技术迁移记录"><a href="#🚀-技术迁移记录" class="headerlink" title="🚀 技术迁移记录"></a>🚀 技术迁移记录</h2><h3 id="从传统开发到AI辅助开发"><a href="#从传统开发到AI辅助开发" class="headerlink" title="从传统开发到AI辅助开发"></a>从传统开发到AI辅助开发</h3><ol>
+<li><strong>开发效率提升</strong>：从传统手动编码到AI辅助开发，效率提升300%</li>
+<li><strong>技术栈扩展</strong>：从Java后端扩展到全栈开发</li>
+<li><strong>工具链优化</strong>：掌握Cursor AI、ChatGPT等AI开发工具</li>
+</ol>
+<h3 id="项目特点"><a href="#项目特点" class="headerlink" title="项目特点"></a>项目特点</h3><ul>
+<li><strong>真实项目</strong>：所有作品都是实际可用的产品</li>
+<li><strong>技术实用</strong>：专注于解决实际问题</li>
+<li><strong>持续更新</strong>：跟随AI技术发展不断迭代</li>
+</ul>
+<hr>
+<h2 id="📞-合作交流"><a href="#📞-合作交流" class="headerlink" title="📞 合作交流"></a>📞 合作交流</h2><p>如果你对我的作品感兴趣，或者想要技术交流，欢迎联系：</p>
+<ul>
+<li><strong>微信</strong>：Kennan1048 （备注 恺南AI实战派）</li>
+<li><strong>邮箱</strong>：kennan1048125026@gmail.com</li>
+</ul>
+<p><strong>让我们一起在AI时代创造更多可能！</strong> 🚀 </p>
  
       <!-- reward -->
       
@@ -180,36 +189,15 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/06/04/007-SVM/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/portfolio/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li></ul>
-
     </footer>
   </div>
 
    
-  <nav class="article-nav">
-    
-      <a href="/2022/06/08/008-k-means/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            008. 机器学习：聚类任务和k_means算法课堂实践
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2022/04/30/006-HTTP-HTTPS/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">006. HTTP协议详解</div>
-      </a>
-    
-  </nav>
-
    
 <!-- valine评论 -->
 <div id="vcomments-box">
@@ -259,8 +247,7 @@
 </style>
 
  
-   
-     
+    
 </article>
 
 </section>
@@ -407,22 +394,6 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link
