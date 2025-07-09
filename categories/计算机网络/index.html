@@ -82,13 +82,13 @@
       <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
-      <a href="/2022/05/30/006-HTTP-HTTPS/" class="archive-article-date">
-  <time datetime="2022-05-30T02:46:33.000Z" itemprop="datePublished">05/30</time>
+      <a href="/2022/04/30/006-HTTP-HTTPS/" class="archive-article-date">
+  <time datetime="2022-04-30T02:46:33.000Z" itemprop="datePublished">04/30</time>
 </a>
        
 <h2 itemprop="name">
-  <a class="archive-article-title" href="/2022/05/30/006-HTTP-HTTPS/"
-    >006-HTTP协议详解</a> 
+  <a class="archive-article-title" href="/2022/04/30/006-HTTP-HTTPS/"
+    >006. HTTP协议详解</a> 
 </h2>
  
 
@@ -144,7 +144,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2022
+        2022-2025
         <i class="ri-heart-fill heart_icon"></i> Kennan Yang
       </li>
     </ul>
@@ -396,6 +396,29 @@
     viewer_init()
 </script> 
 <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
 
 <!-- Katex -->
 

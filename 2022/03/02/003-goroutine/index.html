@@ -118,7 +118,6 @@
   <p><strong>为了学习go语言，和了解并行的基本写法，这里通过一个demo练习</strong><br>由于已经有了c++和python的基础，所以了解基本语法很快，主要是学习go面向消息的传递机制，以及使用goroutine进行并发操作。<br>参考资料：<br><a target="_blank" rel="noopener" href="https://www.runoob.com/go/go-concurrent.html">Go 语言教程-Go并发</a></p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>hello.go</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*一个go的并行计算demo,学习go的基本语法，并计算两个数组元素值为1的数目*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//包声明：必须在源文件中非注释的第一行指明这个文件属于哪个包</span></span><br><span class="line"><span class="comment">//每个Go程序都包含一个名为main的包</span></span><br><span class="line"><span class="keyword">package</span> main </span><br><span class="line"></span><br><span class="line"><span class="comment">//import告诉Go编译器使用&quot;fmt&quot;包里的元素</span></span><br><span class="line"><span class="comment">//fmt包实现了格式化IO函数</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">函数声明方式</span></span><br><span class="line"><span class="comment">func function_name([parameter list])[return_types]&#123;</span></span><br><span class="line"><span class="comment">    函数体</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sum</span><span class="params">(arr []<span class="type">int</span>, c <span class="keyword">chan</span> <span class="type">int</span>)</span></span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    变量声明的两种方式：</span></span><br><span class="line"><span class="comment">    1.var v_name v_type = value</span></span><br><span class="line"><span class="comment">    2.v_name := value 根据值自行判定变量类型</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    注：标识符首字母大写，如Group 1，则可被外部包调用，称为导出。以小写字母开头则只能内部可见。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    sum := <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    循环定义方式 </span></span><br><span class="line"><span class="comment">    1.for init; condition； post&#123;&#125;</span></span><br><span class="line"><span class="comment">    2.for condition&#123;&#125;</span></span><br><span class="line"><span class="comment">    3.for key, value := range iter&#123;&#125;  用range对slice、map、数组等迭代循环</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _, value := <span class="keyword">range</span> arr &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        条件语句</span></span><br><span class="line"><span class="comment">        if 布尔表达式&#123;</span></span><br><span class="line"><span class="comment">            //语句</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">if</span> value == <span class="number">1</span>&#123;</span><br><span class="line">            <span class="comment">//运算符同c++，包括++，--</span></span><br><span class="line">            sum++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//值保存到通道（channel）方便并行</span></span><br><span class="line">    c &lt;- sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//main函数是程序开始执行的函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">( )</span></span>&#123;</span><br><span class="line">    <span class="comment">//字符串输出到控制台，并结尾增加换行符&#x27;\n&#x27;</span></span><br><span class="line">    fmt.Println(<span class="string">&quot;hello world!&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建数组方式一: var variable_name = [SIZE] variable_type&#123;,,,...&#125;</span></span><br><span class="line">    <span class="keyword">var</span> arr_a =[]<span class="type">int</span>  &#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">5</span>&#125;</span><br><span class="line">    <span class="comment">// 创建数组方式二: variable_name := [SIZE] variable_type&#123;,,,...&#125;</span></span><br><span class="line">    arr_b := []<span class="type">int</span> &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="type">int</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    函数调用方式: func([parameter_list])</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    goroutine: 轻量级线程，支持并发</span></span><br><span class="line"><span class="comment">    如果用goroutine调度，则前加go关键字，如go f(x,y,z)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">go</span> sum(arr_a, ch)</span><br><span class="line">    <span class="keyword">go</span> sum(arr_b, ch)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    通道（channel）可用于两个goroutine之间通过传递一个指定的值来同步运行和通讯。</span></span><br><span class="line"><span class="comment">    操作符&lt;-用于指定通道的方向，发送或接收。如：</span></span><br><span class="line"><span class="comment">    ch &lt;- v //把v发送到通道ch</span></span><br><span class="line"><span class="comment">    v := &lt;- ch //从ch接收数据，并把值赋给v</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    result_a, result_b := &lt;- ch, &lt;- ch</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//输出计算结果</span></span><br><span class="line">    fmt.Println(<span class="string">&quot;results&quot;</span>, result_a, result_b, result_a + result_b)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <h3 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h3><p><img src="/images/helloworld.png" alt="输出结果"></p>
  
       <!-- reward -->
@@ -185,7 +184,7 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/03/02/004-tree-datatype/" class="article-nav-link">
+      <a href="/2022/03/12/004-tree-datatype/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
@@ -195,7 +194,7 @@
       </a>
     
     
-      <a href="/2022/02/24/002-config-pytorch/" class="article-nav-link">
+      <a href="/2022/02/26/002-config-pytorch/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
         <div class="article-nav-title">002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</div>
       </a>
@@ -261,7 +260,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2022
+        2022-2025
         <i class="ri-heart-fill heart_icon"></i> Kennan Yang
       </li>
     </ul>
@@ -529,6 +528,29 @@
     viewer_init()
 </script> 
 <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
 
 <!-- Katex -->
 

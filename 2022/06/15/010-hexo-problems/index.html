@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录 |  KennanYang</title>
+      <title>010. hexo配置过程中遇到的问题汇总 |  KennanYang</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/kennan2.png" />
@@ -60,7 +60,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-002-config-pytorch"
+  id="post-010-hexo-problems"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -71,7 +71,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录
+  010. hexo配置过程中遇到的问题汇总
 </h1>
  
 
@@ -79,11 +79,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/02/24/002-config-pytorch/" class="article-date">
-  <time datetime="2022-02-24T10:54:57.000Z" itemprop="datePublished">2022-02-24</time>
+      <a href="/2022/06/15/010-hexo-problems/" class="article-date">
+  <time datetime="2022-06-15T05:19:41.000Z" itemprop="datePublished">2022-06-15</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
+    <a class="article-category-link" href="/categories/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/">搭建环境</a>
   </div>
   
 <div class="word_count">
@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">707</span>
+            <span class="post-count">208</span>
         </span>
     </span>
 
@@ -100,41 +100,27 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">1 min</span>
         </span>
     </span>
 </div>
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。<br>前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。</p>
+  <p>在hexo配置个人主页的过程中，遇到一些环境配置问题，在这里整理一下大神们的解决办法：</p>
+<p>1.主页打不开的问题：</p>
+<p>打开github主页时发现<strong>404</strong>，通过 <strong><em>hexo server</em></strong> 命令打开本地的主页配置时发现 Cannot Get/,所以搜索了一下解决办法，最终参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/loveLifeLoveCoding/article/details/121789466">vue项目Error: Cannot find module ‘xxx’类报错的解决方法</a> 解决了主页打不开的问题。</p>
 <span id="more"></span>
-<h1 id="1-安装python3-9"><a href="#1-安装python3-9" class="headerlink" title="1.安装python3.9"></a>1.安装python3.9</h1><p>首先是python的安装，选用当前时间最新版的python3.9.1<br>官网下载安装包即可<a target="_blank" rel="noopener" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br><img src="https://img-blog.csdnimg.cn/20201219134620158.png"></p>
-<p>一路“下一步”，建议安装到默认路径。</p>
-<p>然后，配置环境变量：<br>找到安装的位置，把图中所示的两个路径加入环境变量。<br>我的路径是：<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python39\Scripts<br><img src="https://img-blog.csdnimg.cn/20201219134237283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>补充一点：<br>conda里python中的pytorch比较老，遇到没法调用的问题（这里没有深究），所以没有用anaconda，而是直接官网找最新的python。</p>
-<h1 id="2-安装cuda（需要vs环境，我的是vs2015）"><a href="#2-安装cuda（需要vs环境，我的是vs2015）" class="headerlink" title="2.安装cuda（需要vs环境，我的是vs2015）"></a>2.安装cuda（需要vs环境，我的是vs2015）</h1><p>CUDA（Compute Unified Device Architecture），是显卡厂商NVIDIA推出的运算平台。</p>
-<p>我当前的环境是vs2015，电脑配置是</p>
-<p><img src="https://img-blog.csdnimg.cn/20201219142426303.png"><br><img src="https://img-blog.csdnimg.cn/20201219142440290.png"><br>注意CUDA的版本不能超过GPU的版本。</p>
-<p>官网的CUDA安装路径如下：<br><a target="_blank" rel="noopener" href="https://developer.nvidia.com/zh-cn/cuda-downloads">https://developer.nvidia.com/zh-cn/cuda-downloads</a><br><img src="https://img-blog.csdnimg.cn/20201219142239715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>圈出来的部分，前者是一个比较大的安装包，下载到本地安装，后者是很小的安装包，但是需要联网，我选的前者。<br><img src="https://img-blog.csdnimg.cn/20201219142349445.png"></p>
-<p>仍然选择当前最新的版本11.1，安装到默认路径下：<br>C:\Program Files\NVIDIA GPU Computing Toolkit</p>
-<h1 id="3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"><a href="#3-安装cudnn（版本和cuda对应，更老的版本也可以但不建议）" class="headerlink" title="3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）"></a>3.安装cudnn（版本和cuda对应，更老的版本也可以但不建议）</h1><p>NVIDIA cuDNN是用于深度神经网络的GPU加速库。<br>老规矩，走官网。<br><a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">https://developer.nvidia.com/rdp/cudnn-archive</a><br><img src="https://img-blog.csdnimg.cn/20201219140906756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
-<p>这里的下载需要注册，有个技巧是复制链接，在迅雷打开可以直接下载。<br><img src="https://img-blog.csdnimg.cn/20201219135916291.png"></p>
-<p>下载好的压缩包解压之后，会发现三个文件夹。<br>分别把文件放到cuda路径对应的文件夹下。<br><img src="https://img-blog.csdnimg.cn/20201219135443329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"></p>
-<h1 id="4-安装pytorch"><a href="#4-安装pytorch" class="headerlink" title="4.安装pytorch"></a>4.安装pytorch</h1><p>它是一个基于Python的可续计算包，提供两个高级功能：1、具有强大的GPU加速的张量计算（如NumPy）。2、包含自动求导系统的深度神经网络。<br>官网：<br><a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br><img src="https://img-blog.csdnimg.cn/20201219140414305.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODA1NTk3,size_16,color_FFFFFF,t_70"><br>可以通过pip安装，最下面的命令行在cmd中打开即可。<br>由于速度慢，所以直接从别人那里拷贝过来了。</p>
-<p>可以在python中通过下面的代码来检验，True表示pytorch的cuda配置成功<br><img src="https://img-blog.csdnimg.cn/20201219142901202.png"></p>
-<h1 id="5-安装opencv"><a href="#5-安装opencv" class="headerlink" title="5.安装opencv"></a>5.安装opencv</h1><p>方法一：<br>打开cmd，输入<code>pip install opencv-python</code>即可，但超级慢还可能断开连接。<br>此处建议清华镜像下载</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
-
-<p>方法二：<br>下载相应Python版本的OpenCV的whl文件<br><a target="_blank" rel="noopener" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv">https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv</a><br>然后打开cmd，在whl文件对应文件夹路径下，使用pip安装，如<br><img src="https://img-blog.csdnimg.cn/20201219141255475.png"></p>
-<h2 id="至此我需要的环境已经配置完成。"><a href="#至此我需要的环境已经配置完成。" class="headerlink" title="至此我需要的环境已经配置完成。"></a>至此我需要的环境已经配置完成。</h2> 
+<p>2.数学公式问题：</p>
+<p>这个问题是当我根据marktown写数学公式时，发现vscode上显示公式正确，但是配置到主页上时，公式就变成了源码，通过学习这个博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45511189/article/details/115798563">hexo博客next主题添加对数学公式的支持</a>，得到解决。</p>
+<p>marktown的数学公式语法规则为：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f0de9f572c9d">Marktown数学公式</a></p>
+ 
       <!-- reward -->
       
     </div>
@@ -186,12 +172,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/02/24/002-config-pytorch/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/06/15/010-hexo-problems/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/" rel="tag">搭建环境</a></li></ul>
 
     </footer>
   </div>
@@ -199,19 +185,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/03/02/003-goroutine/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            003. go入门，学习用goroutine开启并发
-          
-        </div>
-      </a>
     
-    
-      <a href="/2022/02/24/001-link-to-server/" class="article-nav-link">
+      <a href="/2022/06/13/009-FCN-car-recognition/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">001. 如何连接实验室的服务器进行网络训练？</div>
+        <div class="article-nav-title">009. 机器学习：车辆分割任务和卷积神经网络课堂实践</div>
       </a>
     
   </nav>
@@ -275,7 +252,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2022
+        2022-2025
         <i class="ri-heart-fill heart_icon"></i> Kennan Yang
       </li>
     </ul>
@@ -543,6 +520,29 @@
     viewer_init()
 </script> 
 <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
 
 <!-- Katex -->
 

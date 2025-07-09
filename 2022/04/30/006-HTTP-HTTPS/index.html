@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>006-HTTP协议详解 |  KennanYang</title>
+      <title>006. HTTP协议详解 |  KennanYang</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/kennan2.png" />
@@ -71,7 +71,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  006-HTTP协议详解
+  006. HTTP协议详解
 </h1>
  
 
@@ -79,8 +79,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/05/30/006-HTTP-HTTPS/" class="article-date">
-  <time datetime="2022-05-30T02:46:33.000Z" itemprop="datePublished">2022-05-30</time>
+      <a href="/2022/04/30/006-HTTP-HTTPS/" class="article-date">
+  <time datetime="2022-04-30T02:46:33.000Z" itemprop="datePublished">2022-04-30</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
@@ -117,28 +117,28 @@
        
   <p>HTTP协议是网络编程的基础知识，后端开发应当熟练掌握，但是相关内容较多。</p>
 <p>之前在学校学的都忘记了，最近为了找工作又复习起来，参考了力扣上的教程和一些网上资料，做一个总结，并补充一些常问的八股方便回顾。</p>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/leetbook/read/tech-interview-cookbook/o9ga26/">校招基础知识详解-HTTP</a>[2]</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/leetbook/read/tech-interview-cookbook/o9ga26/">校招基础知识详解-HTTP</a></p>
 <span id="more"></span>
 <h2 id="URL解析过程"><a href="#URL解析过程" class="headerlink" title="URL解析过程"></a>URL解析过程</h2><p>当输入网址时会发生什么呢？提到HTTP就不能不先了解一下URL的解析过程。</p>
-<h3 id="URL："><a href="#URL：" class="headerlink" title="URL："></a>URL：</h3><p>在WWW上，每一信息资源都有统一的且在网上唯一的地址，该地址就叫<strong>URL（Uniform Resource Locator,统一资源定位器）</strong>，它是WWW的统一资源定位标志，就是指网络地址。</p>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>在WWW上，每一信息资源都有统一的且在网上唯一的地址，该地址就叫<strong>URL（Uniform Resource Locator,统一资源定位器）</strong>，它是WWW的统一资源定位标志，就是指网络地址。</p>
 <h3 id="浏览器输入地址后发生什么？"><a href="#浏览器输入地址后发生什么？" class="headerlink" title="浏览器输入地址后发生什么？"></a>浏览器输入地址后发生什么？</h3><p>1、域名解析： 浏览器获得URL地址，向操作系统请求该URL对应的IP地址，操作系统查询DNS（首先查询本地HOST文件，没有则查询网络）获得对应的IP地址</p>
 <p>解释：</p>
 <p>把URL分割成几个部分：协议、网络地址、资源路径</p>
 <p>协议：指从该计算机获取资源的方式，常见的是HTTP、FTP</p>
 <p>网络地址：可以是域名或者是IP地址，也可以包括端口号，如果不注明端口号，默认是80端口</p>
-<p>如果地址不是一个IP地址，则需要通过DNS（域名系统）将该地址解析成IP地址，IP地址对应着网络上的一台计算机，DNS服务器本身也有IP，你的网络设置包含DNS服务器的IP，例如，<a target="_blank" rel="noopener" href="http://www.abc.com不是一个ip,则需要向dns询问请求www.abc.com对应的ip,获得ip,在这个过程中,你的电脑直接询问dns服务器可能没有发现www.abc.com对应的ip,就会向它的上级服务器询问,这样依次一层层向上级找,最高可达根节点,直到找到或者全部找不到为止/">www.abc.com不是一个IP，则需要向DNS询问请求www.abc.com对应的IP，获得IP，在这个过程中，你的电脑直接询问DNS服务器可能没有发现www.abc.com对应的IP，就会向它的上级服务器询问，这样依次一层层向上级找，最高可达根节点，直到找到或者全部找不到为止</a></p>
-<p>端口号就相当于银行的窗口，不同的窗口负责不同的服务，如果输入<a target="_blank" rel="noopener" href="http://www.abc.com:8080/%EF%BC%8C%E5%88%99%E8%A1%A8%E7%A4%BA%E4%B8%8D%E4%BD%BF%E7%94%A8%E9%BB%98%E8%AE%A4%E7%9A%8480%E7%AB%AF%E5%8F%A3%EF%BC%8C%E8%80%8C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AE%9A%E7%9A%848080%E7%AB%AF%E5%8F%A3">www.abc.com:8080/，则表示不使用默认的80端口，而使用指定的8080端口</a></p>
+<p>如果地址不是一个IP地址，则需要通过DNS（域名系统）将该地址解析成IP地址，IP地址对应着网络上的一台计算机，DNS服务器本身也有IP，你的网络设置包含DNS服务器的IP，例如，www.abc.com不是一个IP，则需要向DNS询问请求www.abc.com对应的IP，获得IP，在这个过程中，你的电脑直接询问DNS服务器可能没有发现www.abc.com对应的IP，就会向它的上级服务器询问，这样依次一层层向上级找，最高可达根节点，直到找到或者全部找不到为止</p>
+<p>端口号就相当于银行的窗口，不同的窗口负责不同的服务，如果输入www.abc.com:8080/，则表示不使用默认的80端口，而使用指定的8080端口</p>
 <p>2、确认好了IP和端口号，则可以向该IP地址对应的服务器的该端口号发起TCP连接请求</p>
 <p>3、服务器接收到TCP连接请求后，回复可以连接请求，</p>
 <p>4、浏览器收到回传的数据后，还会向服务器发送数据包，表示三次握手结束</p>
 <p>5、三次握手成功后，开始通讯，根据HTTP协议的要求，组织一个请求的数据包，里面包含请求的资源路径、你的身份信息等。</p>
-<p>例如，<a target="_blank" rel="noopener" href="http://www.abc.com/images/1/%E8%A1%A8%E7%A4%BA%E7%9A%84%E8%B5%84%E6%BA%90%E8%B7%AF%E5%BE%84%E6%98%AFimages/1/%EF%BC%8C%E5%8F%91%E9%80%81%E5%90%8E%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%B0%86%E6%95%B0%E6%8D%AE%E8%BF%94%E5%9B%9E%E7%BB%99%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%8C%E6%95%B0%E6%8D%AE%E5%8F%AF%E4%BB%A5%E6%98%AF%E6%A0%B9%E6%8D%AEHTML%E5%8D%8F%E8%AE%AE%E7%BB%84%E7%BB%87%E7%9A%84%E7%BD%91%E9%A1%B5%EF%BC%8C%E9%87%8C%E9%9D%A2%E5%8C%85%E5%90%AB%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%B8%83%E5%B1%80%E3%80%81%E6%96%87%E5%AD%97%E7%AD%89%E7%AD%89%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%98%AF%E5%9B%BE%E7%89%87%E6%88%96%E8%80%85%E8%84%9A%E6%9C%AC%E7%A8%8B%E5%BA%8F%E7%AD%89%EF%BC%8C%E5%A6%82%E6%9E%9C%E8%B5%84%E6%BA%90%E8%B7%AF%E5%BE%84%E6%8C%87%E5%AE%9A%E7%9A%84%E8%B5%84%E6%BA%90%E4%B8%8D%E5%AD%98%E5%9C%A8%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B0%B1%E4%BC%9A%E8%BF%94%E5%9B%9E404%E9%94%99%E8%AF%AF%EF%BC%8C%E5%A6%82%E6%9E%9C%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AF%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%EF%BC%8C%E5%88%99%E6%A0%B9%E6%8D%AE%E9%A1%B5%E9%9D%A2%E9%87%8C%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A4%96%E9%93%BEURL%E5%9C%B0%E5%9D%80%EF%BC%8C%E9%87%8D%E5%A4%8D%E4%B8%8A%E8%BF%B0%E6%AD%A5%E9%AA%A4%EF%BC%8C%E5%86%8D%E6%AC%A1%E8%8E%B7%E5%8F%96">www.abc.com/images/1/表示的资源路径是images/1/，发送后，服务器响应请求，将数据返回给浏览器，数据可以是根据HTML协议组织的网页，里面包含页面的布局、文字等等，也可以是图片或者脚本程序等，如果资源路径指定的资源不存在，服务器就会返回404错误，如果返回的是一个页面，则根据页面里的一些外链URL地址，重复上述步骤，再次获取</a></p>
+<p>例如，www.abc.com/images/1/表示的资源路径是images/1/，发送后，服务器响应请求，将数据返回给浏览器，数据可以是根据HTML协议组织的网页，里面包含页面的布局、文字等等，也可以是图片或者脚本程序等，如果资源路径指定的资源不存在，服务器就会返回404错误，如果返回的是一个页面，则根据页面里的一些外链URL地址，重复上述步骤，再次获取</p>
 <p>6、渲染页面，并开始响应用户的操作</p>
 <p>7、窗口关闭时，浏览器终止与服务器的连接</p>
-<h2 id="HTTP基础"><a href="#HTTP基础" class="headerlink" title="HTTP基础"></a>HTTP基础</h2><p><strong>超文本传输协议（Hyper Text Transfer Protocol，HTTP）</strong> 是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。[1]</p>
-<p>关于HTTP1.1协议的具体内容可以参考<a target="_blank" rel="noopener" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2.2">RFC 2616</a>。 [3] </p>
+<h2 id="HTTP基础"><a href="#HTTP基础" class="headerlink" title="HTTP基础"></a>HTTP基础</h2><p><strong>超文本传输协议（Hyper Text Transfer Protocol，HTTP）</strong> 是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。</p>
+<p>关于HTTP1.1协议的具体内容可以参考<a target="_blank" rel="noopener" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2.2">RFC 2616</a>。 </p>
 <h3 id="1-报文格式"><a href="#1-报文格式" class="headerlink" title="1. 报文格式"></a>1. 报文格式</h3><p>客户端发送一个请求报文给服务器，服务器根据请求报文中的信息进行处理，并将处理结果放入响应报文中返回给客户端。</p>
-<p>如下图所示方式可打开HTTP报文查看内容。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/x1037490413/article/details/117704060">http协议以及如何在谷歌控制台查看通信报文</a>[4]</p>
+<p>如下图所示方式可打开HTTP报文查看内容。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/x1037490413/article/details/117704060">http协议以及如何在谷歌控制台查看通信报文</a></p>
 <p>上方为请求报文解析内容，下方为响应报文内容。</p>
 <p><img src="https://pic.imgdb.cn/item/629440300947543129839d01.png" alt="图1. 一个HTTP报文"></p>
 <p><strong>1.1 请求报文格式如下：</strong></p>
@@ -149,8 +149,6 @@
 <li>最后是请求的内容主体</li>
 </ul>
 <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">http://www.example.com/</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</span><br><span class="line"><span class="attribute">Accept-Encoding</span><span class="punctuation">: </span>gzip, deflate</span><br><span class="line"><span class="attribute">Accept-Language</span><span class="punctuation">: </span>zh-CN,zh;q=0.9,en;q=0.8</span><br><span class="line"><span class="attribute">Cache-Control</span><span class="punctuation">: </span>max-age=0</span><br><span class="line"></span><br><span class="line"><span class="language-awk">作者：CyC2018</span></span><br><span class="line"><span class="language-awk">链接：https:<span class="regexp">//</span>leetcode.cn<span class="regexp">/leetbook/</span>read<span class="regexp">/tech-interview-cookbook/</span>orse6h/</span></span><br><span class="line"><span class="language-awk">来源：力扣（LeetCode）</span></span><br></pre></td></tr></table></figure>
-
-
 <p><strong>1.2 应答报文格式如下：</strong></p>
 <ul>
 <li>第一行包含协议版本、状态码以及描述，最常见的是 200 OK 表示请求成功了，如图1</li>
@@ -166,59 +164,23 @@
 <p><strong>POST</strong></p>
 <p>传输实体主体</p>
 <p>POST 主要用来传输数据，而 GET 主要用来获取资源。</p>
-<ul>
-<li>GET和POST的区别？<ol>
-<li><pre><code>后退按钮或刷新，Get无害，post数据会被重新提交；
-</code></pre>
-<ol start="2">
-<li><pre><code>Get所使用的URL可以被设置为书签，而post不可以；
-</code></pre>
-<ol start="3">
-<li><pre><code>Get能够被缓存，而post不可以；
-</code></pre>
-<ol start="4">
-<li><pre><code>Get参数保留在浏览器历史中，而post参数不会保留在浏览器历史中；
-</code></pre>
-<ol start="5">
-<li><pre><code>当发生数据时，get方法向URL添加数据，URL的数据长度是受限的，而post没有数据长度限制；
-</code></pre>
-<ol start="6">
-<li><pre><code>Get只允许ASCII编码，而post没有限制；
-</code></pre>
-<ol start="7">
-<li><pre><code>Get安全性没有post安全性好；
-</code></pre>
-<ol start="8">
-<li><pre><code>Get数据在URL中对所有人是可见的，而在post中数据不会显示在URL中。
-</code></pre>
-<ol start="9">
-<li><pre><code>Get产生一个TCP数据包，post产生两个TCP数据包；对于get方式的请求，浏览器会把header和data一并发送出去；对于post，浏览器先发送header再发送data；
-</code></pre>
-<ol start="10">
-<li><pre><code>GET和POST本质上就是TCP链接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
+<font color = #888888>
+
+*GET和POST的区别？*
+1)    后退按钮或刷新，Get无害，post数据会被重新提交；
+2)    Get所使用的URL可以被设置为书签，而post不可以；
+3)    Get能够被缓存，而post不可以；
+4)    Get参数保留在浏览器历史中，而post参数不会保留在浏览器历史中；
+5)    当发生数据时，get方法向URL添加数据，URL的数据长度是受限的，而post没有数据长度限制；
+6)    Get只允许ASCII编码，而post没有限制；
+7)    Get安全性没有post安全性好；
+8)    Get数据在URL中对所有人是可见的，而在post中数据不会显示在URL中。
+9)    Get产生一个TCP数据包，post产生两个TCP数据包；对于get方式的请求，浏览器会把header和data一并发送出去；对于post，浏览器先发送header再发送data；
+10)    GET和POST本质上就是TCP链接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。
+
+</font>
+
+
 <p><strong>PUT</strong></p>
 <p>上传文件</p>
 <p>由于自身不带验证机制，任何人都可以上传文件，因此存在安全性问题，一般不使用该方法。</p>
@@ -241,40 +203,44 @@
 <p>发送请求时，在 Max-Forwards 首部字段中填入数值，每经过一个服务器就会减 1，当数值为 0 时就停止传输。</p>
 <p>通常不会使用 TRACE，并且它容易受到 XST 攻击（Cross-Site Tracing，跨站追踪）。</p>
 <h3 id="HTTP-状态码"><a href="#HTTP-状态码" class="headerlink" title="HTTP 状态码"></a>HTTP 状态码</h3><p>服务器返回的 <strong>响应报文</strong> 中第一行为状态行，包含了状态码以及原因短语，用来告知客户端请求的结果。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">状态码</th>
-<th align="center">类别</th>
-<th align="center">含义</th>
+<th style="text-align:center">状态码</th>
+<th style="text-align:center">类别</th>
+<th style="text-align:center">含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">1XX</td>
-<td align="center">Informational（信息性状态码）</td>
-<td align="center">接收的请求正在处理</td>
+<tbody>
+<tr>
+<td style="text-align:center">1XX</td>
+<td style="text-align:center">Informational（信息性状态码）</td>
+<td style="text-align:center">接收的请求正在处理</td>
 </tr>
 <tr>
-<td align="center">2XX</td>
-<td align="center">Success（成功状态码）</td>
-<td align="center">请求正常处理完毕</td>
+<td style="text-align:center">2XX</td>
+<td style="text-align:center">Success（成功状态码）</td>
+<td style="text-align:center">请求正常处理完毕</td>
 </tr>
 <tr>
-<td align="center">3XX</td>
-<td align="center">Redirection（重定向状态码）</td>
-<td align="center">需要进行附加操作以完成请求</td>
+<td style="text-align:center">3XX</td>
+<td style="text-align:center">Redirection（重定向状态码）</td>
+<td style="text-align:center">需要进行附加操作以完成请求</td>
 </tr>
 <tr>
-<td align="center">4XX</td>
-<td align="center">Client Error（客户端错误状态码）</td>
-<td align="center">服务器无法处理请求</td>
+<td style="text-align:center">4XX</td>
+<td style="text-align:center">Client Error（客户端错误状态码）</td>
+<td style="text-align:center">服务器无法处理请求</td>
 </tr>
 <tr>
-<td align="center">5XX</td>
-<td align="center">Server Error（服务器错误状态码）</td>
-<td align="center">服务器处理请求出错</td>
+<td style="text-align:center">5XX</td>
+<td style="text-align:center">Server Error（服务器错误状态码）</td>
+<td style="text-align:center">服务器处理请求出错</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>1. 1XX 信息</strong></p>
 <p>100 Continue ：表明到目前为止都很正常，客户端可以继续发送请求或者忽略这个响应。</p>
 <p><strong>2. 2XX 成功</strong></p>
@@ -349,7 +315,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/05/30/006-HTTP-HTTPS/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/04/30/006-HTTP-HTTPS/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -361,6 +327,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2022/06/04/007-SVM/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            007. 机器学习：支持向量机（SVM）课堂实践
+          
+        </div>
+      </a>
     
     
       <a href="/2022/03/16/005-TCP-IP/" class="article-nav-link">
@@ -429,7 +404,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2022
+        2022-2025
         <i class="ri-heart-fill heart_icon"></i> Kennan Yang
       </li>
     </ul>
@@ -697,6 +672,29 @@
     viewer_init()
 </script> 
 <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
 
 <!-- Katex -->
 
