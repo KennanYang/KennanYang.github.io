@@ -2,6 +2,7 @@
 menu:
   主页: /
   归档: /archives
+  作品集: /portfolio
   分类: /categories
   标签: /tags
   # 旅行: /tags/旅行/
@@ -23,15 +24,15 @@ subtitle:
   showCursor: true # 是否显示光标
 
 # 网站图标和侧边栏logo
-favicon: /images/kennan2.png
-logo: /images/kennan2.png
+favicon: /images/kennanAi.png
+logo: /images/kennanAi.png
 
 # 封面配置
 # enable-是否启用封面；path-封面背景图；logo-封面logo
 cover:
   enable: true
   path: /images/cover0.jpg # /source/images目录下附送多张美图，可更换
-  logo: /images/kennan2.png # 如果不要直接设置成false
+  logo: /images/kennanAi.png # 如果不要直接设置成false
 
 # 页面顶部进度条
 progressBar: true

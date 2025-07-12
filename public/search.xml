@@ -6,10 +6,10 @@
     <content><![CDATA[<p><strong>Hello world</strong><br>欢迎来到我的博客，我是Kennan，一名计算机专业的研究生。以前在不同的地方写一些文章博客，但会受到平台的各种限制和广告。<br>这里在前辈的指导下，通过 <a href="https://docs.github.com/en/pages">github pages平台</a> 和 <a href="https://hexo.io/">Hexo博客框架</a> 搭建了一个自己的个人主页，在上面分享一些自己的经历和学习心得。<br>下面记录一下我的搭建过程，请多多指教，一些相关文件可参考我的 <a href="https://github.com/KennanYang/KennanYang.github.io">KennanYang.github.io</a> 项目<br><span id="more"></span></p>
 <h2 id="1-搭建Hexo"><a href="#1-搭建Hexo" class="headerlink" title="1.搭建Hexo"></a>1.搭建Hexo</h2><p><a href="https://hexo.io/">Hexo</a>是基于Node.js写的，也需要git管理文章上传到github，所以需要先安装git和nodeJS</p>
 <h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>windows：到git官网上下载,<a href="https://gitforwindows.org/">Download git</a><br>linux: </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install git</span><br></pre></td></tr></table></figure>
 <p>使用<code>git --version</code>查看是否安装正确</p>
 <h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>windows：<a href="https://nodejs.org/en/">Node.js官网</a>选择LTS版本（稳定版）。</p>
-<p>linux：<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure><br>使用<code>node -v</code>和<code>npm -v</code>查看是否安装正确</p>
+<p>linux：<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install nodejs</span><br><span class="line"><span class="built_in">sudo</span> apt-get install npm</span><br></pre></td></tr></table></figure><br>使用<code>node -v</code>和<code>npm -v</code>查看是否安装正确</p>
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>创建一个文件夹【filename】(我的叫 hexoblog)，然后<code>cd</code>到这个文件夹下<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><br>用<code>hexo -v</code>查看一下版本</p>
 <p>至此，安装完毕，开始配置Hexo项目</p>
 <h3 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h3><p>初始化Hexo</p>
@@ -55,6 +55,45 @@
       </tags>
   </entry>
   <entry>
+    <title>模板+AI助手：网站开发的新范式</title>
+    <url>/2025/07/09/011-template-ai-website/</url>
+    <content><![CDATA[<h1 id="模板-AI助手：网站开发的新范式"><a href="#模板-AI助手：网站开发的新范式" class="headerlink" title="模板+AI助手：网站开发的新范式"></a>模板+AI助手：网站开发的新范式</h1><blockquote>
+<p>“后端人不会写网站？有模板+AI，照样能整出高大上的主页！”</p>
+</blockquote>
+<p>大家好，我是恺南，一个和bug斗智斗勇三年的后端程序员。</p>
+<h2 id="🚀-1-三年前的“电子简历”模板"><a href="#🚀-1-三年前的“电子简历”模板" class="headerlink" title="🚀 1. 三年前的“电子简历”模板"></a>🚀 1. 三年前的“电子简历”模板</h2><p>说实话，我本来只会写后端，前端页面一窍不通。三年前，为了找工作，我硬着头皮用Hexo模板搭了个个人主页，纯粹是为了有个电子简历能发链接。<br>那会儿的我，能把模板跑起来就谢天谢地了，样式啥的全靠主题自带，能用就行。</p>
+<h2 id="🤖-2-模板-AI：升级的正确姿势"><a href="#🤖-2-模板-AI：升级的正确姿势" class="headerlink" title="🤖 2. 模板+AI：升级的正确姿势"></a>🤖 2. 模板+AI：升级的正确姿势</h2><p>这次升级，灵感来自AI。不是让AI从零帮我生成网站，而是——<strong>在原有模板的基础上，让AI帮我改、帮我美化、帮我加新功能！</strong></p>
+<ul>
+<li><strong>有模板打底</strong>：不用担心页面结构、兼容性，省心省力。</li>
+<li><strong>AI加持</strong>：想要什么新功能、什么样式，直接和Cursor说，AI帮我写代码、调样式，效率飞起。</li>
+</ul>
+<h2 id="🛠️-3-改造过程，省心又高效"><a href="#🛠️-3-改造过程，省心又高效" class="headerlink" title="🛠️ 3. 改造过程，省心又高效"></a>🛠️ 3. 改造过程，省心又高效</h2><ul>
+<li><strong>作品集</strong>：以前没这玩意，AI帮我在模板上加了卡片式作品集，展示项目so easy。</li>
+<li><strong>自我介绍</strong>：AI帮我把“后端程序员”写得有梗又有范儿，访客一看就记住。</li>
+<li><strong>样式美化</strong>：字号、留白、配色，AI给建议，我点头，网站立马高大上。</li>
+<li><strong>社交icon</strong>：以前只会写“邮箱：xxx”，现在AI帮我一行icon全搞定，连SVG都不用抠。</li>
+</ul>
+<h2 id="😂-4-幽默彩蛋"><a href="#😂-4-幽默彩蛋" class="headerlink" title="😂 4. 幽默彩蛋"></a>😂 4. 幽默彩蛋</h2><p>有模板+AI，后端人也能做出前端大佬的效果。<br>有时候我和Cursor开玩笑：“要不是有你，我还在为div加margin发愁呢！”</p>
+<h2 id="🌈-5-总结"><a href="#🌈-5-总结" class="headerlink" title="🌈 5. 总结"></a>🌈 5. 总结</h2><ul>
+<li><strong>有模板，省心</strong>：不用从零造轮子，结构稳、样式美。</li>
+<li><strong>有AI，省力</strong>：想怎么改就怎么改，效率提升不是一星半点。</li>
+<li><strong>新时代建站姿势</strong>：后端人也能玩转高颜值个人主页！</li>
+</ul>
+<hr>
+<blockquote>
+<p>关注我，带你体验更多AI驱动的开发新范式！ </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术杂谈</category>
+      </categories>
+      <tags>
+        <tag>AI开发</tag>
+        <tag>个人网站</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>010. hexo配置过程中遇到的问题汇总</title>
     <url>/2022/06/15/010-hexo-problems/</url>
     <content><![CDATA[<p>在hexo配置个人主页的过程中，遇到一些环境配置问题，在这里整理一下大神们的解决办法：</p>
@@ -92,10 +131,10 @@
 <p>考虑到下采样部分的特征提取具有从细节到抽象、从局部到全局的特点，通俗来说可以描述为，网络在卷积部分开始时学习到的是图像某一部分的特征，而前向传播到网络后半程时，网络所掌握到的是对整个图像的总体印象。</p>
 <p>不难发现，如果只使用卷积网络最后的输出进行上采样，则保留的信息是全局信息，缺乏细节信息对于总体精度的调整，因此本项目将卷积网络中所有的池化层输出都融入了上采样过程当中，具体做法是：</p>
 <p>（1）将卷积网络输出作为当前的上采样对象，将最后一个池化层作为目标池化层<br>（2）对上采样对象进行反卷积，尺寸扩大一定程度，且通道数也进行扩充，使之与目标池化层尺寸与通道数一致。<br>（3）将（2）中反卷积后的结果与目标池化层进行对应元素相加。<br>（4）将（3）操作结束后的输出作为当前的上采样对象，将当前目标池化层的前一个池化层替换当前的目标池化层。跳回（2），循环至所有池化层被融入整个上采样过程。<br>（5）将最后的结果进行正向卷积，还原成原图片尺寸，此时的输出即为该样本的像素级分类结果。</p>
-<h2 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h2><h3 id="1-图像缩放"><a href="#1-图像缩放" class="headerlink" title="1.图像缩放"></a>1.图像缩放</h3><p>为了达到降低数据维度减少训练模型时间的目的，同时保证缩小后的图片仍能保留原图片的关键信息，因此将图片尺寸缩小到（192，128）。缩小方法采用双线性插值法，即在两个方向分别进行一次线性插值，见下图：<br><img src="https://pic.imgdb.cn/item/62a95ff40947543129ab41bc.png" alt="图 5 双线性插值法"><br>假如我们想得到未知函数 f 在点 P = (x, y) 的值，假设我们已知函数 f 在 $Q_{11}  = (x_1, y_1)、Q_{12} = (x_1, y_2), Q_{21} = (x_2, y_1) 以及 Q_{22} = (x_2, y_2)$ 四个点的值。f就是一个像素点的像素值。首先在 x 方向进行线性插值，得到<br><img src="https://pic.imgdb.cn/item/62a962d90947543129af372e.png" alt=""><br>然后在 y 方向进行线性插值，得到<br><img src="https://pic.imgdb.cn/item/62a962d90947543129af36c6.png" alt=""><br>综合起来就是双线性插值最后的结果：<br><img src="https://pic.imgdb.cn/item/62a962d90947543129af3658.png" alt=""><br>图像双线性插值只会用相邻的4个点,最终还要将源图像和目标图像几何中心的对齐：<br><img src="https://pic.imgdb.cn/item/62a962d90947543129af361d.png" alt=""></p>
+<h2 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h2><h3 id="1-图像缩放"><a href="#1-图像缩放" class="headerlink" title="1.图像缩放"></a>1.图像缩放</h3><p>为了达到降低数据维度减少训练模型时间的目的，同时保证缩小后的图片仍能保留原图片的关键信息，因此将图片尺寸缩小到（192，128）。缩小方法采用双线性插值法，即在两个方向分别进行一次线性插值，见下图：<br><img src="https://pic.imgdb.cn/item/62a95ff40947543129ab41bc.png" alt="图 5 双线性插值法"><br>假如我们想得到未知函数 f 在点 P = (x, y) 的值，假设我们已知函数 f 在 $Q<em>{11}  = (x_1, y_1)、Q</em>{12} = (x<em>1, y_2), Q</em>{21} = (x<em>2, y_1) 以及 Q</em>{22} = (x_2, y_2)$ 四个点的值。f就是一个像素点的像素值。首先在 x 方向进行线性插值，得到<br><img src="https://pic.imgdb.cn/item/62a962d90947543129af372e.png" alt=""><br>然后在 y 方向进行线性插值，得到<br><img src="https://pic.imgdb.cn/item/62a962d90947543129af36c6.png" alt=""><br>综合起来就是双线性插值最后的结果：<br><img src="https://pic.imgdb.cn/item/62a962d90947543129af3658.png" alt=""><br>图像双线性插值只会用相邻的4个点,最终还要将源图像和目标图像几何中心的对齐：<br><img src="https://pic.imgdb.cn/item/62a962d90947543129af361d.png" alt=""></p>
 <h3 id="2-归一化"><a href="#2-归一化" class="headerlink" title="2.归一化"></a>2.归一化</h3><p>把数据变成(0，1)之间的小数，为了数据处理的方便性和正确性，便于不同单位或量级的指标能够进行比较和加权。归一化是一种简化计算的方式，即将有量纲的表达式，经过变换，化为无量纲的表达式，成为纯量。</p>
 <p>本次实验数据为图片，处理的数值为像素点，由于像素点的值在（0，255）之间，采用区间放缩法，将数据映射到（0，1）之间。即：</p>
-<p>$x’ = (x - X_{min}) / (X_{max} - X_{min})$</p>
+<p>$x’ = (x - X<em>{min}) / (X</em>{max} - X_{min})$</p>
 <h3 id="3-标准化"><a href="#3-标准化" class="headerlink" title="3.标准化"></a>3.标准化</h3><p>标准化是依照特征矩阵的列处理数据，其通过求z-score的方法，转换为标准正态分布，和整体样本分布相关，每个样本点都能对标准化产生影响。<br>即：$x’ = (x - μ)／σ$，<br>其中μ为均值，σ为标准差。</p>
 <h3 id="4-独热编码"><a href="#4-独热编码" class="headerlink" title="4.独热编码"></a>4.独热编码</h3><p>独热编码即 One-Hot 编码，又称一位有效编码，其方法是使用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候，其中只有一位有效。对于每一个特征，如果它有m个可能值，那么经过独热编码后，就变成了m个二元特征。并且，这些特征互斥，每次只有一个激活。因此，数据会变成稀疏的。</p>
 <p>这样做解决了分类器不好处理属性数据的问题，并且在一定程度上也起到了扩充特征的作用。</p>
@@ -129,7 +168,7 @@
     <url>/2022/06/08/008-k-means/</url>
     <content><![CDATA[<p>这是在学习《机器学习基础》课程的<strong>聚类</strong>这一章时，做的课堂实践内容，详见《机器学习（周立华）》第九章，记录一下以便回顾。<br>数据集使用 <a href="http://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10数据集</a><br>完整代码见github：<a href="https://github.com/KennanYang/mechine-learning/blob/master/week11_k_means.ipynb">聚类和k均值算法课程实践</a></p>
 <span id="more"></span>
-<h2 id="机器学习算法基础"><a href="#机器学习算法基础" class="headerlink" title="机器学习算法基础"></a>机器学习算法基础</h2><h3 id="聚类任务和k-means算法"><a href="#聚类任务和k-means算法" class="headerlink" title="聚类任务和k-means算法"></a>聚类任务和k-means算法</h3><p><strong>聚类（Clustering）</strong> 是一种无监督学习。目的是通过对<strong>未标记训练样本</strong>的学习来解释数据的固有属性和规律，为进一步的数据分析提供基础。<br>通过对数据集进行划分，形成<strong>簇结构（cluster）</strong>。<br>实验采用 <strong>k-means算法</strong> 对数据集进行分割。<br>给定样本集D，<strong>k-means</strong>算法使平方误差最小化<br><img src="https://pic.imgdb.cn/item/62a9499d09475431298ce88d.png" alt="平方误差"><br>对于聚类得到的聚类划分$C={C_1,C_2，…，C_k}$，其中$μ_i=1/(| C_i |)∑_(x∈C_i)$, x是聚类C的均值向量。该公式描述了聚类中样本与聚类均值向量之间的密切程度。</p>
+<h2 id="机器学习算法基础"><a href="#机器学习算法基础" class="headerlink" title="机器学习算法基础"></a>机器学习算法基础</h2><h3 id="聚类任务和k-means算法"><a href="#聚类任务和k-means算法" class="headerlink" title="聚类任务和k-means算法"></a>聚类任务和k-means算法</h3><p><strong>聚类（Clustering）</strong> 是一种无监督学习。目的是通过对<strong>未标记训练样本</strong>的学习来解释数据的固有属性和规律，为进一步的数据分析提供基础。<br>通过对数据集进行划分，形成<strong>簇结构（cluster）</strong>。<br>实验采用 <strong>k-means算法</strong> 对数据集进行分割。<br>给定样本集D，<strong>k-means</strong>算法使平方误差最小化<br><img src="https://pic.imgdb.cn/item/62a9499d09475431298ce88d.png" alt="平方误差"><br>对于聚类得到的聚类划分$C={C<em>1,C_2，…，C_k}$，其中$μ_i=1/(| C_i |)∑</em>(x∈C_i)$, x是聚类C的均值向量。该公式描述了聚类中样本与聚类均值向量之间的密切程度。</p>
 <p>E值越小，表示聚类中样本的相似性越高。</p>
 <p>K-means采用贪心策略通过迭代优化来逼近该公式。在迭代更新过程中，每个聚类中的样本与平均向量之间的距离会变短。这个距离可以用不同的范式来计算。</p>
 <p>当达到调整范围的阈值时，停止迭代，输出一个近似最优的聚类分类结果。在本实验中，该阈值被设置为0.0001。</p>
