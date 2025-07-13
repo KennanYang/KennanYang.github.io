@@ -94,9 +94,9 @@
       </tags>
   </entry>
   <entry>
-    <title>论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies</title>
+    <title>012.当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路</title>
     <url>/2024/07/10/012-multi-agent-design-mass/</url>
-    <content><![CDATA[<h1 id="当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路"><a href="#当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路" class="headerlink" title="当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路"></a>当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路</h1><p>在大语言模型（LLM）横扫AI领域的今天，我们早已习惯了单个模型在翻译、写作、代码生成等任务中的惊艳表现。但当面对更复杂的挑战——比如解一道需要多步推理的数学题、分析一篇跨文档的多跳问答，或是调试一段藏着隐蔽bug的代码时，单枪匹马的模型往往力不从心。这时候，一个新的思路逐渐清晰：让多个AI智能体像人类团队一样协作，会不会迸发更强的力量？</p>
+    <content><![CDATA[<h1 id="“论文读后感-Multi-Agent-Design-Optimizing-Agents-with-Better-Prompts-and-Topologies”"><a href="#“论文读后感-Multi-Agent-Design-Optimizing-Agents-with-Better-Prompts-and-Topologies”" class="headerlink" title="“论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies”"></a>“论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies”</h1><p>在大语言模型（LLM）横扫AI领域的今天，我们早已习惯了单个模型在翻译、写作、代码生成等任务中的惊艳表现。但当面对更复杂的挑战——比如解一道需要多步推理的数学题、分析一篇跨文档的多跳问答，或是调试一段藏着隐蔽bug的代码时，单枪匹马的模型往往力不从心。这时候，一个新的思路逐渐清晰：让多个AI智能体像人类团队一样协作，会不会迸发更强的力量？</p>
 <p>最近读到Google和剑桥大学联合发表的论文《Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies》，终于找到了这个问题的系统答案。这篇论文不仅揭示了多智能体系统（MAS）的核心设计密码，更提出了一套名为Mass的优化框架，让AI团队的“协作效率”实现了质的飞跃。</p>
 <h2 id="多智能体系统：不只是“人多力量大”"><a href="#多智能体系统：不只是“人多力量大”" class="headerlink" title="多智能体系统：不只是“人多力量大”"></a>多智能体系统：不只是“人多力量大”</h2><p>提到多智能体系统，你可能会想：不就是让多个AI模型一起干活吗？但事实远没这么简单。论文开篇就点出了一个关键矛盾：当多个智能体协作时，<strong>提示词的微小改动</strong>可能引发连锁反应（比如A的输出作为B的输入，误差会被放大），而<strong>智能体的连接方式</strong>（拓扑结构）更是千变万化——有的并行工作，有的串行接力，有的互相辩论，到底哪种组合才最高效？</p>
 <p>研究者们通过实验发现了两个反常识的结论：</p>
