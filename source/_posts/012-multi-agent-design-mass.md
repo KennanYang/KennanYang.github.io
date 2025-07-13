@@ -1,5 +1,5 @@
 ---
-title: 论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies
+title: 012.当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路
 categories:
   - 技术杂谈
 abbrlink: multi-agent-design-mass
@@ -12,7 +12,7 @@ tags:
 cover: /images/kennanAi.png
 ---
 
-# 当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路
+# "论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies"
 
 在大语言模型（LLM）横扫AI领域的今天，我们早已习惯了单个模型在翻译、写作、代码生成等任务中的惊艳表现。但当面对更复杂的挑战——比如解一道需要多步推理的数学题、分析一篇跨文档的多跳问答，或是调试一段藏着隐蔽bug的代码时，单枪匹马的模型往往力不从心。这时候，一个新的思路逐渐清晰：让多个AI智能体像人类团队一样协作，会不会迸发更强的力量？
 

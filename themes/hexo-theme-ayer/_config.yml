@@ -1,12 +1,8 @@
 # 侧边栏菜单
 menu:
   主页: /
-  归档: /archives
+  文章: /archives
   作品集: /portfolio
-  分类: /categories
-  标签: /tags
-  # 旅行: /tags/旅行/
-  # 摄影: http://shenyu-vip.lofter.com
   友链: /friends
   关于我: /about/
 language: en
