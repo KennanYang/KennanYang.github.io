@@ -1,4 +1,5 @@
 <section class="outer">
+  <!-- 分类和标签筛选按钮，右上角浮动，距离顶部有间距 -->
   <% if (theme.ads && theme.ads.length != 0){ %>
   <%- partial('ads') %>
   <% } %>
@@ -6,16 +7,12 @@
   <%- partial('_partial/broadcast') %>
   <% } %>
   <article class="articles">
-    <%
-    var title = '';
-    if (page.category) title = page.category;
-    if (page.tag) title = "#" + "&nbsp" + page.tag;
-    if (page.archive) {
-      if (page.year) title = page.year + (page.month ? '/' + page.month : '');
-      else title = __('archive_a');
-    }
-    %>
-    <% if (pagination !== 2){ %>
+    <h1 class="page-type-title" style="text-align:left;font-size:2.1rem;font-weight:800;margin:2.5em 0 0.8em 0;letter-spacing:1.2px;">文章</h1>
+    <div style="margin-bottom:1.5em;text-align:left;">
+      <a href="/categories/" style="display:inline-block;padding:0.45em 1.2em;margin-right:0.7em;background:#0078e7;color:#fff;border-radius:2em;font-weight:600;font-size:1rem;box-shadow:0 2px 8px rgba(0,120,231,0.08);text-decoration:none;transition:background 0.2s;">分类</a>
+      <a href="/tags/" style="display:inline-block;padding:0.45em 1.2em;background:#ff9800;color:#fff;border-radius:2em;font-weight:600;font-size:1rem;box-shadow:0 2px 8px rgba(255,152,0,0.08);text-decoration:none;transition:background 0.2s;">标签</a>
+    </div>
+    <% if (pagination !== 2 && typeof title !== 'undefined'){ %>
     <h1 class="page-type-title"><%- title %></h1>
     <% } %>
     <% if (pagination == 2){ %>

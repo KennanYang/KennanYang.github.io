@@ -1,5 +1,5 @@
 ---
-title: '010. hexo配置过程中遇到的问题汇总'
+title: 'hexo配置过程中遇到的问题汇总'
 date: 2022-06-15 13:19:41
 categories: 搭建环境
 tags:

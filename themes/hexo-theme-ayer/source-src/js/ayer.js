@@ -136,7 +136,7 @@
     $sidebar = $(".sidebar");
 
   $(".navbar-toggle").on("click", () => {
-    $(".content,.sidebar").addClass("anim");
+    $(".content").addClass("anim"); // 只给内容区加动画
     $content.toggleClass("on");
     $sidebar.toggleClass("on");
   });

@@ -1,5 +1,5 @@
 ---
-title: 002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录
+title: win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录
 date: 2022-02-26 18:54:57
 categories: python
 tags: python

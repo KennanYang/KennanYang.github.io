@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>000. Hello World - 用Github pages和Hexo搭建自己的个人主页</title>
+    <title>Hello World - 用Github pages和Hexo搭建自己的个人主页</title>
     <url>/2022/02/24/000-hello-world/</url>
     <content><![CDATA[<p><strong>Hello world</strong><br>欢迎来到我的博客，我是Kennan，一名计算机专业的研究生。以前在不同的地方写一些文章博客，但会受到平台的各种限制和广告。<br>这里在前辈的指导下，通过 <a href="https://docs.github.com/en/pages">github pages平台</a> 和 <a href="https://hexo.io/">Hexo博客框架</a> 搭建了一个自己的个人主页，在上面分享一些自己的经历和学习心得。<br>下面记录一下我的搭建过程，请多多指教，一些相关文件可参考我的 <a href="https://github.com/KennanYang/KennanYang.github.io">KennanYang.github.io</a> 项目<br><span id="more"></span></p>
 <h2 id="1-搭建Hexo"><a href="#1-搭建Hexo" class="headerlink" title="1.搭建Hexo"></a>1.搭建Hexo</h2><p><a href="https://hexo.io/">Hexo</a>是基于Node.js写的，也需要git管理文章上传到github，所以需要先安装git和nodeJS</p>
@@ -94,7 +94,7 @@
       </tags>
   </entry>
   <entry>
-    <title>012.当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路</title>
+    <title>当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路</title>
     <url>/2024/07/10/012-multi-agent-design-mass/</url>
     <content><![CDATA[<h1 id="“论文读后感-Multi-Agent-Design-Optimizing-Agents-with-Better-Prompts-and-Topologies”"><a href="#“论文读后感-Multi-Agent-Design-Optimizing-Agents-with-Better-Prompts-and-Topologies”" class="headerlink" title="“论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies”"></a>“论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies”</h1><p>在大语言模型（LLM）横扫AI领域的今天，我们早已习惯了单个模型在翻译、写作、代码生成等任务中的惊艳表现。但当面对更复杂的挑战——比如解一道需要多步推理的数学题、分析一篇跨文档的多跳问答，或是调试一段藏着隐蔽bug的代码时，单枪匹马的模型往往力不从心。这时候，一个新的思路逐渐清晰：让多个AI智能体像人类团队一样协作，会不会迸发更强的力量？</p>
 <p>最近读到Google和剑桥大学联合发表的论文《Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies》，终于找到了这个问题的系统答案。这篇论文不仅揭示了多智能体系统（MAS）的核心设计密码，更提出了一套名为Mass的优化框架，让AI团队的“协作效率”实现了质的飞跃。</p>
@@ -151,7 +151,7 @@
       </tags>
   </entry>
   <entry>
-    <title>010. hexo配置过程中遇到的问题汇总</title>
+    <title>hexo配置过程中遇到的问题汇总</title>
     <url>/2022/06/15/010-hexo-problems/</url>
     <content><![CDATA[<p>在hexo配置个人主页的过程中，遇到一些环境配置问题，在这里整理一下大神们的解决办法：</p>
 <p>1.主页打不开的问题：</p>
@@ -169,7 +169,7 @@
       </tags>
   </entry>
   <entry>
-    <title>009. 机器学习：车辆分割任务和卷积神经网络课堂实践</title>
+    <title>机器学习：车辆分割任务和卷积神经网络课堂实践</title>
     <url>/2022/06/13/009-FCN-car-recognition/</url>
     <content><![CDATA[<p>这是在学习《机器学习基础》课程的<strong>神经网络</strong>这一章时，做的期末大作业，详见《机器学习（周立华）》第五章，记录一下以便回顾。</p>
 <p>数据集: kaggle车辆分割数据集<br>完整代码见github：<a href="https://github.com/KennanYang/Kaggle_car_segmentation">车辆分割任务和卷积神经网络课堂实践</a><br><span id="more"></span></p>
@@ -221,7 +221,7 @@
       </tags>
   </entry>
   <entry>
-    <title>008. 机器学习：聚类任务和k_means算法课堂实践</title>
+    <title>机器学习：聚类任务和k_means算法课堂实践</title>
     <url>/2022/06/08/008-k-means/</url>
     <content><![CDATA[<p>这是在学习《机器学习基础》课程的<strong>聚类</strong>这一章时，做的课堂实践内容，详见《机器学习（周立华）》第九章，记录一下以便回顾。<br>数据集使用 <a href="http://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10数据集</a><br>完整代码见github：<a href="https://github.com/KennanYang/mechine-learning/blob/master/week11_k_means.ipynb">聚类和k均值算法课程实践</a></p>
 <span id="more"></span>
@@ -248,7 +248,7 @@
       </tags>
   </entry>
   <entry>
-    <title>007. 机器学习：支持向量机（SVM）课堂实践</title>
+    <title>机器学习：支持向量机（SVM）课堂实践</title>
     <url>/2022/06/04/007-SVM/</url>
     <content><![CDATA[<p>这是在学习《机器学习基础》课程的支持向量机这一章时，做的课堂实践内容，详见《机器学习（周立华）》第六章，记录一下以便回顾。<br>数据集使用 <a href="http://yann.lecun.com/exdb/mnist/">Mnist-image数据集</a><br>完整代码见github：<a href="https://github.com/KennanYang/mechine-learning/blob/master/week7_SVM.ipynb">SVM课程实践</a></p>
 <span id="more"></span>
@@ -273,7 +273,7 @@
       </tags>
   </entry>
   <entry>
-    <title>006. HTTP协议详解</title>
+    <title>HTTP协议详解</title>
     <url>/2022/04/30/006-HTTP-HTTPS/</url>
     <content><![CDATA[<p>HTTP协议是网络编程的基础知识，后端开发应当熟练掌握，但是相关内容较多。</p>
 <p>之前在学校学的都忘记了，最近为了找工作又复习起来，参考了力扣上的教程和一些网上资料，做一个总结，并补充一些常问的八股方便回顾。</p>
@@ -432,7 +432,7 @@
       </tags>
   </entry>
   <entry>
-    <title>005. UDP/TCP协议详解</title>
+    <title>UDP/TCP协议详解</title>
     <url>/2022/03/16/005-TCP-IP/</url>
     <content><![CDATA[<p>面试中频繁问到UDP/TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。</p>
 <span id="more"></span>
@@ -487,7 +487,7 @@ TCP segment 可能由于路由器异常而“迷途”，在迷途期间，TCP�
       </tags>
   </entry>
   <entry>
-    <title>004. 数据结构总结 —— 树</title>
+    <title>数据结构总结 —— 树</title>
     <url>/2022/03/12/004-tree-datatype/</url>
     <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><a href="http://c.biancheng.net/view/3390.html">《c语言学习网》数据结构总结——树</a><br>本文旨在根据教程巩固树的数据结构知识和c语言指针的应用，记录一下自己学习过程中的代码，知识讲解参考教程。</p>
 <h2 id="一、树的基本概念和术语"><a href="#一、树的基本概念和术语" class="headerlink" title="一、树的基本概念和术语"></a>一、树的基本概念和术语</h2><p>树结构是一种非线性存储结构，存储的是具有“一对多”关系的数据元素的集合。如图 是使用树结构存储的集合 {A,B,C,D,E,F,G,H,I,J,K,L,M} 的示意图。对于数据 A 来说，和数据 B、C、D 有关系；对于数据 B 来说，和 E、F 有关系。这就是“一对多”的关系。<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTA0MjcvMDk0NDMwMTQ5My0wLnBuZw?x-oss-process=image/format,png" alt="图 1（A）树的示例"><br><span id="more"></span></p>
@@ -600,7 +600,7 @@ TCP segment 可能由于路由器异常而“迷途”，在迷途期间，TCP�
       </tags>
   </entry>
   <entry>
-    <title>003. go入门，学习用goroutine开启并发</title>
+    <title>go入门，学习用goroutine开启并发</title>
     <url>/2022/03/02/003-goroutine/</url>
     <content><![CDATA[<p><strong>为了学习go语言，和了解并行的基本写法，这里通过一个demo练习</strong><br>由于已经有了c++和python的基础，所以了解基本语法很快，主要是学习go面向消息的传递机制，以及使用goroutine进行并发操作。<br>参考资料：<br><a href="https://www.runoob.com/go/go-concurrent.html">Go 语言教程-Go并发</a></p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>hello.go</p>
@@ -616,7 +616,7 @@ TCP segment 可能由于路由器异常而“迷途”，在迷途期间，TCP�
       </tags>
   </entry>
   <entry>
-    <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
+    <title>win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
     <url>/2022/02/26/002-config-pytorch/</url>
     <content><![CDATA[<p>最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。<br>前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。<br><span id="more"></span></p>
 <h1 id="1-安装python3-9"><a href="#1-安装python3-9" class="headerlink" title="1.安装python3.9"></a>1.安装python3.9</h1><p>首先是python的安装，选用当前时间最新版的python3.9.1<br>官网下载安装包即可<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br><img src="https://img-blog.csdnimg.cn/20201219134620158.png" alt=""></p>
@@ -644,7 +644,7 @@ TCP segment 可能由于路由器异常而“迷途”，在迷途期间，TCP�
       </tags>
   </entry>
   <entry>
-    <title>001. 如何连接实验室的服务器进行网络训练？</title>
+    <title>如何连接实验室的服务器进行网络训练？</title>
     <url>/2022/02/24/001-link-to-server/</url>
     <content><![CDATA[<p>我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。</p>
 <p>实验室的师兄甩过来服务器的ip和用户名密码，说直接连就行。</p>

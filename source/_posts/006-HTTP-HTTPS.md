@@ -1,5 +1,5 @@
 ---
-title: 006. HTTP协议详解
+title: HTTP协议详解
 date: 2022-04-30 10:46:33
 categories: 计算机网络
 tags:

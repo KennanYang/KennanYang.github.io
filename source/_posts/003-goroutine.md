@@ -1,5 +1,5 @@
 ---
-title: 003. go入门，学习用goroutine开启并发
+title: go入门，学习用goroutine开启并发
 date: 2022-03-02 08:03:04
 categories: go
 tags: 

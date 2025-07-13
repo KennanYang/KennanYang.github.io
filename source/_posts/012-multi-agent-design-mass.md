@@ -1,5 +1,5 @@
 ---
-title: 012.当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路
+title: 当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路
 categories:
   - 技术杂谈
 abbrlink: multi-agent-design-mass

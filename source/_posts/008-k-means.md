@@ -1,5 +1,5 @@
 ---
-title: 008. 机器学习：聚类任务和k_means算法课堂实践
+title: 机器学习：聚类任务和k_means算法课堂实践
 date: 2022-06-08 09:43:51
 categories: 机器学习
 tags:

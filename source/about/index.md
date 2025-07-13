@@ -2,9 +2,10 @@
 title: About me
 createdate: 2022-02-24 22:14:57
 gmtdate: 2025-07-9 22:14:57
+layout: page
 ---
 
-<h1>恺南<img src="/images/kennan.jpg" width="25%" align ="right"></h1>
+<h1>恺南<img src="/images/kennanAi.png" width="25%" align ="right"></h1>
 
 ## 🎯 我是谁
 **AI实战派程序员** | 复旦大学图像识别硕士 | 金融科技互联网码农
