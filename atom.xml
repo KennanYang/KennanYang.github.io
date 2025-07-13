@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-13T06:26:45.505Z</updated>
+  <updated>2025-07-13T06:57:17.397Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2025/07/09/011-template-ai-website/"/>
     <id>http://example.com/2025/07/09/011-template-ai-website/</id>
     <published>2025-07-09T15:55:00.000Z</published>
-    <updated>2025-07-13T06:26:45.505Z</updated>
+    <updated>2025-07-13T06:57:17.397Z</updated>
     
     
       
@@ -50,11 +50,11 @@
   </entry>
   
   <entry>
-    <title>012.当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路</title>
+    <title>当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路</title>
     <link href="http://example.com/2024/07/10/012-multi-agent-design-mass/"/>
     <id>http://example.com/2024/07/10/012-multi-agent-design-mass/</id>
     <published>2024-07-10T12:00:00.000Z</published>
-    <updated>2025-07-13T06:28:18.856Z</updated>
+    <updated>2025-07-13T06:57:17.397Z</updated>
     
     
       
@@ -81,11 +81,11 @@
   </entry>
   
   <entry>
-    <title>010. hexo配置过程中遇到的问题汇总</title>
+    <title>hexo配置过程中遇到的问题汇总</title>
     <link href="http://example.com/2022/06/15/010-hexo-problems/"/>
     <id>http://example.com/2022/06/15/010-hexo-problems/</id>
     <published>2022-06-15T05:19:41.000Z</published>
-    <updated>2022-08-21T06:56:17.302Z</updated>
+    <updated>2025-07-13T06:57:17.333Z</updated>
     
     
     <summary type="html">&lt;p&gt;在hexo配置个人主页的过程中，遇到一些环境配置问题，在这里整理一下大神们的解决办法：&lt;/p&gt;
@@ -102,11 +102,11 @@
   </entry>
   
   <entry>
-    <title>009. 机器学习：车辆分割任务和卷积神经网络课堂实践</title>
+    <title>机器学习：车辆分割任务和卷积神经网络课堂实践</title>
     <link href="http://example.com/2022/06/13/009-FCN-car-recognition/"/>
     <id>http://example.com/2022/06/13/009-FCN-car-recognition/</id>
     <published>2022-06-13T01:44:24.000Z</published>
-    <updated>2022-08-21T06:56:17.302Z</updated>
+    <updated>2025-07-13T06:57:17.333Z</updated>
     
     
     <summary type="html">&lt;p&gt;这是在学习《机器学习基础》课程的&lt;strong&gt;神经网络&lt;/strong&gt;这一章时，做的期末大作业，详见《机器学习（周立华）》第五章，记录一下以便回顾。&lt;/p&gt;
@@ -126,11 +126,11 @@
   </entry>
   
   <entry>
-    <title>008. 机器学习：聚类任务和k_means算法课堂实践</title>
+    <title>机器学习：聚类任务和k_means算法课堂实践</title>
     <link href="http://example.com/2022/06/08/008-k-means/"/>
     <id>http://example.com/2022/06/08/008-k-means/</id>
     <published>2022-06-08T01:43:51.000Z</published>
-    <updated>2022-08-21T06:56:17.301Z</updated>
+    <updated>2025-07-13T06:57:17.333Z</updated>
     
     
     <summary type="html">&lt;p&gt;这是在学习《机器学习基础》课程的&lt;strong&gt;聚类&lt;/strong&gt;这一章时，做的课堂实践内容，详见《机器学习（周立华）》第九章，记录一下以便回顾。&lt;br&gt;数据集使用 &lt;a href=&quot;http://www.cs.toronto.edu/~kriz/cifar.html&quot;&gt;CIFAR-10数据集&lt;/a&gt;&lt;br&gt;完整代码见github：&lt;a href=&quot;https://github.com/KennanYang/mechine-learning/blob/master/week11_k_means.ipynb&quot;&gt;聚类和k均值算法课程实践&lt;/a&gt;&lt;/p&gt;</summary>
@@ -147,11 +147,11 @@
   </entry>
   
   <entry>
-    <title>007. 机器学习：支持向量机（SVM）课堂实践</title>
+    <title>机器学习：支持向量机（SVM）课堂实践</title>
     <link href="http://example.com/2022/06/04/007-SVM/"/>
     <id>http://example.com/2022/06/04/007-SVM/</id>
     <published>2022-06-04T01:43:37.000Z</published>
-    <updated>2022-08-21T06:56:17.301Z</updated>
+    <updated>2025-07-13T06:57:17.333Z</updated>
     
     
     <summary type="html">&lt;p&gt;这是在学习《机器学习基础》课程的支持向量机这一章时，做的课堂实践内容，详见《机器学习（周立华）》第六章，记录一下以便回顾。&lt;br&gt;数据集使用 &lt;a href=&quot;http://yann.lecun.com/exdb/mnist/&quot;&gt;Mnist-image数据集&lt;/a&gt;&lt;br&gt;完整代码见github：&lt;a href=&quot;https://github.com/KennanYang/mechine-learning/blob/master/week7_SVM.ipynb&quot;&gt;SVM课程实践&lt;/a&gt;&lt;/p&gt;</summary>
@@ -168,11 +168,11 @@
   </entry>
   
   <entry>
-    <title>006. HTTP协议详解</title>
+    <title>HTTP协议详解</title>
     <link href="http://example.com/2022/04/30/006-HTTP-HTTPS/"/>
     <id>http://example.com/2022/04/30/006-HTTP-HTTPS/</id>
     <published>2022-04-30T02:46:33.000Z</published>
-    <updated>2022-08-21T06:56:17.300Z</updated>
+    <updated>2025-07-13T06:57:17.306Z</updated>
     
     
     <summary type="html">&lt;p&gt;HTTP协议是网络编程的基础知识，后端开发应当熟练掌握，但是相关内容较多。&lt;/p&gt;
@@ -189,11 +189,11 @@
   </entry>
   
   <entry>
-    <title>005. UDP/TCP协议详解</title>
+    <title>UDP/TCP协议详解</title>
     <link href="http://example.com/2022/03/16/005-TCP-IP/"/>
     <id>http://example.com/2022/03/16/005-TCP-IP/</id>
     <published>2022-03-16T04:27:49.000Z</published>
-    <updated>2022-05-30T04:45:29.740Z</updated>
+    <updated>2025-07-13T06:57:17.306Z</updated>
     
     
     <summary type="html">&lt;p&gt;面试中频繁问到UDP/TCP协议，但是经常只知其表，不知其里，因此在这里做一个总结，尽量涵盖可能问到的问题。&lt;/p&gt;</summary>
@@ -208,11 +208,11 @@
   </entry>
   
   <entry>
-    <title>004. 数据结构总结 —— 树</title>
+    <title>数据结构总结 —— 树</title>
     <link href="http://example.com/2022/03/12/004-tree-datatype/"/>
     <id>http://example.com/2022/03/12/004-tree-datatype/</id>
     <published>2022-03-12T00:59:29.000Z</published>
-    <updated>2022-08-21T06:56:17.300Z</updated>
+    <updated>2025-07-13T06:57:17.306Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://c.biancheng.net/view/3390.html&quot;&gt;《c语言学习网》数据结构总结——树&lt;/a&gt;&lt;br&gt;本文旨在根据教程巩固树的数据结构知识和c语言指针的应用，记录一下自己学习过程中的代码，知识讲解参考教程。&lt;/p&gt;
@@ -230,11 +230,11 @@
   </entry>
   
   <entry>
-    <title>003. go入门，学习用goroutine开启并发</title>
+    <title>go入门，学习用goroutine开启并发</title>
     <link href="http://example.com/2022/03/02/003-goroutine/"/>
     <id>http://example.com/2022/03/02/003-goroutine/</id>
     <published>2022-03-02T00:03:04.000Z</published>
-    <updated>2022-05-09T12:17:20.024Z</updated>
+    <updated>2025-07-13T06:57:17.305Z</updated>
     
     
       
@@ -257,11 +257,11 @@
   </entry>
   
   <entry>
-    <title>002. win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
+    <title>win10安装python3.9.1+cuda11.1+cudnn+pytorch+opencv记录</title>
     <link href="http://example.com/2022/02/26/002-config-pytorch/"/>
     <id>http://example.com/2022/02/26/002-config-pytorch/</id>
     <published>2022-02-26T10:54:57.000Z</published>
-    <updated>2022-08-21T06:56:17.299Z</updated>
+    <updated>2025-07-13T06:57:17.305Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近由于机器学习大作业需要用到神经网络，记录一下配置环境的过程。&lt;br&gt;前人铺路，我只是结合自己的环境做了一个简单的总结，写的不好多多见谅。&lt;br&gt;</summary>
@@ -276,11 +276,11 @@
   </entry>
   
   <entry>
-    <title>001. 如何连接实验室的服务器进行网络训练？</title>
+    <title>如何连接实验室的服务器进行网络训练？</title>
     <link href="http://example.com/2022/02/24/001-link-to-server/"/>
     <id>http://example.com/2022/02/24/001-link-to-server/</id>
     <published>2022-02-24T10:48:44.000Z</published>
-    <updated>2022-05-09T12:17:20.023Z</updated>
+    <updated>2025-07-13T06:57:17.287Z</updated>
     
     
     <summary type="html">&lt;p&gt;我在用电脑训练CNN时遇到了性能瓶颈（显存不够），当得知实验室的服务器算力更强时，去请教师兄怎么连。&lt;/p&gt;
@@ -300,11 +300,11 @@
   </entry>
   
   <entry>
-    <title>000. Hello World - 用Github pages和Hexo搭建自己的个人主页</title>
+    <title>Hello World - 用Github pages和Hexo搭建自己的个人主页</title>
     <link href="http://example.com/2022/02/24/000-hello-world/"/>
     <id>http://example.com/2022/02/24/000-hello-world/</id>
     <published>2022-02-24T02:54:57.000Z</published>
-    <updated>2022-05-09T12:17:20.023Z</updated>
+    <updated>2025-07-13T06:57:10.987Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;Hello world&lt;/strong&gt;&lt;br&gt;欢迎来到我的博客，我是Kennan，一名计算机专业的研究生。以前在不同的地方写一些文章博客，但会受到平台的各种限制和广告。&lt;br&gt;这里在前辈的指导下，通过 &lt;a href=&quot;https://docs.github.com/en/pages&quot;&gt;github pages平台&lt;/a&gt; 和 &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo博客框架&lt;/a&gt; 搭建了一个自己的个人主页，在上面分享一些自己的经历和学习心得。&lt;br&gt;下面记录一下我的搭建过程，请多多指教，一些相关文件可参考我的 &lt;a href=&quot;https://github.com/KennanYang/KennanYang.github.io&quot;&gt;KennanYang.github.io&lt;/a&gt; 项目&lt;br&gt;</summary>
