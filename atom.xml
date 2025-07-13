@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-09T15:55:37.515Z</updated>
+  <updated>2025-07-13T06:26:45.505Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,14 +21,18 @@
     <link href="http://example.com/2025/07/09/011-template-ai-website/"/>
     <id>http://example.com/2025/07/09/011-template-ai-website/</id>
     <published>2025-07-09T15:55:00.000Z</published>
-    <updated>2025-07-09T15:55:37.515Z</updated>
+    <updated>2025-07-13T06:26:45.505Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;模板-AI助手：网站开发的新范式&quot;&gt;&lt;a href=&quot;#模板-AI助手：网站开发的新范式&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;“后端人不会写网站？有模板+AI，照样能整出高大上的主页！”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;大家好，我是恺南，一个和bug斗智斗勇三年的后端程序员。&lt;/p&gt;
+&lt;h2 id=&quot;🚀-1-三年前的“电子简历”模板&quot;&gt;&lt;a</summary>
         
       
     
@@ -42,6 +46,37 @@
     <category term="个人网站" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
     
     <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies</title>
+    <link href="http://example.com/2024/07/10/012-multi-agent-design-mass/"/>
+    <id>http://example.com/2024/07/10/012-multi-agent-design-mass/</id>
+    <published>2024-07-10T12:00:00.000Z</published>
+    <updated>2025-07-13T06:26:29.809Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路&quot;&gt;&lt;a href=&quot;#当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术杂谈" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="多智能体系统" scheme="http://example.com/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="LLM" scheme="http://example.com/tags/LLM/"/>
+    
+    <category term="AI论文" scheme="http://example.com/tags/AI%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="读后感" scheme="http://example.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     
   </entry>
   

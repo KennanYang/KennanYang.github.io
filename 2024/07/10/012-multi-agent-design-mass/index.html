@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>010. hexo配置过程中遇到的问题汇总 |  KennanYang</title>
+      <title>论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies |  KennanYang</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/kennanAi.png" />
@@ -61,7 +61,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-010-hexo-problems"
+  id="post-012-multi-agent-design-mass"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -72,7 +72,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  010. hexo配置过程中遇到的问题汇总
+  论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies
 </h1>
  
 
@@ -80,11 +80,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/06/15/010-hexo-problems/" class="article-date">
-  <time datetime="2022-06-15T05:19:41.000Z" itemprop="datePublished">2022-06-15</time>
+      <a href="/2024/07/10/012-multi-agent-design-mass/" class="article-date">
+  <time datetime="2024-07-10T12:00:00.000Z" itemprop="datePublished">2024-07-10</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/">搭建环境</a>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/">技术杂谈</a>
   </div>
   
 <div class="word_count">
@@ -92,7 +92,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">208</span>
+            <span class="post-count">2.2k</span>
         </span>
     </span>
 
@@ -101,26 +101,64 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">7 min</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>在hexo配置个人主页的过程中，遇到一些环境配置问题，在这里整理一下大神们的解决办法：</p>
-<p>1.主页打不开的问题：</p>
-<p>打开github主页时发现<strong>404</strong>，通过 <strong><em>hexo server</em></strong> 命令打开本地的主页配置时发现 Cannot Get/,所以搜索了一下解决办法，最终参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/loveLifeLoveCoding/article/details/121789466">vue项目Error: Cannot find module ‘xxx’类报错的解决方法</a> 解决了主页打不开的问题。</p>
-<span id="more"></span>
-<p>2.数学公式问题：</p>
-<p>这个问题是当我根据marktown写数学公式时，发现vscode上显示公式正确，但是配置到主页上时，公式就变成了源码，通过学习这个博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45511189/article/details/115798563">hexo博客next主题添加对数学公式的支持</a>，得到解决。</p>
-<p>marktown的数学公式语法规则为：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f0de9f572c9d">Marktown数学公式</a></p>
+  <h1 id="当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路"><a href="#当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路" class="headerlink" title="当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路"></a>当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路</h1><p>在大语言模型（LLM）横扫AI领域的今天，我们早已习惯了单个模型在翻译、写作、代码生成等任务中的惊艳表现。但当面对更复杂的挑战——比如解一道需要多步推理的数学题、分析一篇跨文档的多跳问答，或是调试一段藏着隐蔽bug的代码时，单枪匹马的模型往往力不从心。这时候，一个新的思路逐渐清晰：让多个AI智能体像人类团队一样协作，会不会迸发更强的力量？</p>
+<p>最近读到Google和剑桥大学联合发表的论文《Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies》，终于找到了这个问题的系统答案。这篇论文不仅揭示了多智能体系统（MAS）的核心设计密码，更提出了一套名为Mass的优化框架，让AI团队的“协作效率”实现了质的飞跃。</p>
+<h2 id="多智能体系统：不只是“人多力量大”"><a href="#多智能体系统：不只是“人多力量大”" class="headerlink" title="多智能体系统：不只是“人多力量大”"></a>多智能体系统：不只是“人多力量大”</h2><p>提到多智能体系统，你可能会想：不就是让多个AI模型一起干活吗？但事实远没这么简单。论文开篇就点出了一个关键矛盾：当多个智能体协作时，<strong>提示词的微小改动</strong>可能引发连锁反应（比如A的输出作为B的输入，误差会被放大），而<strong>智能体的连接方式</strong>（拓扑结构）更是千变万化——有的并行工作，有的串行接力，有的互相辩论，到底哪种组合才最高效？</p>
+<p>研究者们通过实验发现了两个反常识的结论：</p>
+<ul>
+<li><strong>提示词比数量更重要</strong>：给单个智能体优化提示词，比盲目增加智能体数量更有效。比如在数学推理任务中，经过优化的单智能体配合少量协作，性能远超“人海战术”。</li>
+</ul>
+<p><img src="/images/MASfigure2.png" alt="图2：Gemini 1.5 Pro在MATH任务上提示优化智能体的准确率与总令牌计数对比"></p>
+<p>这张图清晰展示了提示优化的力量：随着计算资源（令牌数）增加，经过提示优化的智能体准确率持续攀升，而单纯依靠“自我一致性”“多智能体辩论”等扩展方式的系统很快陷入瓶颈，直观印证了“精准提示优于盲目堆量”的结论。</p>
+<ul>
+<li><strong>不是所有拓扑都有用</strong>：像“辩论”“聚合”这样的拓扑结构可能提升性能，但有些结构反而会拖后腿。在HotpotQA任务中，只有“辩论”拓扑带来了3%的提升，其他结构甚至导致性能下降。</li>
+</ul>
+<p><img src="/images/MASfigure3.png" alt="图3：Gemini 1.5 Pro不同拓扑结构的性能对比"></p>
+<p>通过对比不同拓扑与基础智能体的性能数据，我们能清晰看到：拓扑结构的价值高度分化，盲目组合反而可能降低效率，这也解释了为什么“筛选有效拓扑”是设计MAS的关键。</p>
+<p>这让我想起人类团队的协作：一个高效的团队，既需要每个成员明确分工（类似优化提示词），也需要合理的沟通机制（类似拓扑结构）。如果成员角色模糊、沟通混乱，人再多也无济于事。</p>
+<h2 id="Mass框架：给AI团队“搭班子”的智慧"><a href="#Mass框架：给AI团队“搭班子”的智慧" class="headerlink" title="Mass框架：给AI团队“搭班子”的智慧"></a>Mass框架：给AI团队“搭班子”的智慧</h2><p>既然提示词和拓扑结构这么重要，怎么才能找到最优组合？论文提出的Mass框架给出了一套漂亮的解决方案。它不像传统方法那样“眉毛胡子一把抓”，而是分三步走：</p>
+<p><img src="/images/MASfigure1.png" alt="图1：Mass框架示意图"></p>
+<p>这张图直观呈现了Mass的核心逻辑：从左侧的“多智能体设计空间”（包含提示词组件和拓扑模块）出发，通过交错优化提示词和拓扑结构，最终得到右侧“优化后的智能体系统”。整个过程像搭积木一样，先打磨好每个零件，再设计拼接方式，最后微调整体稳定性。</p>
+<ol>
+<li><p><strong>先练内功：块级提示词优化</strong><br>就像球队先训练每个位置的球员，Mass先给每个智能体“量身定制”提示词。比如让“计算器”智能体专注于精准运算，让“检查者”智能体擅长挑错。这一步用了自动提示词优化技术，连示例和指令都精细调整，确保每个智能体“术业有专攻”。</p>
+</li>
+<li><p><strong>搭好骨架：工作流拓扑优化</strong><br>有了优秀的个体，下一步是设计协作方式。Mass会根据前一步的结果，筛选出那些真正有效的拓扑结构（比如排除掉拖后腿的），再组合出高效的工作流。比如在数学推理任务中，它发现“9个并行计算器+0个辩论者”的结构效果最好。</p>
+</li>
+<li><p><strong>全局调优：工作流级提示词优化</strong><br>最后，Mass会站在全局视角，微调整个团队的“沟通话术”。比如让“计算器”的输出格式更适合“检查者”快速理解，减少协作摩擦。</p>
+</li>
+</ol>
+<p><img src="/images/MASfigure5.png" alt="图5：Mass优化阶段性能及对比消融研究"></p>
+<p>这张图通过阶段性能曲线和对照组数据，生动说明：每个优化步骤都在“踩在前一步的肩膀上”提升——块级优化打好基础，拓扑优化搭建框架，全局优化消除协作缝隙。而“无剪枝”“无前序提示优化”的对照组性能明显落后，更凸显了Mass分阶段逻辑的合理性。</p>
+<p>这种“从局部到全局”的思路，完美解决了多智能体系统的复杂性。实验结果也很亮眼：在数学推理、代码生成等8项任务中，Mass优化的系统平均性能比现有方法高出8%-14%，尤其在LiveCodeBench编码任务中，准确率直接从66%飙升到82%。</p>
+<p><img src="/images/MASfigure6.png" alt="图6：Mass与自动代理设计基线的优化轨迹对比"></p>
+<p>通过对比Mass与ADAS、AFlow等方法的优化曲线，我们能清晰看到：Mass的性能提升更稳定、更高效。其他方法要么波动剧烈，要么早早陷入停滞，而Mass像“螺旋上升”一样稳步逼近最优解，这得益于它对“提示词+拓扑”的协同优化。</p>
+<p><img src="/images/MASfigure7.png" alt="图7：Mass在MATH任务上的优化轨迹示例"></p>
+<p>以数学推理任务为例，这张图完整展示了Mass的“进化路径”：从初始的零样本CoT智能体，到块级优化发现“辩论拓扑”更优，再到拓扑优化发现“聚合并行智能体”性能更强，最后通过全局提示优化锁定最佳方案。整个过程像“团队试错-调整-精进”的真实写照，让抽象框架变得可触可感。</p>
+<h2 id="写给开发者：多智能体系统的实用启示"><a href="#写给开发者：多智能体系统的实用启示" class="headerlink" title="写给开发者：多智能体系统的实用启示"></a>写给开发者：多智能体系统的实用启示</h2><p>读完这篇论文，我最大的感触是：<strong>未来的AI应用，拼的不是单个模型的“智商”，而是团队的“协作力”</strong>。Mass框架给我们的启示远不止技术细节，更有一套可落地的设计原则：</p>
+<ul>
+<li><strong>先优化个体，再设计协作</strong>：别急于堆砌智能体数量，先把每个角色的提示词打磨到极致。</li>
+<li><strong>警惕“无效协作”</strong>：不是所有拓扑结构都有价值，多做 ablation study（控制变量实验），找出真正有效的组合。</li>
+<li><strong>动态调整优于固定模式</strong>：就像人类团队会根据任务调整分工，多智能体系统也需要灵活的拓扑结构。比如简单任务用并行计算，复杂任务加入辩论环节。</li>
+</ul>
+<p>对于开发者来说，Mass框架提供了一个现成的“搭班子”工具。无论是做数据分析还是代码生成，你都可以先用它优化单个智能体的提示词，再尝试不同的协作方式，最后全局微调——这套流程能帮你少走很多弯路。</p>
+<h2 id="结语：AI的“群体智慧”时代正在到来"><a href="#结语：AI的“群体智慧”时代正在到来" class="headerlink" title="结语：AI的“群体智慧”时代正在到来"></a>结语：AI的“群体智慧”时代正在到来</h2><p>从AlphaGo的团队协作击败人类棋手，到如今Mass框架让AI团队高效解决复杂任务，我们正在见证一个新趋势：AI的进步不再是单点突破，而是“群体智慧”的胜利。</p>
+<p>这篇论文不仅为多智能体系统设计提供了方法论，更暗示了未来AI的发展方向——就像人类社会的进步离不开分工与协作，AI的下一个里程碑，或许就藏在这些“智能体团队”的高效协作中。</p>
+<p>如果你也在开发复杂的AI应用，不妨试试Mass的思路：先让每个智能体“做好自己”，再让它们“好好配合”。说不定，你的下一个爆款应用，就诞生于这样的“AI团队协作”之中。</p>
  
       <!-- reward -->
       
@@ -173,12 +211,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/06/15/010-hexo-problems/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/07/10/012-multi-agent-design-mass/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/" rel="tag">搭建环境</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI%E8%AE%BA%E6%96%87/" rel="tag">AI论文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F/" rel="tag">多智能体系统</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/" rel="tag">读后感</a></li></ul>
 
     </footer>
   </div>
@@ -186,19 +224,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/07/10/012-multi-agent-design-mass/" class="article-nav-link">
+      <a href="/2025/07/09/011-template-ai-website/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            论文读后感 | Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies
+            模板+AI助手：网站开发的新范式
           
         </div>
       </a>
     
     
-      <a href="/2022/06/13/009-FCN-car-recognition/" class="article-nav-link">
+      <a href="/2022/06/15/010-hexo-problems/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">009. 机器学习：车辆分割任务和卷积神经网络课堂实践</div>
+        <div class="article-nav-title">010. hexo配置过程中遇到的问题汇总</div>
       </a>
     
   </nav>
