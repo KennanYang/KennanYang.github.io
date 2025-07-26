@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>hexo配置过程中遇到的问题汇总 |  KennanYang</title>
+      <title>RTX 3070+32GB 本地部署 DeepSeek-R1 最全教程（零基础三种方式对比） |  KennanYang</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/kennanAi.png" />
@@ -61,7 +61,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-010-hexo-problems"
+  id="post-013-RTX3070-deepseek-r1-local-deploy"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -73,7 +73,7 @@
       
  
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  hexo配置过程中遇到的问题汇总
+  RTX 3070+32GB 本地部署 DeepSeek-R1 最全教程（零基础三种方式对比）
 </h1>
  
 
@@ -81,11 +81,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/06/15/010-hexo-problems/" class="article-date">
-  <time datetime="2022-06-15T05:19:41.000Z" itemprop="datePublished">2022-06-15</time>
+      <a href="/2024/06/10/013-RTX3070-deepseek-r1-local-deploy/" class="article-date">
+  <time datetime="2024-06-10T12:00:00.000Z" itemprop="datePublished">2024-06-10</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/">搭建环境</a>
+    <a class="article-category-link" href="/categories/AI%E9%83%A8%E7%BD%B2/">AI部署</a>
   </div>
   
 <div class="word_count">
@@ -93,7 +93,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">208</span>
+            <span class="post-count">1.2k</span>
         </span>
     </span>
 
@@ -102,26 +102,185 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">4 min</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>在hexo配置个人主页的过程中，遇到一些环境配置问题，在这里整理一下大神们的解决办法：</p>
-<p>1.主页打不开的问题：</p>
-<p>打开github主页时发现<strong>404</strong>，通过 <strong><em>hexo server</em></strong> 命令打开本地的主页配置时发现 Cannot Get/,所以搜索了一下解决办法，最终参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/loveLifeLoveCoding/article/details/121789466">vue项目Error: Cannot find module ‘xxx’类报错的解决方法</a> 解决了主页打不开的问题。</p>
-<span id="more"></span>
-<p>2.数学公式问题：</p>
-<p>这个问题是当我根据marktown写数学公式时，发现vscode上显示公式正确，但是配置到主页上时，公式就变成了源码，通过学习这个博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45511189/article/details/115798563">hexo博客next主题添加对数学公式的支持</a>，得到解决。</p>
-<p>marktown的数学公式语法规则为：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f0de9f572c9d">Marktown数学公式</a></p>
+  <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着大模型的普及，越来越多开发者和AI爱好者希望在本地体验如 DeepSeek-R1 这样的强大模型。本文针对 RTX 3070 显卡 + 32GB 内存的主流配置，详细对比三种零基础部署方式，帮你选出最适合自己的方案，并附常见问题与优化建议。</p>
+<hr>
+<h2 id="一、硬件适配建议：3070显卡-32GB内存能跑哪些模型？"><a href="#一、硬件适配建议：3070显卡-32GB内存能跑哪些模型？" class="headerlink" title="一、硬件适配建议：3070显卡+32GB内存能跑哪些模型？"></a>一、硬件适配建议：3070显卡+32GB内存能跑哪些模型？</h2><p>显存是本地部署大模型的核心瓶颈。RTX 3070 拥有 8GB 显存，结合 32GB 内存，推荐如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>模型参数</th>
+<th>所需显存</th>
+<th>是否推荐</th>
+<th>性能表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7B/8B</td>
+<td>4.6~5.3GB</td>
+<td>✅ 优先选择</td>
+<td>流畅响应（10~20字/秒）</td>
+</tr>
+<tr>
+<td>14B</td>
+<td>~9.2GB</td>
+<td>⚠️ 勉强运行</td>
+<td>可能爆显存，速度降至2~5字/秒</td>
+</tr>
+<tr>
+<td>32B+</td>
+<td>≥16GB</td>
+<td>❌ 不推荐</td>
+<td>显存不足，几乎不可用</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>💡 经验公式：所需显存 ≈ (参数规模B ÷ 2) × 1.15<br>例如 8B 模型约需 5.3GB 显存。</p>
+</blockquote>
+<hr>
+<h2 id="二、三种零基础部署方式详解（从易到难）"><a href="#二、三种零基础部署方式详解（从易到难）" class="headerlink" title="二、三种零基础部署方式详解（从易到难）"></a>二、三种零基础部署方式详解（从易到难）</h2><h3 id="方式1：LM-Studio（图形化操作，最适合纯小白）"><a href="#方式1：LM-Studio（图形化操作，最适合纯小白）" class="headerlink" title="方式1：LM Studio（图形化操作，最适合纯小白）"></a>方式1：LM Studio（图形化操作，最适合纯小白）</h3><ul>
+<li><strong>特点</strong>：完全可视化，无需代码，下载即用。</li>
+<li><strong>步骤</strong>：<ol>
+<li>访问 <a target="_blank" rel="noopener" href="https://lmstudio.ai/">lmstudio.ai</a> 下载客户端。</li>
+<li>搜索 <code>deepseek-r1</code>，选择 7B 或 8B 版本，点击下载（约4~6GB）。</li>
+<li>下载完成后点击“启动”，在聊天窗口直接提问。</li>
+</ol>
+</li>
+<li><strong>优点</strong>：操作极简，自动处理GPU，内置性能监控。</li>
+<li><strong>缺点</strong>：高级调参较少。</li>
+</ul>
+<p><img src="https://pic1.imgdb.cn/item/68790f7e58cb8da5c8bef102.png" alt="LM Studio 主界面"></p>
+<blockquote>
+<p>图：LM Studio 可视化界面，支持模型下载与一键对话，适合零基础用户。</p>
+</blockquote>
+<hr>
+<h3 id="方式2：Ollama-Open-WebUI（兼顾易用性与扩展性）"><a href="#方式2：Ollama-Open-WebUI（兼顾易用性与扩展性）" class="headerlink" title="方式2：Ollama + Open WebUI（兼顾易用性与扩展性）"></a>方式2：Ollama + Open WebUI（兼顾易用性与扩展性）</h3><ul>
+<li><strong>特点</strong>：命令行下载模型 + 浏览器交互界面，适合进阶用户。</li>
+<li><strong>步骤</strong>：<ol>
+<li>安装 Ollama：<a target="_blank" rel="noopener" href="https://ollama.com/">ollama.com</a></li>
+<li>命令行下载模型：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama run deepseek-r1:7b  <span class="comment"># 或 deepseek-r1:8b</span></span><br></pre></td></tr></table></figure></li>
+<li>安装 Open WebUI（可选，美化界面）：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3000:8080 --gpus all -v open-webui:/app/backend/data ghcr.io/open-webui/open-webui:cuda</span><br></pre></td></tr></table></figure>
+访问 <a target="_blank" rel="noopener" href="http://localhost:3000">http://localhost:3000</a> 即可网页聊天。</li>
+</ol>
+</li>
+<li><strong>优点</strong>：支持多模型管理，可通过 Docker 扩展。</li>
+<li><strong>缺点</strong>：需基础命令行，Docker 需科学上网。</li>
+</ul>
+<p><img src="https://pic1.imgdb.cn/item/68790ff358cb8da5c8bef145.png" alt="Ollama 命令行界面"></p>
+<blockquote>
+<p>图：Ollama 命令行模型管理，支持多模型切换与运行。</p>
+</blockquote>
+<hr>
+<h3 id="方式3：Ollama-Chatbox（桌面客户端交互）"><a href="#方式3：Ollama-Chatbox（桌面客户端交互）" class="headerlink" title="方式3：Ollama + Chatbox（桌面客户端交互）"></a>方式3：Ollama + Chatbox（桌面客户端交互）</h3><ul>
+<li><strong>特点</strong>：用第三方客户端替代命令行，体验更友好。</li>
+<li><strong>步骤</strong>：<ol>
+<li>完成 Ollama 安装及模型下载（同方式2）。</li>
+<li>下载 <a target="_blank" rel="noopener" href="https://chatboxai.app/">Chatbox</a> 安装桌面端。</li>
+<li>设置模型提供方为 <code>Ollama</code>，选择 <code>deepseek-r1:7b</code>，保存即可对话。</li>
+</ol>
+</li>
+<li><strong>优点</strong>：类似 ChatGPT 的聊天界面，支持历史记录。</li>
+<li><strong>缺点</strong>：需额外安装客户端。</li>
+</ul>
+<p><img src="https://pic1.imgdb.cn/item/68790fba58cb8da5c8bef11e.png" alt="Chatbox AI 客户端界面"></p>
+<blockquote>
+<p>图：Chatbox AI 桌面客户端，界面美观，支持历史记录与多模型切换。</p>
+</blockquote>
+<hr>
+<h2 id="三、关键对比：哪种方式更适合你？"><a href="#三、关键对比：哪种方式更适合你？" class="headerlink" title="三、关键对比：哪种方式更适合你？"></a>三、关键对比：哪种方式更适合你？</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>LM Studio</th>
+<th>Ollama+WebUI</th>
+<th>Ollama+Chatbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上手难度</td>
+<td>⭐⭐⭐⭐⭐（极简单）</td>
+<td>⭐⭐⭐（需命令行）</td>
+<td>⭐⭐⭐⭐（中等）</td>
+</tr>
+<tr>
+<td>界面友好度</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐（网页）</td>
+<td>⭐⭐⭐⭐⭐（最佳）</td>
+</tr>
+<tr>
+<td>功能扩展性</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐⭐⭐（Docker）</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>适合场景</td>
+<td>快速体验</td>
+<td>多模型管理</td>
+<td>追求美观界面</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>📌 <strong>总结建议</strong>：  </p>
+<ul>
+<li>完全零基础 → 选 LM Studio，10分钟搞定。  </li>
+<li>想玩高级功能 → 选 Ollama+Open WebUI，未来可接入知识库。  </li>
+<li>偏爱客户端 → 选 Ollama+Chatbox，操作直观。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="四、优化设置与避坑指南"><a href="#四、优化设置与避坑指南" class="headerlink" title="四、优化设置与避坑指南"></a>四、优化设置与避坑指南</h2><ol>
+<li><strong>加速下载</strong>：模型下载慢可用国内镜像（如 GHProxy）。</li>
+<li><strong>防爆显存技巧</strong>：<ul>
+<li>在 LM Studio/Ollama 设置中开启 <code>GPU卸载</code>，确保模型全在显卡上。</li>
+<li>调整上下文长度（如4096→2048）减少显存占用。</li>
+</ul>
+</li>
+<li><strong>常见问题</strong>：<ul>
+<li>显存不足 → 换更小模型（如7B→1.5B）或关闭其他占用GPU的程序。</li>
+<li>响应慢 → 避免同时运行多个AI应用，确保内存充足。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="四、下载卡顿？一键切换镜像加速"><a href="#四、下载卡顿？一键切换镜像加速" class="headerlink" title="四、下载卡顿？一键切换镜像加速"></a>四、下载卡顿？一键切换镜像加速</h2><p>（预留图片位置：命令行加速操作截图）<br><em>图片描述：终端窗口显示 <code>export OLLAMA_MODEL_SOURCE=加速地址</code> 命令 + 绿色高速下载进度条</em></p>
+<p><strong>解决下载慢的终极方案</strong>：<br>1️⃣ <strong>复制加速命令</strong>（任选其一）：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 推荐源（速度快）</span></span><br><span class="line"><span class="built_in">export</span> OLLAMA_MODEL_SOURCE=<span class="string">&quot;https://ollama-mirror.1ms.run&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 备用源（更稳定）</span></span><br><span class="line"><span class="built_in">export</span> OLLAMA_MODEL_SOURCE=<span class="string">&quot;https://mirror.ghproxy.com/ollama&quot;</span></span><br></pre></td></tr></table></figure><br>2️⃣ 粘贴到终端执行</p>
+<p>3️⃣ 重新下载模型：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama run deepseek-r1:7b</span><br></pre></td></tr></table></figure><br>✅ 效果：下载速度提升 5-10倍，告别每秒几KB的煎熬！</p>
+<hr>
+<h2 id="五、最终建议"><a href="#五、最终建议" class="headerlink" title="五、最终建议"></a>五、最终建议</h2><p>你的配置（3070+32GB）<strong>强烈推荐7B/8B模型</strong>，配合 LM Studio 或 Ollama+Chatbox，体验最佳。若追求知识库扩展或企业级应用，可逐步探索 Open WebUI 的 Docker 集成。部署后如遇速度波动，优先检查显存占用（任务管理器 → GPU视图），必要时降级模型参数。</p>
+<hr>
+<p><strong>附：所有工具官网直达</strong>  </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://lmstudio.ai">LM Studio</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://ollama.com">Ollama</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/open-webui">Open WebUI</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://chatboxai.app">Chatbox</a></li>
+</ul>
+<hr>
+<p>如有疑问或遇到新问题，欢迎留言交流！ </p>
  
       <!-- reward -->
       
@@ -174,12 +333,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/06/15/010-hexo-problems/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/06/10/013-RTX3070-deepseek-r1-local-deploy/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/" rel="tag">搭建环境</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DeepSeek/" rel="tag">DeepSeek</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" rel="tag">大模型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/" rel="tag">本地部署</a></li></ul>
 
     </footer>
   </div>
@@ -187,19 +346,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/06/10/013-RTX3070-deepseek-r1-local-deploy/" class="article-nav-link">
+      <a href="/2024/07/10/012-multi-agent-design-mass/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            RTX 3070+32GB 本地部署 DeepSeek-R1 最全教程（零基础三种方式对比）
+            当AI学会“团队协作”：从Mass框架看多智能体系统的进化之路
           
         </div>
       </a>
     
     
-      <a href="/2022/06/13/009-FCN-car-recognition/" class="article-nav-link">
+      <a href="/2022/06/15/010-hexo-problems/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">机器学习：车辆分割任务和卷积神经网络课堂实践</div>
+        <div class="article-nav-title">hexo配置过程中遇到的问题汇总</div>
       </a>
     
   </nav>
