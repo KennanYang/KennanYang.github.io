@@ -187,15 +187,18 @@ friends_link:
   GitHub:
     url: https://github.com/KennanYang
     img: /images/github.png
-  博客:
+  CSDN博客:
     url: https://blog.csdn.net/qq_28805597?spm=1011.2124.3001.5343
     img: /images/CSDN1.png
     img_size: 50
-    
-  Ayer主题: #网站名称
-    #网站地址
+  MBTI测试网站:
+    url: https://mbtitestpro.lol/
+    img: /images/kennanAi.png
+  AI工具箱导航:
+    url: https://aitoolbox.uk/
+    img: /images/kennanAi.png
+  Ayer主题:
     url: https://github.com/Shen-Yu/hexo-theme-ayer
-    #网站图片(可忽略不写)
     img: /images/ayer.png
     
   # Hexo官网:

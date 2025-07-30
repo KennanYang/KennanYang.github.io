@@ -60,6 +60,33 @@ layout: page
 
 ---
 
+## 🔧 Bolt Prompt Helper - Chrome插件
+
+### 📋 项目简介
+基于Bolt New开发的Chrome扩展插件，专门用于管理和优化AI提示词，帮助用户提高AI工具使用效率。
+
+### 🛠️ 技术栈
+- **Chrome Extension**：JavaScript, Chrome Extension API
+- **AI工具**：Bolt New 零代码开发
+- **前端**：HTML5, CSS3, JavaScript
+- **部署**：Chrome Web Store
+
+### ✨ 核心功能
+- 提示词批量处理和管理
+- 智能优化建议
+- 一键导出功能
+- 跨平台同步
+- 实时提示词分析
+
+### 🔗 项目链接
+- **在线演示**：[Bolt Prompt Helper](https://boltpromothelper.uk/)
+- **源码地址**：[GitHub仓库](https://github.com/KennanYang/bolt-helper)
+
+### 💡 开发心得
+这是我在@码叔编程线下活动中学到的新技能，使用Bolt New在3-4小时内完成了从零到可用的Chrome插件开发，真正体验到了AI工具在插件开发中的强大能力。
+
+---
+
 ## 🚀 技术迁移记录
 
 ### 从传统开发到AI辅助开发
