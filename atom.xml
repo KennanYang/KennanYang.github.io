@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-30T16:14:00.846Z</updated>
+  <updated>2025-08-08T01:15:14.103Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MCP实战：从零开始构建财务报告生成工具</title>
+    <link href="http://example.com/2025/07/31/016-financial-report-generator/"/>
+    <id>http://example.com/2025/07/31/016-financial-report-generator/</id>
+    <published>2025-07-31T12:00:00.000Z</published>
+    <updated>2025-08-08T01:15:14.103Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;🚀-前言&quot;&gt;&lt;a href=&quot;#🚀-前言&quot; class=&quot;headerlink&quot; title=&quot;🚀 前言&quot;&gt;&lt;/a&gt;🚀 前言&lt;/h2&gt;&lt;p&gt;Model Context Protocol (MCP)</summary>
+        
+      
+    
+    
+    
+    <category term="AI开发" scheme="http://example.com/categories/AI%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="AI工具" scheme="http://example.com/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="自动化" scheme="http://example.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    <category term="MCP" scheme="http://example.com/tags/MCP/"/>
+    
+    <category term="财务报告" scheme="http://example.com/tags/%E8%B4%A2%E5%8A%A1%E6%8A%A5%E5%91%8A/"/>
+    
+    <category term="技术实战" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF%E5%AE%9E%E6%88%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AI工具新玩法！我用Bolt New零代码开发谷歌插件，效率提升10倍！</title>
     <link href="http://example.com/2025/07/30/015-google-tool-develop/"/>
     <id>http://example.com/2025/07/30/015-google-tool-develop/</id>
     <published>2025-07-30T12:00:00.000Z</published>
-    <updated>2025-07-30T16:14:00.846Z</updated>
+    <updated>2025-08-03T10:18:46.995Z</updated>
     
     
       
